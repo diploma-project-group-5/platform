@@ -1,0 +1,102 @@
+# Інфраструктура «Лад»: PostgreSQL, Kafka, шлюз Traefik.
+# Запуск: make up (див. README.md). Keycloak і сервіси додаються окремими картками.
+
+name: lad
+
+services:
+  postgres:
+    image: postgres:16.15
+    container_name: lad-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_SUPERUSER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_SUPERUSER_PASSWORD:?задайте POSTGRES_SUPERUSER_PASSWORD у .env}
+      POSTGRES_DB: postgres
+      TZ: UTC
+    ports:
+      # Лише localhost: ззовні ВМ база недоступна.
+      - "127.0.0.1:${PG_PORT:-5432}:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
+    networks: [lad]
+
+  kafka:
+    image: apache/kafka:4.3.2
+    container_name: lad-kafka
+    restart: unless-stopped
+    environment:
+      # Один вузол у режимі KRaft: брокер і контролер в одному процесі, без ZooKeeper.
+      CLUSTER_ID: ${KAFKA_CLUSTER_ID:-TX4v_oipS5WiDI8HDaVfvw}
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      # INTERNAL — для контейнерів у мережі compose (kafka:9092),
+      # EXTERNAL — для сервісів, запущених на хості (localhost:29092).
+      KAFKA_LISTENERS: INTERNAL://:9092,EXTERNAL://:29092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:9092,EXTERNAL://localhost:${KAFKA_EXTERNAL_PORT:-29092}
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT,CONTROLLER:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+      # Топіки створює лише kafka-init (окрема картка), не випадковий споживач.
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+      # Строк зберігання за замовчуванням — 7 днів (рішення 66); DLQ — 14 днів на рівні топіка.
+      KAFKA_LOG_RETENTION_HOURS: 168
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_HEAP_OPTS: "-Xms256m -Xmx768m"
+    ports:
+      - "127.0.0.1:${KAFKA_EXTERNAL_PORT:-29092}:29092"
+    volumes:
+      - kafka-data:/var/lib/kafka/data
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server localhost:9092 > /dev/null 2>&1"]
+      interval: 10s
+      timeout: 15s
+      retries: 12
+      start_period: 30s
+    networks: [lad]
+
+  traefik:
+    image: traefik:v3.7.17
+    container_name: lad-traefik
+    restart: unless-stopped
+    command: ["--configFile=/etc/traefik/traefik.yml"]
+    environment:
+      # Куди шлюз веде запити. За замовчуванням — на сервіси, запущені на хості
+      # (npm run dev). Коли сервіс з'явиться в compose, тут буде http://<сервіс>:8080.
+      WEB_UPSTREAM: ${WEB_UPSTREAM:-http://host.docker.internal:5173}
+      KEYCLOAK_UPSTREAM: ${KEYCLOAK_UPSTREAM:-http://keycloak:8080}
+      TENANT_UPSTREAM: ${TENANT_UPSTREAM:-http://host.docker.internal:3001}
+      SCHOOL_UPSTREAM: ${SCHOOL_UPSTREAM:-http://host.docker.internal:3002}
+      TIMETABLE_UPSTREAM: ${TIMETABLE_UPSTREAM:-http://host.docker.internal:3003}
+    ports:
+      - "${HTTP_PORT:-80}:80"
+    extra_hosts:
+      # На macOS host.docker.internal є й так; на Linux (ВМ) його треба оголосити.
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./traefik:/etc/traefik:ro
+    healthcheck:
+      test: ["CMD", "traefik", "healthcheck", "--configFile=/etc/traefik/traefik.yml"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 5s
+    networks: [lad]
+
+volumes:
+  pg-data:
+  kafka-data:
+
+networks:
+  lad:
+    name: lad
