@@ -1,6 +1,6 @@
 # platform
 
-Інфраструктура «Лад» для локальної розробки й демо-сервера: PostgreSQL, Kafka і шлюз Traefik у docker-compose.
+Інфраструктура «Лад» для локальної розробки й демо-сервера: PostgreSQL, Kafka, Keycloak і шлюз Traefik у docker-compose.
 
 ## Що потрібно
 
@@ -22,10 +22,63 @@ make up
 | PostgreSQL 16.15 | `lad-postgres` | `localhost:5432` | `postgres:5432` |
 | Kafka 4.3.2 (KRaft, один вузол) | `lad-kafka` | `localhost:29092` | `kafka:9092` |
 | Traefik v3.7.17 | `lad-traefik` | `http://localhost` | — |
+| Keycloak 26.8.1 | `lad-keycloak` | `http://localhost/idp` (через шлюз) | `keycloak:8080/idp` |
 
-PostgreSQL і Kafka слухають лише `127.0.0.1`: ззовні машини вони недоступні.
+PostgreSQL, Kafka і прямий порт Keycloak (8180, для адмін-консолі) слухають лише `127.0.0.1`: ззовні машини вони недоступні.
 
-Автостворення топіків у Kafka вимкнене: топіки створює `kafka-init`. Ролі й бази сервісів створює `db-init`. Обидва — окремі картки.
+`db-init` — одноразовий контейнер, який при кожному `make up` створює ролі й бази (зараз лише для Keycloak) і завершується. Бази й ролі сервісів додає картка «Схеми й користувачі БД на кожен сервіс» у `db-init/init.sh`.
+
+Автостворення топіків у Kafka вимкнене: топіки створює `kafka-init` (окрема картка).
+
+## Keycloak
+
+Realm `lad` описано у файлі `keycloak/realm/lad-realm.json`. До демо 13.11 realm змінюється лише через цей файл (рішення 60). Keycloak імпортує файл тільки тоді, коли realm ще немає, тож після зміни файлу потрібен `make kc-reset`: він видаляє базу Keycloak і імпортує realm заново.
+
+| Що | Значення |
+|---|---|
+| Ролі | `sysadmin`, `scheduler` |
+| Група `schedulers` | дає роль `scheduler`; tenant-service створює укладача одразу в ній |
+| Атрибут `school_id` | лише адмін бачить і змінює; користувач змінити не може (перевірено) |
+| Клієнт `web` | публічний, вхід з PKCE (S256), без пароля напряму; `school_id` у токені |
+| Клієнт `tenant-service` | секретний, сервісний акаунт з правами лише на користувачів |
+| Користувачі | `sysadmin` і демо-укладач `demo` (`school_id` = `DEMO_SCHOOL_ID`); паролі з `.env` |
+| Паролі | від 10 символів, не дорівнює логіну; після 5 невдалих спроб — тимчасове блокування до 15 хв |
+| Токени | access-токен 15 хв, сесія 8 год |
+| Мови | українська (за замовчуванням), англійська |
+
+Головне в токені укладача:
+
+```json
+{
+  "iss": "http://localhost/idp/realms/lad",
+  "azp": "web",
+  "realm_access": { "roles": ["scheduler"] },
+  "school_id": "5d0b6a1e-7c3f-4b2a-9e41-0a1d2c3b4e5f"
+}
+```
+
+### Перевірка JWT у сервісах
+
+`iss` у токені — публічна адреса (`LAD_PUBLIC_URL`), а ключі сервіс у контейнері бере внутрішньою мережею. Тому в сервісі дві змінні:
+
+| Змінна | Локально (сервіс на хості) | Сервіс у compose |
+|---|---|---|
+| `OIDC_ISSUER` | `http://localhost/idp/realms/lad` | `http://localhost/idp/realms/lad` (на ВМ — `https://<домен>/idp/realms/lad`) |
+| `OIDC_JWKS_URL` | `http://localhost/idp/realms/lad/protocol/openid-connect/certs` | `http://keycloak:8080/idp/realms/lad/protocol/openid-connect/certs` |
+
+Сервіс перевіряє підпис, `iss`, `exp`, `azp = web` і роль у `realm_access.roles`.
+
+### Токен для перевірки свого API
+
+```bash
+make token                                  # демо-укладач
+make token u=sysadmin p=<SYSADMIN_PASSWORD> # системний адмін
+curl -H "Authorization: Bearer $(make -s token)" http://localhost/api/v1/school/...
+```
+
+### Адмін-консоль
+
+Локально: `http://localhost:8180/idp/admin`, логін `admin`, пароль `KC_ADMIN_PASSWORD`. Через шлюз (`http://localhost/idp/admin`) консоль закрита навмисно. На ВМ — через SSH-тунель: `ssh -L 8180:127.0.0.1:8180 <ВМ>`, потім та сама адреса.
 
 ## Маршрути шлюзу
 
@@ -58,6 +111,25 @@ PostgreSQL і Kafka слухають лише `127.0.0.1`: ззовні маши
 
 Коли сервіс переїде в контейнер compose, його адресу змінюють у `.env`, наприклад `TENANT_UPSTREAM=http://tenant-service:8080`.
 
+## Тести
+
+```bash
+make test
+```
+
+Піднімає окремий стенд `lad-test` (свої томи й мережа, порти назовні не відкриваються, робоче оточення `make up` не зачіпає), проганяє всі тести й прибирає стенд за собою. Перший запуск — до 2 хвилин, далі швидше. Якщо `make test` перервали, стенд прибирає `make test-down`.
+
+| Файл | Що перевіряє |
+|---|---|
+| `tests/gateway.test.mjs` | маршрути шлюзу без зрізання префікса; адмінка Keycloak закрита разом з відомими обходами; ліміт `/api/v1/public`; заголовки безпеки; закодовані символи й заголовки-аліаси |
+| `tests/keycloak.test.mjs` | вхід і вміст токенів; перший вхід зі зміною пароля; незмінність `school_id`; блокування підбору; права сервісного акаунта tenant-service; адмін-консоль |
+| `tests/realm.test.mjs` | статичні перевірки `lad-realm.json`, без запуску Keycloak |
+| `tests/db-init.sh` | ідемпотентність `db-init` і права ролі `keycloak` |
+
+Тести — JavaScript (`node --test`, без залежностей), запускаються в контейнері `node:24`, тож Node на машині не потрібен. Той самий `make test` запускає GitHub Actions на кожен пуш (`.github/workflows/test.yml`).
+
+Правило: нова поведінка — новий тест у тій самій гілці; знайдена помилка — спершу тест, що її відтворює.
+
 ## Команди
 
 | Команда | Що робить |
@@ -70,4 +142,7 @@ PostgreSQL і Kafka слухають лише `127.0.0.1`: ззовні маши
 | `make config` | перевірити compose і `.env` без запуску |
 | `make psql` | консоль PostgreSQL |
 | `make kafka-topics` | список топіків |
+| `make token` | access-токен демо-укладача (`u=… p=…` — іншого користувача) |
+| `make test` | усі тести на окремому стенді |
+| `make kc-reset` | перестворити realm з файлу (видаляє користувачів Keycloak, з підтвердженням) |
 | `make reset` | зупинити й видалити всі дані (з підтвердженням) |
