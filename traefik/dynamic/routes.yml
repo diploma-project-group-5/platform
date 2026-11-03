@@ -1,0 +1,100 @@
+# Маршрути шлюзу (розділ 07 специфікації).
+# Адреси сервісів беруться зі змінних середовища контейнера traefik (див. docker-compose.yml).
+# Префікс шляху не зрізається: сервіс отримує запит разом з /api/v1/<сервіс>.
+
+http:
+  routers:
+    web:
+      rule: "PathPrefix(`/`)"
+      priority: 1
+      entryPoints: [web]
+      service: web
+      middlewares: [security-headers]
+
+    idp:
+      rule: "PathPrefix(`/idp`)"
+      priority: 100
+      entryPoints: [web]
+      service: keycloak
+
+    # Адмін-консоль, realm master і консоль акаунта ззовні закриті (403).
+    # Адмін відкриває консоль напряму через SSH-тунель на ВМ, повз шлюз.
+    # Без урахування регістру (/idp/ADMIN) і з забороною «;», «\», %3B, %2F, %5C у шляху:
+    # Keycloak може відкинути «;…» чи розкодувати слеш і віддати адмінку в обхід простого PathPrefix.
+    # У звичайних шляхах Keycloak цих символів немає (перевірено тестом обходів).
+    # Одинарні лапки YAML: усередині регулярного виразу «\\» — це буквальний «\».
+    idp-blocked:
+      rule: 'PathRegexp(`(?i)^/idp/+(admin|realms/+master|realms/+lad/+account)`) || PathRegexp(`(?i)^/idp.*(;|\\|%3b|%2f|%5c)`)'
+      priority: 200
+      entryPoints: [web]
+      service: keycloak
+      middlewares: [deny-external]
+
+    tenant:
+      rule: "PathPrefix(`/api/v1/tenant`)"
+      priority: 100
+      entryPoints: [web]
+      service: tenant
+      middlewares: [security-headers]
+
+    school:
+      rule: "PathPrefix(`/api/v1/school`)"
+      priority: 100
+      entryPoints: [web]
+      service: school
+      middlewares: [security-headers]
+
+    timetable:
+      rule: "PathPrefix(`/api/v1/timetable`)"
+      priority: 100
+      entryPoints: [web]
+      service: timetable
+      middlewares: [security-headers]
+
+    # Сторінки за QR: без JWT, тому обмеження частоти запитів (429).
+    public:
+      rule: "PathPrefix(`/api/v1/public`)"
+      priority: 100
+      entryPoints: [web]
+      service: timetable
+      middlewares: [public-rate-limit, security-headers]
+
+  middlewares:
+    security-headers:
+      headers:
+        contentTypeNosniff: true
+        referrerPolicy: "no-referrer"
+        # SAMEORIGIN, а не DENY: keycloak-js вбудовує iframe зі своєї ж адреси.
+        customFrameOptionsValue: "SAMEORIGIN"
+
+    deny-external:
+      ipAllowList:
+        sourceRange: ["127.0.0.1/32"]
+
+    public-rate-limit:
+      rateLimit:
+        average: 10
+        period: 1s
+        burst: 20
+
+  services:
+    web:
+      loadBalancer:
+        servers:
+          - url: '{{ env "WEB_UPSTREAM" }}'
+    keycloak:
+      loadBalancer:
+        servers:
+          - url: '{{ env "KEYCLOAK_UPSTREAM" }}'
+    tenant:
+      loadBalancer:
+        servers:
+          - url: '{{ env "TENANT_UPSTREAM" }}'
+    school:
+      loadBalancer:
+        servers:
+          - url: '{{ env "SCHOOL_UPSTREAM" }}'
+    timetable:
+      loadBalancer:
+        servers:
+          - url: '{{ env "TIMETABLE_UPSTREAM" }}'

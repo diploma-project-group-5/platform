@@ -1,0 +1,27 @@
+# Статична конфігурація Traefik: порти й звідки брати маршрути.
+# Самі маршрути — у dynamic/routes.yml.
+
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false
+
+entryPoints:
+  web:
+    address: ":80"
+  # Лише для healthcheck контейнера; порт назовні не публікується.
+  ping:
+    address: ":8082"
+
+ping:
+  entryPoint: ping
+
+providers:
+  file:
+    directory: /etc/traefik/dynamic
+    watch: true
+
+log:
+  level: INFO
+
+# Журнал запитів у stdout. На ВМ — у файл з logrotate на 30 днів (рішення 66), окремою карткою деплою.
+accessLog: {}
