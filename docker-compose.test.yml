@@ -1,0 +1,74 @@
+# Тестовий стенд для make test. Окремий проєкт compose (lad-test): свої томи, мережа й імена
+# контейнерів, порти назовні не публікуються. Робоче оточення розробки (make up) не зачіпається.
+#
+# Сервіси замінено заглушками whoami: вони відповідають своїм іменем і рядком запиту,
+# тож тести бачать, куди саме шлюз переслав запит і чи не зрізав префікс.
+# Публічна адреса стенду — http://traefik (так його бачить контейнер tests).
+
+services:
+  postgres:
+    container_name: lad-test-postgres
+    ports: !reset []
+
+  db-init:
+    container_name: lad-test-db-init
+
+  keycloak:
+    container_name: lad-test-keycloak
+    ports: !reset []
+    environment:
+      KC_HOSTNAME: http://traefik/idp
+      LAD_PUBLIC_URL: http://traefik
+
+  kafka:
+    container_name: lad-test-kafka
+    ports: !reset []
+
+  traefik:
+    container_name: lad-test-traefik
+    ports: !reset []
+    environment:
+      WEB_UPSTREAM: http://web-stub
+      KEYCLOAK_UPSTREAM: http://keycloak:8080
+      TENANT_UPSTREAM: http://tenant-stub
+      SCHOOL_UPSTREAM: http://school-stub
+      TIMETABLE_UPSTREAM: http://timetable-stub
+
+  web-stub:
+    image: traefik/whoami:v1.11.0
+    environment: { WHOAMI_NAME: web }
+    networks: [lad]
+  tenant-stub:
+    image: traefik/whoami:v1.11.0
+    environment: { WHOAMI_NAME: tenant }
+    networks: [lad]
+  school-stub:
+    image: traefik/whoami:v1.11.0
+    environment: { WHOAMI_NAME: school }
+    networks: [lad]
+  timetable-stub:
+    image: traefik/whoami:v1.11.0
+    environment: { WHOAMI_NAME: timetable }
+    networks: [lad]
+
+  tests:
+    image: node:24-bookworm-slim
+    working_dir: /work
+    command: ["node", "--test", "--test-concurrency=1", "--test-timeout=60000", "tests/*.test.mjs"]
+    volumes:
+      - .:/work:ro
+    environment:
+      GATEWAY_URL: http://traefik
+      LAD_PUBLIC_URL: http://traefik
+      KC_INTERNAL_URL: http://keycloak:8080/idp
+      KC_ADMIN_PORT: ${KC_ADMIN_PORT:-8180}
+      KC_ADMIN_PASSWORD: ${KC_ADMIN_PASSWORD}
+      SYSADMIN_PASSWORD: ${SYSADMIN_PASSWORD}
+      DEMO_SCHEDULER_PASSWORD: ${DEMO_SCHEDULER_PASSWORD}
+      DEMO_SCHOOL_ID: ${DEMO_SCHOOL_ID}
+      TENANT_CLIENT_SECRET: ${TENANT_CLIENT_SECRET}
+    networks: [lad]
+
+networks:
+  lad:
+    name: lad-test

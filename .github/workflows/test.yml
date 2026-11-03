@@ -1,0 +1,18 @@
+name: test
+
+on:
+  push:
+    branches: [develop, main, "feat/**", "fix/**", "test/**"]
+  pull_request:
+    branches: [develop, main]
+
+jobs:
+  platform:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - name: .env з прикладу
+        run: cp .env.example .env
+      - name: make test
+        run: make test

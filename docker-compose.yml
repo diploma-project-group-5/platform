@@ -1,5 +1,5 @@
-# Інфраструктура «Лад»: PostgreSQL, Kafka, шлюз Traefik.
-# Запуск: make up (див. README.md). Keycloak і сервіси додаються окремими картками.
+# Інфраструктура «Лад»: PostgreSQL, Kafka, шлюз Traefik, Keycloak.
+# Запуск: make up (див. README.md). Сервіси додаються окремими картками.
 
 name: lad
 
@@ -24,6 +24,71 @@ services:
       timeout: 3s
       retries: 20
       start_period: 10s
+    networks: [lad]
+
+  # Одноразовий контейнер: створює ролі й бази (db-init/init.sh) і завершується.
+  # Запускається при кожному make up, скрипт ідемпотентний.
+  db-init:
+    image: postgres:16.15
+    container_name: lad-db-init
+    restart: "no"
+    entrypoint: ["bash", "/db-init/init.sh"]
+    environment:
+      PGHOST: postgres
+      PGUSER: ${POSTGRES_SUPERUSER:-postgres}
+      PGPASSWORD: ${POSTGRES_SUPERUSER_PASSWORD:?задайте POSTGRES_SUPERUSER_PASSWORD у .env}
+      KEYCLOAK_DB_PASSWORD: ${KEYCLOAK_DB_PASSWORD:?задайте KEYCLOAK_DB_PASSWORD у .env}
+    volumes:
+      - ./db-init:/db-init:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks: [lad]
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.8.1
+    container_name: lad-keycloak
+    restart: unless-stopped
+    # --import-realm імпортує keycloak/realm/lad-realm.json лише якщо realm lad ще немає.
+    # Змінили файл realm — make kc-reset.
+    command: ["start", "--import-realm"]
+    environment:
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://postgres:5432/keycloak
+      KC_DB_USERNAME: keycloak
+      KC_DB_PASSWORD: ${KEYCLOAK_DB_PASSWORD:?задайте KEYCLOAK_DB_PASSWORD у .env}
+      # Keycloak живе за шлюзом під /idp. Публічна адреса потрапляє в токени як iss.
+      KC_HTTP_ENABLED: "true"
+      KC_HTTP_RELATIVE_PATH: /idp
+      KC_HOSTNAME: ${LAD_PUBLIC_URL:-http://localhost}/idp
+      KC_PROXY_HEADERS: xforwarded
+      # Адмін-консоль — лише напряму на 127.0.0.1 (на ВМ через SSH-тунель); шлюз її не пропускає.
+      KC_HOSTNAME_ADMIN: http://localhost:${KC_ADMIN_PORT:-8180}/idp
+      KC_HEALTH_ENABLED: "true"
+      # Адмін realm master для консолі.
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${KC_ADMIN_PASSWORD:?задайте KC_ADMIN_PASSWORD у .env}
+      # Значення для плейсхолдерів у lad-realm.json.
+      LAD_PUBLIC_URL: ${LAD_PUBLIC_URL:-http://localhost}
+      SYSADMIN_PASSWORD: ${SYSADMIN_PASSWORD:?задайте SYSADMIN_PASSWORD у .env}
+      DEMO_SCHEDULER_PASSWORD: ${DEMO_SCHEDULER_PASSWORD:?задайте DEMO_SCHEDULER_PASSWORD у .env}
+      DEMO_SCHOOL_ID: ${DEMO_SCHOOL_ID:?задайте DEMO_SCHOOL_ID у .env}
+      TENANT_CLIENT_SECRET: ${TENANT_CLIENT_SECRET:?задайте TENANT_CLIENT_SECRET у .env}
+    ports:
+      - "127.0.0.1:${KC_ADMIN_PORT:-8180}:8080"
+    volumes:
+      - ./keycloak/realm:/opt/keycloak/data/import:ro
+    healthcheck:
+      # Готовність — за HTTP-кодом (200/503), а не за текстом: «UP» є й у вкладених перевірках.
+      # Чистий bash: /dev/tcp, printf, read і [[ ]] вбудовані; curl, head, grep в образі Keycloak може не бути.
+      test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/9000 && printf 'GET /idp/health/ready HTTP/1.1\\r\\nHost: localhost\\r\\nConnection: close\\r\\n\\r\\n' >&3 && read -r status <&3 && [[ $$status == *' 200 '* ]]"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 60s
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
     networks: [lad]
 
   kafka:

@@ -8,9 +8,23 @@ global:
 entryPoints:
   web:
     address: ":80"
+    http:
+      # Заголовки на кшталт X_Forwarded_For видаляються: інакше бекенд міг би прийняти їх
+      # за X-Forwarded-For, яким Keycloak визначає адресу клієнта.
+      aliasHeadersStrategy: delete
+      # Закодовані «/», «\», «;» і NULL у шляху — 400. Друга лінія захисту від обходу
+      # блокування адмінки Keycloak (перша — правило idp-blocked у routes.yml).
+      # У шляхах Keycloak, web і наших API таких символів немає; query не зачіпається.
+      encodedCharacters:
+        allowEncodedSlash: false
+        allowEncodedBackSlash: false
+        allowEncodedSemicolon: false
+        allowEncodedNullCharacter: false
   # Лише для healthcheck контейнера; порт назовні не публікується.
   ping:
     address: ":8082"
+    http:
+      aliasHeadersStrategy: delete
 
 ping:
   entryPoint: ping
