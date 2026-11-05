@@ -9,9 +9,11 @@ Docker Desktop (з Docker Compose v2) і `make`.
 ## Швидкий старт
 
 ```bash
-cp .env.example .env
+make env
 make up
 ```
+
+`make env` створює `.env` з `.env.example`, а якщо `.env` уже є — дописує лише змінні, яких бракує (наприклад, після `git pull`), не чіпаючи ваших значень. Запускайте його після кожного оновлення platform.
 
 `make up` чекає, поки всі контейнери пройдуть healthcheck. Перевірити стан — `make ps`, список усіх команд — `make`.
 
