@@ -26,7 +26,7 @@ make up
 
 PostgreSQL, Kafka і прямий порт Keycloak (8180, для адмін-консолі) слухають лише `127.0.0.1`: ззовні машини вони недоступні.
 
-`db-init` — одноразовий контейнер, який при кожному `make up` створює ролі й бази (зараз лише для Keycloak) і завершується. Бази й ролі сервісів додає картка «Схеми й користувачі БД на кожен сервіс» у `db-init/init.sh`.
+`db-init` — одноразовий контейнер, який при кожному `make up` створює ролі й бази й завершується. Зараз це Keycloak (`keycloak`) і tenant (`tenant` з ролями `tenant_owner`, `tenant_app`, `tenant_relay`, `tenant_maint`, паролі — `TENANT_*_DB_PASSWORD` у `.env`). Наступний сервіс додається одним рядком `service_database <svc>` у `db-init/init.sh` плюс чотири паролі в `.env.example` і `docker-compose.yml`.
 
 Автостворення топіків у Kafka вимкнене: топіки створює `kafka-init` (окрема картка).
 

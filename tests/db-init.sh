@@ -4,6 +4,8 @@
 #   tests/db-init.sh "docker compose -p lad-test -f docker-compose.yml -f docker-compose.test.yml"
 set -euo pipefail
 dc="$1"
+# Ті самі паролі, що бачить compose.
+set -a; . ./.env; set +a
 pass=0; fail=0
 ok()  { echo "  ✔ $1"; pass=$((pass + 1)); }
 bad() { echo "  ✖ $1"; fail=$((fail + 1)); }
@@ -19,11 +21,28 @@ attrs="$(sql "SELECT rolsuper::text || rolbypassrls::text || rolcreatedb::text F
 owner="$(sql "SELECT pg_get_userbyid(datdba) FROM pg_database WHERE datname = 'keycloak'")"
 [ "$owner" = "keycloak" ] && ok "база keycloak належить ролі keycloak" || bad "власник бази keycloak: $owner"
 
-sql "DROP ROLE IF EXISTS lad_probe; CREATE ROLE lad_probe LOGIN PASSWORD 'probe-pass-123'" >/dev/null
+roles="$(sql "SELECT count(*) FROM pg_roles WHERE rolname IN ('tenant_owner','tenant_app','tenant_relay','tenant_maint') AND NOT rolsuper AND NOT rolbypassrls AND NOT rolcreatedb AND NOT rolcreaterole")"
+[ "$roles" = "4" ] && ok "ролі tenant_owner, tenant_app, tenant_relay, tenant_maint без зайвих прав" || bad "ролей tenant без зайвих прав: $roles із 4"
+
+owner="$(sql "SELECT pg_get_userbyid(datdba) FROM pg_database WHERE datname = 'tenant'")"
+[ "$owner" = "tenant_owner" ] && ok "база tenant належить ролі tenant_owner" || bad "власник бази tenant: $owner"
+
+if $dc exec -T -e PGPASSWORD="$TENANT_APP_DB_PASSWORD" postgres psql -h 127.0.0.1 -U tenant_app -d tenant -c "SELECT 1" >/dev/null 2>&1; then
+  ok "tenant_app під'єднується до бази tenant з паролем з .env"
+else
+  bad "tenant_app не під'єднується до бази tenant"
+fi
+
+sql "SET client_min_messages = warning; DROP ROLE IF EXISTS lad_probe; CREATE ROLE lad_probe LOGIN PASSWORD 'probe-pass-123'" >/dev/null
 if $dc exec -T -e PGPASSWORD=probe-pass-123 postgres psql -h 127.0.0.1 -U lad_probe -d keycloak -c "SELECT 1" >/dev/null 2>&1; then
   bad "стороння роль під'єднується до бази keycloak"
 else
   ok "стороння роль не під'єднується до бази keycloak"
+fi
+if $dc exec -T -e PGPASSWORD=probe-pass-123 postgres psql -h 127.0.0.1 -U lad_probe -d tenant -c "SELECT 1" >/dev/null 2>&1; then
+  bad "стороння роль під'єднується до бази tenant"
+else
+  ok "стороння роль не під'єднується до бази tenant"
 fi
 sql "DROP ROLE lad_probe" >/dev/null
 
