@@ -2,23 +2,56 @@
 # Створює ролі й бази на спільному сервері PostgreSQL.
 # Запускається контейнером db-init при кожному make up, тому ідемпотентний:
 # повторний запуск нічого не ламає й лише синхронізує паролі з .env.
-#
-# Зараз тут лише база Keycloak (картка #18). Бази й ролі сервісів
-# (<svc>_owner, <svc>_app, <svc>_relay, <svc>_maint, backup) додає картка
-# «[каркас] Схеми й користувачі БД на кожен сервіс» за тим самим зразком.
 set -euo pipefail
 
-: "${KEYCLOAK_DB_PASSWORD:?задайте KEYCLOAK_DB_PASSWORD у .env}"
+psql_admin() { psql -v ON_ERROR_STOP=1 -q -d postgres "$@"; }
 
-psql -v ON_ERROR_STOP=1 -q -d postgres -v kc_pass="$KEYCLOAK_DB_PASSWORD" <<'SQL'
--- Keycloak: власна роль і база; інші ролі до неї не під'єднуються.
-SELECT format('CREATE ROLE keycloak LOGIN PASSWORD %L', :'kc_pass')
-WHERE NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'keycloak') \gexec
-ALTER ROLE keycloak WITH LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE NOBYPASSRLS PASSWORD :'kc_pass';
-
-SELECT 'CREATE DATABASE keycloak OWNER keycloak'
-WHERE NOT EXISTS (SELECT 1 FROM pg_database WHERE datname = 'keycloak') \gexec
-REVOKE ALL ON DATABASE keycloak FROM PUBLIC;
+# Роль з LOGIN без зайвих прав; пароль завжди синхронізується з .env.
+ensure_role() {
+  local role="$1" password="$2"
+  psql_admin -v role="$role" -v pass="$password" <<'SQL'
+SELECT format('CREATE ROLE %I LOGIN', :'role')
+WHERE NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname = :'role') \gexec
+SELECT format('ALTER ROLE %I WITH LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE NOBYPASSRLS PASSWORD %L', :'role', :'pass') \gexec
 SQL
+}
+
+# База з власником; під'єднуватися можуть лише перелічені ролі.
+ensure_database() {
+  local db="$1" owner="$2"; shift 2
+  psql_admin -v db="$db" -v owner="$owner" <<'SQL'
+SELECT format('CREATE DATABASE %I OWNER %I', :'db', :'owner')
+WHERE NOT EXISTS (SELECT 1 FROM pg_database WHERE datname = :'db') \gexec
+SELECT format('REVOKE ALL ON DATABASE %I FROM PUBLIC', :'db') \gexec
+SQL
+  for role in "$@"; do
+    psql_admin -v db="$db" -v role="$role" <<'SQL'
+SELECT format('GRANT CONNECT ON DATABASE %I TO %I', :'db', :'role') \gexec
+SQL
+  done
+}
+
+# Сервіс за схемою розділу 03: <svc>_owner (міграції), <svc>_app (DML), <svc>_relay (outbox),
+# <svc>_maint (фонові задачі). Паролі — змінні <SVC>_<РОЛЬ>_DB_PASSWORD у .env.
+service_database() {
+  local svc="$1" upper kind var password
+  upper="$(printf '%s' "$svc" | tr '[:lower:]' '[:upper:]')"
+  for kind in owner app relay maint; do
+    var="${upper}_$(printf '%s' "$kind" | tr '[:lower:]' '[:upper:]')_DB_PASSWORD"
+    password="${!var:-}"
+    [ -n "$password" ] || { echo "db-init: задайте $var у .env" >&2; exit 1; }
+    ensure_role "${svc}_${kind}" "$password"
+  done
+  ensure_database "$svc" "${svc}_owner" "${svc}_app" "${svc}_relay" "${svc}_maint"
+}
+
+# --- Keycloak: власна роль і база ---
+: "${KEYCLOAK_DB_PASSWORD:?задайте KEYCLOAK_DB_PASSWORD у .env}"
+ensure_role keycloak "$KEYCLOAK_DB_PASSWORD"
+ensure_database keycloak keycloak
+
+# --- Сервіси ---
+# school і timetable додаються сюди одним рядком кожен, разом з паролями в .env і docker-compose.yml.
+service_database tenant
 
 echo "db-init: OK"
