@@ -362,6 +362,21 @@ services:
         condition: service_completed_successfully
     networks: [lad]
 
+  # web (репо frontend): статика React за nginx. VITE_* вшиваються при збірці, значення за
+  # замовчуванням у Dockerfile frontend уже під шлюз (/idp, /api/v1). Сам по собі без бекенду.
+  web:
+    profiles: [apps]
+    image: ${WEB_IMAGE:-lad-web:local}
+    build: ${WEB_SRC:-../frontend}
+    container_name: lad-web
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+    networks: [lad]
+
   traefik:
     image: traefik:v3.7.17
     container_name: lad-traefik
@@ -369,7 +384,7 @@ services:
     command: ["--configFile=/etc/traefik/traefik.yml"]
     environment:
       # Куди шлюз веде запити. За замовчуванням — на сервіси, запущені на хості (make dev).
-      # make up-apps перемикає tenant, school і timetable на контейнери профілю apps.
+      # make up-apps перемикає web, tenant, school і timetable на контейнери профілю apps.
       WEB_UPSTREAM: ${WEB_UPSTREAM:-http://host.docker.internal:5173}
       KEYCLOAK_UPSTREAM: ${KEYCLOAK_UPSTREAM:-http://keycloak:8080}
       TENANT_UPSTREAM: ${TENANT_UPSTREAM:-http://host.docker.internal:3001}
