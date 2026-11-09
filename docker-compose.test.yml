@@ -24,6 +24,9 @@ services:
     container_name: lad-test-kafka
     ports: !reset []
 
+  kafka-init:
+    container_name: lad-test-kafka-init
+
   traefik:
     container_name: lad-test-traefik
     ports: !reset []
