@@ -33,6 +33,18 @@ PostgreSQL, Kafka і прямий порт Keycloak (8180, для адмін-к�
 
 Автостворення топіків у Kafka вимкнене. Топіки створює `kafka-init` — одноразовий контейнер, як `db-init`. Він бере список з маніфесту `contracts/topics.v1.json` (contracts v0.2.0): 6 топіків по 3 партиції зі строком зберігання 7 днів і до кожного `<топік>.dlq` на 14 днів. Повторний запуск нічого не перестворює, лише повертає строк зберігання до значення з маніфесту. Змінився маніфест у contracts — оновіть список у `kafka-init/init.sh`.
 
+### Сервіси в контейнерах (профіль `apps`)
+
+Для розробки сервіси запускаються на хості (`make dev` у їхніх репозиторіях), а `make up` піднімає лише інфраструктуру. Щоб підняти систему цілком, як на ВМ:
+
+```bash
+make up-apps   # збирає образи з ../tenant-service, ../school-service, ../timetable-service і піднімає все
+make smoke     # шлюз → сервіси → Keycloak → PostgreSQL → Kafka: реєстрація закладу доходить до school
+make down-apps # зупинити все, включно з контейнерами сервісів
+```
+
+Перед кожним сервісом окремий одноразовий контейнер `<svc>-migrate` застосовує міграції під роллю `<svc>_owner`; сервіс стартує лише після нього. `make up-apps` сам перемикає шлюз на контейнери, `.env` для розробки на хості не змінюється. Порт `/internal/v1` school-service (3102) доступний лише в мережі compose. Коли образи з'являться в реєстрі — `TENANT_IMAGE`, `SCHOOL_IMAGE`, `TIMETABLE_IMAGE` у `.env`.
+
 ### solver
 
 Kafka-воркер CP-SAT (`lad-solver`) вмикається профілем: `COMPOSE_PROFILES=solver` у `.env`, далі звичайний `make up`. Поки образу немає в реєстрі, compose збирає `lad-solver:local` з клону репо solver поруч (`SOLVER_SRC=../solver`). Коли образ з'явиться в GHCR — `SOLVER_IMAGE=ghcr.io/diploma-project-group-5/solver:<тег>`.

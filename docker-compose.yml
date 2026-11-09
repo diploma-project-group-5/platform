@@ -212,14 +212,164 @@ services:
     # Портів немає: HTTP у воркера немає; стан — HEALTHCHECK образу за файлом-пульсом.
     networks: [lad]
 
+  # --- Сервіси «Лад» (профіль apps) ------------------------------------------------------------
+  # Без профілю make up піднімає лише інфраструктуру, а сервіси запускаються на хості (make dev у
+  # їхніх репозиторіях). make up-apps вмикає профіль apps і перемикає шлюз на ці контейнери.
+  # Поки образів немає в реєстрі, compose збирає їх із сусідніх клонів (../tenant-service тощо).
+
+  # Міграції tenant окремим одноразовим контейнером під роллю tenant_owner (розділ 03), з того самого
+  # образу, що й сервіс. Сервіс стартує лише після успішної міграції.
+  tenant-migrate:
+    profiles: [apps]
+    image: ${TENANT_IMAGE:-lad-tenant-service:local}
+    build: ${TENANT_SRC:-../tenant-service}
+    container_name: lad-tenant-migrate
+    restart: "no"
+    command: ["node", "dist/migrate.js"]
+    environment:
+      MIGRATION_DATABASE_URL: postgres://tenant_owner:${TENANT_OWNER_DB_PASSWORD}@postgres:5432/tenant
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
+    networks: [lad]
+
+  tenant-service:
+    profiles: [apps]
+    image: ${TENANT_IMAGE:-lad-tenant-service:local}
+    build: ${TENANT_SRC:-../tenant-service}
+    container_name: lad-tenant-service
+    restart: unless-stopped
+    environment:
+      HOST: 0.0.0.0
+      PORT: "3001"
+      DATABASE_URL: postgres://tenant_app:${TENANT_APP_DB_PASSWORD}@postgres:5432/tenant
+      RELAY_DATABASE_URL: postgres://tenant_relay:${TENANT_RELAY_DB_PASSWORD}@postgres:5432/tenant
+      MAINT_DATABASE_URL: postgres://tenant_maint:${TENANT_MAINT_DB_PASSWORD}@postgres:5432/tenant
+      # iss у токенах — публічна адреса (як бачить браузер); ключі — внутрішньою мережею.
+      OIDC_ISSUER: ${LAD_PUBLIC_URL:-http://localhost}/idp/realms/lad
+      OIDC_JWKS_URL: http://keycloak:8080/idp/realms/lad/protocol/openid-connect/certs
+      # Admin API Keycloak — напряму, повз шлюз (шлюз закриває /idp/admin).
+      KEYCLOAK_URL: http://keycloak:8080/idp
+      TENANT_CLIENT_SECRET: ${TENANT_CLIENT_SECRET:?задайте TENANT_CLIENT_SECRET у .env}
+      KAFKA_BROKERS: kafka:9092
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+    depends_on:
+      tenant-migrate:
+        condition: service_completed_successfully
+      keycloak:
+        condition: service_healthy
+      kafka-init:
+        condition: service_completed_successfully
+    networks: [lad]
+
+  # Міграції school окремим одноразовим контейнером під роллю school_owner (розділ 03), з того самого
+  # образу, що й сервіс. Сервіс стартує лише після успішної міграції.
+  school-migrate:
+    profiles: [apps]
+    image: ${SCHOOL_IMAGE:-lad-school-service:local}
+    build: ${SCHOOL_SRC:-../school-service}
+    container_name: lad-school-migrate
+    restart: "no"
+    command: ["node", "dist/migrate.js"]
+    environment:
+      MIGRATION_DATABASE_URL: postgres://school_owner:${SCHOOL_OWNER_DB_PASSWORD}@postgres:5432/school
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
+    networks: [lad]
+
+  school-service:
+    profiles: [apps]
+    image: ${SCHOOL_IMAGE:-lad-school-service:local}
+    build: ${SCHOOL_SRC:-../school-service}
+    container_name: lad-school-service
+    restart: unless-stopped
+    environment:
+      HOST: 0.0.0.0
+      PORT: "3002"
+      # /internal/v1 (знімок для timetable) — лише мережа compose; шлюз сюди не веде, порт не публікується.
+      INTERNAL_PORT: "3102"
+      DATABASE_URL: postgres://school_app:${SCHOOL_APP_DB_PASSWORD}@postgres:5432/school
+      RELAY_DATABASE_URL: postgres://school_relay:${SCHOOL_RELAY_DB_PASSWORD}@postgres:5432/school
+      MAINT_DATABASE_URL: postgres://school_maint:${SCHOOL_MAINT_DB_PASSWORD}@postgres:5432/school
+      # iss у токенах — публічна адреса (як бачить браузер); ключі — внутрішньою мережею.
+      OIDC_ISSUER: ${LAD_PUBLIC_URL:-http://localhost}/idp/realms/lad
+      OIDC_JWKS_URL: http://keycloak:8080/idp/realms/lad/protocol/openid-connect/certs
+      KAFKA_BROKERS: kafka:9092
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+    depends_on:
+      school-migrate:
+        condition: service_completed_successfully
+      kafka-init:
+        condition: service_completed_successfully
+    networks: [lad]
+
+  # Міграції timetable окремим одноразовим контейнером під роллю timetable_owner (розділ 03), з того самого
+  # образу, що й сервіс. Сервіс стартує лише після успішної міграції.
+  timetable-migrate:
+    profiles: [apps]
+    image: ${TIMETABLE_IMAGE:-lad-timetable-service:local}
+    build: ${TIMETABLE_SRC:-../timetable-service}
+    container_name: lad-timetable-migrate
+    restart: "no"
+    command: ["node", "dist/migrate.js"]
+    environment:
+      MIGRATION_DATABASE_URL: postgres://timetable_owner:${TIMETABLE_OWNER_DB_PASSWORD}@postgres:5432/timetable
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
+    networks: [lad]
+
+  timetable-service:
+    profiles: [apps]
+    image: ${TIMETABLE_IMAGE:-lad-timetable-service:local}
+    build: ${TIMETABLE_SRC:-../timetable-service}
+    container_name: lad-timetable-service
+    restart: unless-stopped
+    environment:
+      HOST: 0.0.0.0
+      PORT: "3003"
+      DATABASE_URL: postgres://timetable_app:${TIMETABLE_APP_DB_PASSWORD}@postgres:5432/timetable
+      RELAY_DATABASE_URL: postgres://timetable_relay:${TIMETABLE_RELAY_DB_PASSWORD}@postgres:5432/timetable
+      MAINT_DATABASE_URL: postgres://timetable_maint:${TIMETABLE_MAINT_DB_PASSWORD}@postgres:5432/timetable
+      # iss у токенах — публічна адреса (як бачить браузер); ключі — внутрішньою мережею.
+      OIDC_ISSUER: ${LAD_PUBLIC_URL:-http://localhost}/idp/realms/lad
+      OIDC_JWKS_URL: http://keycloak:8080/idp/realms/lad/protocol/openid-connect/certs
+      # Єдиний прямий виклик між сервісами: знімок даних закладу в school (розділ 03).
+      SCHOOL_INTERNAL_URL: http://school-service:3102
+      QR_HMAC_SECRET: ${QR_HMAC_SECRET:?задайте QR_HMAC_SECRET у .env}
+      PUBLIC_URL: ${LAD_PUBLIC_URL:-http://localhost}
+      KAFKA_BROKERS: kafka:9092
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+    depends_on:
+      timetable-migrate:
+        condition: service_completed_successfully
+      school-service:
+        condition: service_healthy
+      kafka-init:
+        condition: service_completed_successfully
+    networks: [lad]
+
   traefik:
     image: traefik:v3.7.17
     container_name: lad-traefik
     restart: unless-stopped
     command: ["--configFile=/etc/traefik/traefik.yml"]
     environment:
-      # Куди шлюз веде запити. За замовчуванням — на сервіси, запущені на хості
-      # (npm run dev). Коли сервіс з'явиться в compose, тут буде http://<сервіс>:8080.
+      # Куди шлюз веде запити. За замовчуванням — на сервіси, запущені на хості (make dev).
+      # make up-apps перемикає tenant, school і timetable на контейнери профілю apps.
       WEB_UPSTREAM: ${WEB_UPSTREAM:-http://host.docker.internal:5173}
       KEYCLOAK_UPSTREAM: ${KEYCLOAK_UPSTREAM:-http://keycloak:8080}
       TENANT_UPSTREAM: ${TENANT_UPSTREAM:-http://host.docker.internal:3001}
