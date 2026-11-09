@@ -29,7 +29,7 @@ make up
 
 PostgreSQL, Kafka і прямий порт Keycloak (8180, для адмін-консолі) слухають лише `127.0.0.1`: ззовні машини вони недоступні.
 
-`db-init` — одноразовий контейнер, який при кожному `make up` створює ролі й бази й завершується. Зараз це Keycloak (`keycloak`) і tenant (`tenant` з ролями `tenant_owner`, `tenant_app`, `tenant_relay`, `tenant_maint`, паролі — `TENANT_*_DB_PASSWORD` у `.env`). Наступний сервіс додається одним рядком `service_database <svc>` у `db-init/init.sh` плюс чотири паролі в `.env.example` і `docker-compose.yml`.
+`db-init` — одноразовий контейнер, який при кожному `make up` створює ролі й бази й завершується. Зараз це Keycloak (`keycloak`) і три бази сервісів — `tenant`, `school`, `timetable`, кожна з ролями `<svc>_owner`, `<svc>_app`, `<svc>_relay`, `<svc>_maint` (паролі — `TENANT_*`, `SCHOOL_*`, `TIMETABLE_*_DB_PASSWORD` у `.env`). Робоча роль одного сервісу до бази іншого не під'єднується. Наступний сервіс додається одним рядком `service_database <svc>` у `db-init/init.sh` плюс чотири паролі в `.env.example` і `docker-compose.yml`.
 
 Автостворення топіків у Kafka вимкнене. Топіки створює `kafka-init` — одноразовий контейнер, як `db-init`. Він бере список з маніфесту `contracts/topics.v1.json` (contracts v0.2.0): 6 топіків по 3 партиції зі строком зберігання 7 днів і до кожного `<топік>.dlq` на 14 днів. Повторний запуск нічого не перестворює, лише повертає строк зберігання до значення з маніфесту. Змінився маніфест у contracts — оновіть список у `kafka-init/init.sh`.
 
@@ -141,7 +141,7 @@ make test
 | `tests/gateway.test.mjs` | маршрути шлюзу без зрізання префікса; адмінка Keycloak закрита разом з відомими обходами; ліміт `/api/v1/public`; заголовки безпеки; закодовані символи й заголовки-аліаси |
 | `tests/keycloak.test.mjs` | вхід і вміст токенів; перший вхід зі зміною пароля; незмінність `school_id`; блокування підбору; права сервісного акаунта tenant-service; адмін-консоль |
 | `tests/realm.test.mjs` | статичні перевірки `lad-realm.json`, без запуску Keycloak |
-| `tests/db-init.sh` | ідемпотентність `db-init` і права ролі `keycloak` |
+| `tests/db-init.sh` | ідемпотентність `db-init`; ролі keycloak, tenant, school, timetable без зайвих прав і власники баз; межа між базами сервісів; `btree_gist` для timetable |
 | `tests/kafka-init.sh` | ідемпотентність `kafka-init`; рівно 6 топіків з маніфесту + 6 `.dlq`; строки зберігання 7 і 14 днів; 3 партиції |
 
 Тести — JavaScript (`node --test`, без залежностей), запускаються в контейнері `node:24`, тож Node на машині не потрібен. Той самий `make test` запускає GitHub Actions на кожен пуш (`.github/workflows/test.yml`).

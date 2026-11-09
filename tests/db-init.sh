@@ -21,29 +21,51 @@ attrs="$(sql "SELECT rolsuper::text || rolbypassrls::text || rolcreatedb::text F
 owner="$(sql "SELECT pg_get_userbyid(datdba) FROM pg_database WHERE datname = 'keycloak'")"
 [ "$owner" = "keycloak" ] && ok "база keycloak належить ролі keycloak" || bad "власник бази keycloak: $owner"
 
-roles="$(sql "SELECT count(*) FROM pg_roles WHERE rolname IN ('tenant_owner','tenant_app','tenant_relay','tenant_maint') AND NOT rolsuper AND NOT rolbypassrls AND NOT rolcreatedb AND NOT rolcreaterole")"
-[ "$roles" = "4" ] && ok "ролі tenant_owner, tenant_app, tenant_relay, tenant_maint без зайвих прав" || bad "ролей tenant без зайвих прав: $roles із 4"
+# Сервіси з базами (розділ 03): ролі без зайвих прав, власник бази, вхід робочої ролі з паролем з .env.
+services="tenant school timetable"
+for svc in $services; do
+  roles="$(sql "SELECT count(*) FROM pg_roles WHERE rolname IN ('${svc}_owner','${svc}_app','${svc}_relay','${svc}_maint') AND NOT rolsuper AND NOT rolbypassrls AND NOT rolcreatedb AND NOT rolcreaterole")"
+  [ "$roles" = "4" ] && ok "ролі ${svc}_owner, _app, _relay, _maint без зайвих прав" || bad "ролей $svc без зайвих прав: $roles із 4"
 
-owner="$(sql "SELECT pg_get_userbyid(datdba) FROM pg_database WHERE datname = 'tenant'")"
-[ "$owner" = "tenant_owner" ] && ok "база tenant належить ролі tenant_owner" || bad "власник бази tenant: $owner"
+  owner="$(sql "SELECT pg_get_userbyid(datdba) FROM pg_database WHERE datname = '$svc'")"
+  [ "$owner" = "${svc}_owner" ] && ok "база $svc належить ролі ${svc}_owner" || bad "власник бази $svc: $owner"
 
-if $dc exec -T -e PGPASSWORD="$TENANT_APP_DB_PASSWORD" postgres psql -h 127.0.0.1 -U tenant_app -d tenant -c "SELECT 1" >/dev/null 2>&1; then
-  ok "tenant_app під'єднується до бази tenant з паролем з .env"
+  var="$(printf '%s' "$svc" | tr '[:lower:]' '[:upper:]')_APP_DB_PASSWORD"
+  if $dc exec -T -e PGPASSWORD="${!var}" postgres psql -h 127.0.0.1 -U "${svc}_app" -d "$svc" -c "SELECT 1" >/dev/null 2>&1; then
+    ok "${svc}_app під'єднується до бази $svc з паролем з .env"
+  else
+    bad "${svc}_app не під'єднується до бази $svc"
+  fi
+done
+
+# Межу між сервісами тримає СУБД: робоча роль одного сервісу не під'єднується до бази іншого.
+if $dc exec -T -e PGPASSWORD="$SCHOOL_APP_DB_PASSWORD" postgres psql -h 127.0.0.1 -U school_app -d timetable -c "SELECT 1" >/dev/null 2>&1; then
+  bad "school_app під'єднується до бази timetable"
 else
-  bad "tenant_app не під'єднується до бази tenant"
+  ok "school_app не під'єднується до бази timetable"
+fi
+if $dc exec -T -e PGPASSWORD="$TIMETABLE_APP_DB_PASSWORD" postgres psql -h 127.0.0.1 -U timetable_app -d tenant -c "SELECT 1" >/dev/null 2>&1; then
+  bad "timetable_app під'єднується до бази tenant"
+else
+  ok "timetable_app не під'єднується до бази tenant"
+fi
+
+# Міграції timetable створюють btree_gist (EXCLUDE для активацій). Це довірене розширення:
+# власник бази створює його без суперкористувача.
+if $dc exec -T -e PGPASSWORD="$TIMETABLE_OWNER_DB_PASSWORD" postgres psql -h 127.0.0.1 -U timetable_owner -d timetable -v ON_ERROR_STOP=1 -c "CREATE EXTENSION IF NOT EXISTS btree_gist" >/dev/null 2>&1; then
+  ok "timetable_owner створює розширення btree_gist у своїй базі"
+else
+  bad "timetable_owner не може створити btree_gist"
 fi
 
 sql "SET client_min_messages = warning; DROP ROLE IF EXISTS lad_probe; CREATE ROLE lad_probe LOGIN PASSWORD 'probe-pass-123'" >/dev/null
-if $dc exec -T -e PGPASSWORD=probe-pass-123 postgres psql -h 127.0.0.1 -U lad_probe -d keycloak -c "SELECT 1" >/dev/null 2>&1; then
-  bad "стороння роль під'єднується до бази keycloak"
-else
-  ok "стороння роль не під'єднується до бази keycloak"
-fi
-if $dc exec -T -e PGPASSWORD=probe-pass-123 postgres psql -h 127.0.0.1 -U lad_probe -d tenant -c "SELECT 1" >/dev/null 2>&1; then
-  bad "стороння роль під'єднується до бази tenant"
-else
-  ok "стороння роль не під'єднується до бази tenant"
-fi
+for db in keycloak $services; do
+  if $dc exec -T -e PGPASSWORD=probe-pass-123 postgres psql -h 127.0.0.1 -U lad_probe -d "$db" -c "SELECT 1" >/dev/null 2>&1; then
+    bad "стороння роль під'єднується до бази $db"
+  else
+    ok "стороння роль не під'єднується до бази $db"
+  fi
+done
 sql "DROP ROLE lad_probe" >/dev/null
 
 echo "ℹ db-init: пройдено $pass, не пройдено $fail"
