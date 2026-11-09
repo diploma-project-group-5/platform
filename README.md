@@ -25,12 +25,27 @@ make up
 | Kafka 4.3.2 (KRaft, один вузол) | `lad-kafka` | `localhost:29092` | `kafka:9092` |
 | Traefik v3.7.17 | `lad-traefik` | `http://localhost` | — |
 | Keycloak 26.8.1 | `lad-keycloak` | `http://localhost/idp` (через шлюз) | `keycloak:8080/idp` |
+| solver (профіль `solver`) | `lad-solver` | — | — (лише Kafka) |
 
 PostgreSQL, Kafka і прямий порт Keycloak (8180, для адмін-консолі) слухають лише `127.0.0.1`: ззовні машини вони недоступні.
 
 `db-init` — одноразовий контейнер, який при кожному `make up` створює ролі й бази й завершується. Зараз це Keycloak (`keycloak`) і tenant (`tenant` з ролями `tenant_owner`, `tenant_app`, `tenant_relay`, `tenant_maint`, паролі — `TENANT_*_DB_PASSWORD` у `.env`). Наступний сервіс додається одним рядком `service_database <svc>` у `db-init/init.sh` плюс чотири паролі в `.env.example` і `docker-compose.yml`.
 
-Автостворення топіків у Kafka вимкнене: топіки створює `kafka-init` (окрема картка).
+Автостворення топіків у Kafka вимкнене. Топіки створює `kafka-init` — одноразовий контейнер, як `db-init`. Він бере список з маніфесту `contracts/topics.v1.json` (contracts v0.2.0): 6 топіків по 3 партиції зі строком зберігання 7 днів і до кожного `<топік>.dlq` на 14 днів. Повторний запуск нічого не перестворює, лише повертає строк зберігання до значення з маніфесту. Змінився маніфест у contracts — оновіть список у `kafka-init/init.sh`.
+
+### solver
+
+Kafka-воркер CP-SAT (`lad-solver`) вмикається профілем: `COMPOSE_PROFILES=solver` у `.env`, далі звичайний `make up`. Поки образу немає в реєстрі, compose збирає `lad-solver:local` з клону репо solver поруч (`SOLVER_SRC=../solver`). Коли образ з'явиться в GHCR — `SOLVER_IMAGE=ghcr.io/diploma-project-group-5/solver:<тег>`.
+
+| Параметр | Значення | Чому |
+|---|---|---|
+| `cpus` | 1.5 | ВМ має 2 vCPU; ~0.5 CPU лишається API, Kafka і PostgreSQL |
+| `SOLVER_NUM_WORKERS` | 2 | 2 потоки CP-SAT на 1.5 CPU дають найкращу якість за замірами |
+| `mem_limit` | 768m | пік 222 МБ на закладі з 45 класів; CP-SAT обмежено 512 МБ |
+| `stop_grace_period` | 30s | на SIGTERM solver публікує найкращий розв'язок і виходить з кодом 0 |
+| `SOLVER_STALL_MIN_S` | 0 (вимкнено) | рання зупинка; ставити 8, коли timetable прийматиме `stop_reason: "no_improvement"` |
+
+Портів у solver немає; стан — healthcheck образу за файлом-пульсом. Повний опис змінних — у README репо solver.
 
 ## Keycloak
 
@@ -127,6 +142,7 @@ make test
 | `tests/keycloak.test.mjs` | вхід і вміст токенів; перший вхід зі зміною пароля; незмінність `school_id`; блокування підбору; права сервісного акаунта tenant-service; адмін-консоль |
 | `tests/realm.test.mjs` | статичні перевірки `lad-realm.json`, без запуску Keycloak |
 | `tests/db-init.sh` | ідемпотентність `db-init` і права ролі `keycloak` |
+| `tests/kafka-init.sh` | ідемпотентність `kafka-init`; рівно 6 топіків з маніфесту + 6 `.dlq`; строки зберігання 7 і 14 днів; 3 партиції |
 
 Тести — JavaScript (`node --test`, без залежностей), запускаються в контейнері `node:24`, тож Node на машині не потрібен. Той самий `make test` запускає GitHub Actions на кожен пуш (`.github/workflows/test.yml`).
 

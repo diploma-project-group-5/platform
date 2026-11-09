@@ -134,6 +134,76 @@ services:
       start_period: 30s
     networks: [lad]
 
+  # Одноразовий контейнер: створює топіки й <топік>.dlq (kafka-init/init.sh) і завершується.
+  # Запускається при кожному make up, скрипт ідемпотентний.
+  kafka-init:
+    image: apache/kafka:4.3.2
+    container_name: lad-kafka-init
+    restart: "no"
+    entrypoint: ["bash", "/kafka-init/init.sh"]
+    environment:
+      KAFKA_BOOTSTRAP: kafka:9092
+    volumes:
+      - ./kafka-init:/kafka-init:ro
+    depends_on:
+      kafka:
+        condition: service_healthy
+    networks: [lad]
+
+  # Kafka-воркер CP-SAT (репо solver; фрагмент — solver/deploy/compose.solver.yml).
+  # Вмикається профілем: COMPOSE_PROFILES=solver у .env. Поки образу немає в реєстрі,
+  # compose збирає його з сусідньої папки ../solver (SOLVER_SRC).
+  solver:
+    profiles: [solver]
+    image: ${SOLVER_IMAGE:-lad-solver:local}
+    build: ${SOLVER_SRC:-../solver}
+    container_name: lad-solver
+    command: ["worker"]
+    init: true                    # SIGTERM доходить до воркера; зомбі-процеси прибираються
+    restart: unless-stopped       # exit 1 (фатальна помилка Kafka, сторож) -> перезапуск
+    stop_grace_period: 30s        # SIGTERM -> зупинка CP-SAT -> публікація найкращого розв'язку -> exit 0
+    # ВМ має 2 vCPU: Docker не дає більше, ніж є на хості, а ~0.5 CPU лишається API, Kafka
+    # і PostgreSQL. 2 потоки CP-SAT на 1.5 CPU — найкраща якість за замірами (ADR solver 2026-11-08).
+    cpus: 1.5
+    # Пік — 222 МБ на закладі з 45 класів. CP-SAT обмежено SOLVER_MAX_MEMORY_MB (~0.7 x mem_limit):
+    # на межі він віддає найкращий розв'язок, а не падає через OOM.
+    mem_limit: 768m
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      SOLVER_GROUP_ID: lad-solver
+      SOLVER_BUILD_TOPIC: solve.build.requested
+      SOLVER_STATUS_TOPIC: solve.status
+      SOLVER_BUILD_DLQ_TOPIC: solve.build.requested.dlq
+      SOLVER_MIN_TIME_LIMIT_S: "10"
+      SOLVER_MAX_TIME_LIMIT_S: "180"
+      SOLVER_NUM_WORKERS: "2"
+      SOLVER_SEED: "0"
+      SOLVER_STOP_GRACE_S: "20"         # < stop_grace_period: лишає час опублікувати й закритися
+      SOLVER_STOP_FLUSH_TIMEOUT_S: "4"
+      SOLVER_SHUTDOWN_BUDGET_S: "29"    # grace + 2 x flush + 1 с; < stop_grace_period
+      SOLVER_MAX_MEMORY_MB: "512"
+      SOLVER_WATCHDOG_MARGIN_S: "60"
+      # Рання зупинка без покращення: 0 — вимкнено. Ставити 8, коли timetable-service
+      # прийматиме stop_reason "no_improvement" (contracts v0.2.0).
+      SOLVER_STALL_MIN_S: ${SOLVER_STALL_MIN_S:-0}
+      SOLVER_STALL_RATIO: "1.0"
+      SOLVER_HEARTBEAT_FILE: /tmp/lad-solver.alive
+      KAFKA_MAX_POLL_INTERVAL_MS: "300000"  # > (макс. ліміт 180 с + запас сторожа 60 с) x 1000
+      KAFKA_SESSION_TIMEOUT_MS: "10000"
+      KAFKA_HEARTBEAT_INTERVAL_MS: "3000"
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+    depends_on:
+      kafka:
+        condition: service_healthy
+      kafka-init:
+        condition: service_completed_successfully
+    # Портів немає: HTTP у воркера немає; стан — HEALTHCHECK образу за файлом-пульсом.
+    networks: [lad]
+
   traefik:
     image: traefik:v3.7.17
     container_name: lad-traefik

@@ -1,7 +1,7 @@
 COMPOSE := docker compose
 # Окремий тестовий стенд: свій проєкт, томи й мережа; порти назовні не відкриваються.
 TEST := docker compose -p lad-test -f docker-compose.yml -f docker-compose.test.yml
-TEST_SERVICES := postgres db-init keycloak traefik web-stub tenant-stub school-stub timetable-stub
+TEST_SERVICES := postgres db-init kafka kafka-init keycloak traefik web-stub tenant-stub school-stub timetable-stub
 
 .DEFAULT_GOAL := help
 .PHONY: help env up down restart ps logs config psql kafka-topics token kc-reset reset test test-down
@@ -60,6 +60,7 @@ test: .env ## Усі тести platform на окремому стенді lad-
 	echo "▶ Піднімаю стенд lad-test (перший раз — до 2 хв)…"; \
 	$(TEST) up -d --wait --quiet-pull $(TEST_SERVICES); \
 	bash tests/db-init.sh "$(TEST)"; \
+	bash tests/kafka-init.sh "$(TEST)"; \
 	$(TEST) run --rm tests
 
 test-down: ## Прибрати стенд lad-test, якщо make test перервали
