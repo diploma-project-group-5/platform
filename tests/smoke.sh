@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+# Наскрізна перевірка стенду після make up-apps (не входить у make test: CI не має клонів сервісів).
+# Шлюз → сервіси в контейнерах → Keycloak → PostgreSQL → Kafka → school-service.
+set -euo pipefail
+set -a; . ./.env; set +a
+base="${LAD_PUBLIC_URL:-http://localhost}"
+pass=0; fail=0
+ok()  { echo "  ✔ $1"; pass=$((pass + 1)); }
+bad() { echo "  ✖ $1"; fail=$((fail + 1)); }
+
+echo "▶ smoke: стенд із сервісами в контейнерах"
+
+# docker inspect для неіснуючого контейнера друкує порожній рядок, тож порожнє значення — «немає».
+inspect() { docker inspect -f "$1" "$2" 2>/dev/null | tr -d '\n' || true; }
+for c in lad-tenant-service lad-school-service lad-timetable-service; do
+  state="$(inspect '{{.State.Health.Status}}' "$c")"
+  [ "$state" = "healthy" ] && ok "$c: healthy" || bad "$c: ${state:-немає контейнера} (make up-apps пройшов?)"
+done
+for c in lad-tenant-migrate lad-school-migrate lad-timetable-migrate; do
+  code="$(inspect '{{.State.ExitCode}}' "$c")"
+  [ "$code" = "0" ] && ok "$c: міграції застосовано (exit 0)" || bad "$c: ${code:+exit $code}${code:-немає контейнера}"
+done
+# Без контейнерів сервісів решта перевірок лише повторить ту саму причину.
+if [ "$fail" -gt 0 ]; then echo "ℹ smoke: пройдено $pass, не пройдено $fail — спершу make up-apps"; exit 1; fi
+
+# Без токена кожен сервіс відповідає сам 401. 502 чи 404 означали б, що шлюз до нього не дійшов.
+for svc in tenant/schools school/classes timetable/timetables; do
+  code="$(curl -s -o /dev/null -w '%{http_code}' "$base/api/v1/$svc")"
+  [ "$code" = "401" ] && ok "шлюз → $svc: 401 без токена (відповів сервіс)" || bad "шлюз → $svc: $code замість 401"
+done
+
+token="$(bash scripts/token.sh sysadmin "$SYSADMIN_PASSWORD" "$base")"
+login="smoke-$(date +%s)"
+resp="$(curl -s -X POST "$base/api/v1/tenant/schools" -H "Authorization: Bearer $token" \
+  -H 'Content-Type: application/json' -d "{\"name\":\"Smoke $login\",\"login\":\"$login\"}")"
+school_id="$(printf '%s' "$resp" | sed -n 's/.*"school_id":"\([0-9a-f-]*\)".*/\1/p')"
+if [ -n "$school_id" ]; then ok "реєстрація закладу через шлюз: school_id $school_id"; else bad "реєстрація не вдалася: $resp"; fi
+
+if [ -n "$school_id" ]; then
+  found=""
+  for _ in $(seq 1 30); do
+    found="$(docker exec lad-postgres psql -U "${POSTGRES_SUPERUSER:-postgres}" -d school -tAc \
+      "select name from school_profile where school_id = '$school_id'")"
+    [ -n "$found" ] && break
+    sleep 0.5
+  done
+  [ "$found" = "Smoke $login" ] && ok "school-service отримав school.registered і створив профіль" \
+    || bad "профілю $school_id у school немає за 15 с (relay tenant → Kafka → school?)"
+fi
+
+echo "ℹ smoke: пройдено $pass, не пройдено $fail"
+[ "$fail" -eq 0 ]

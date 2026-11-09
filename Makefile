@@ -4,7 +4,7 @@ TEST := docker compose -p lad-test -f docker-compose.yml -f docker-compose.test.
 TEST_SERVICES := postgres db-init kafka kafka-init keycloak traefik web-stub tenant-stub school-stub timetable-stub
 
 .DEFAULT_GOAL := help
-.PHONY: help env up down restart ps logs config psql kafka-topics token kc-reset reset test test-down
+.PHONY: help env up up-apps down down-apps smoke restart ps logs config psql kafka-topics token kc-reset reset test test-down
 
 help: ## Список команд
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
@@ -18,8 +18,21 @@ env: ## Створити .env або дописати змінні, яких б�
 up: .env ## Підняти інфраструктуру й дочекатися, поки всі healthcheck зелені
 	$(COMPOSE) up -d --wait
 
+# Шлюз веде на контейнери сервісів замість сервісів на хості (make dev). Змінні оболонки
+# мають пріоритет над .env, тож .env для розробки на хості лишається без змін.
+APPS_UPSTREAMS := TENANT_UPSTREAM=http://tenant-service:3001 SCHOOL_UPSTREAM=http://school-service:3002 TIMETABLE_UPSTREAM=http://timetable-service:3003
+
+up-apps: .env ## Підняти все разом із tenant, school і timetable у контейнерах (збирає образи з ../<сервіс>)
+	$(APPS_UPSTREAMS) $(COMPOSE) --profile apps up -d --wait --build
+
 down: ## Зупинити контейнери (дані в томах лишаються)
 	$(COMPOSE) down
+
+down-apps: ## Зупинити все, включно з контейнерами сервісів і solver (дані в томах лишаються)
+	$(COMPOSE) --profile apps --profile solver down
+
+smoke: .env ## Наскрізна перевірка після make up-apps: шлюз, сервіси, реєстрація закладу доходить до school
+	@bash tests/smoke.sh
 
 restart: .env ## Перезапустити все або один сервіс: make restart s=traefik
 	$(COMPOSE) restart $(s)
