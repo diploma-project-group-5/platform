@@ -51,7 +51,9 @@ ensure_role keycloak "$KEYCLOAK_DB_PASSWORD"
 ensure_database keycloak keycloak
 
 # --- Сервіси ---
-# school і timetable додаються сюди одним рядком кожен, разом з паролями в .env і docker-compose.yml.
+# Новий сервіс — один рядок тут плюс чотири паролі в .env.example і docker-compose.yml.
 service_database tenant
+service_database school
+service_database timetable
 
 echo "db-init: OK"
