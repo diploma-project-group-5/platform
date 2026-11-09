@@ -12,7 +12,7 @@ echo "▶ smoke: стенд із сервісами в контейнерах"
 
 # docker inspect для неіснуючого контейнера друкує порожній рядок, тож порожнє значення — «немає».
 inspect() { docker inspect -f "$1" "$2" 2>/dev/null | tr -d '\n' || true; }
-for c in lad-tenant-service lad-school-service lad-timetable-service; do
+for c in lad-web lad-tenant-service lad-school-service lad-timetable-service; do
   state="$(inspect '{{.State.Health.Status}}' "$c")"
   [ "$state" = "healthy" ] && ok "$c: healthy" || bad "$c: ${state:-немає контейнера} (make up-apps пройшов?)"
 done
@@ -22,6 +22,12 @@ for c in lad-tenant-migrate lad-school-migrate lad-timetable-migrate; do
 done
 # Без контейнерів сервісів решта перевірок лише повторить ту саму причину.
 if [ "$fail" -gt 0 ]; then echo "ℹ smoke: пройдено $pass, не пройдено $fail — спершу make up-apps"; exit 1; fi
+
+# web: сторінка застосунку через шлюз; шляхи SPA (/c — сторінка за QR) теж віддають index.html.
+for path in / /c; do
+  page="$(curl -s "$base$path")"
+  case "$page" in *'id="root"'*) ok "шлюз → web $path: сторінка застосунку";; *) bad "шлюз → web $path: не index.html";; esac
+done
 
 # Без токена кожен сервіс відповідає сам 401. 502 чи 404 означали б, що шлюз до нього не дійшов.
 for svc in tenant/schools school/classes timetable/timetables; do

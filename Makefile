@@ -20,9 +20,9 @@ up: .env ## Підняти інфраструктуру й дочекатися,
 
 # Шлюз веде на контейнери сервісів замість сервісів на хості (make dev). Змінні оболонки
 # мають пріоритет над .env, тож .env для розробки на хості лишається без змін.
-APPS_UPSTREAMS := TENANT_UPSTREAM=http://tenant-service:3001 SCHOOL_UPSTREAM=http://school-service:3002 TIMETABLE_UPSTREAM=http://timetable-service:3003
+APPS_UPSTREAMS := WEB_UPSTREAM=http://web:8080 TENANT_UPSTREAM=http://tenant-service:3001 SCHOOL_UPSTREAM=http://school-service:3002 TIMETABLE_UPSTREAM=http://timetable-service:3003
 
-up-apps: .env ## Підняти все разом із tenant, school і timetable у контейнерах (збирає образи з ../<сервіс>)
+up-apps: .env ## Підняти все разом із web, tenant, school і timetable у контейнерах (збирає образи з сусідніх папок)
 	$(APPS_UPSTREAMS) $(COMPOSE) --profile apps up -d --wait --build
 
 down: ## Зупинити контейнери (дані в томах лишаються)

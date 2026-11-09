@@ -38,12 +38,12 @@ PostgreSQL, Kafka і прямий порт Keycloak (8180, для адмін-к�
 Для розробки сервіси запускаються на хості (`make dev` у їхніх репозиторіях), а `make up` піднімає лише інфраструктуру. Щоб підняти систему цілком, як на ВМ:
 
 ```bash
-make up-apps   # збирає образи з ../tenant-service, ../school-service, ../timetable-service і піднімає все
+make up-apps   # збирає образи з ../frontend, ../tenant-service, ../school-service, ../timetable-service і піднімає все
 make smoke     # шлюз → сервіси → Keycloak → PostgreSQL → Kafka: реєстрація закладу доходить до school
 make down-apps # зупинити все, включно з контейнерами сервісів
 ```
 
-Перед кожним сервісом окремий одноразовий контейнер `<svc>-migrate` застосовує міграції під роллю `<svc>_owner`; сервіс стартує лише після нього. `make up-apps` сам перемикає шлюз на контейнери, `.env` для розробки на хості не змінюється. Порт `/internal/v1` school-service (3102) доступний лише в мережі compose. Коли образи з'являться в реєстрі — `TENANT_IMAGE`, `SCHOOL_IMAGE`, `TIMETABLE_IMAGE` у `.env`.
+Перед кожним сервісом окремий одноразовий контейнер `<svc>-migrate` застосовує міграції під роллю `<svc>_owner`; сервіс стартує лише після нього. `make up-apps` сам перемикає шлюз на контейнери (web — nginx зі статикою з репо frontend), `.env` для розробки на хості не змінюється. Порт `/internal/v1` school-service (3102) доступний лише в мережі compose. Коли образи з'являться в реєстрі — `WEB_IMAGE`, `TENANT_IMAGE`, `SCHOOL_IMAGE`, `TIMETABLE_IMAGE` у `.env`.
 
 ### solver
 
