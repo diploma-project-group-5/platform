@@ -109,6 +109,11 @@ curl -H "Authorization: Bearer $(make -s token)" http://localhost/api/v1/school/
 
 Локально: `http://localhost:8180/idp/admin`, логін `admin`, пароль `KC_ADMIN_PASSWORD`. Через шлюз (`http://localhost/idp/admin`) консоль закрита навмисно. На ВМ — через SSH-тунель: `ssh -L 8180:127.0.0.1:8180 <ВМ>`, потім та сама адреса.
 
+
+### Тема входу «Лад»
+
+Сторінка входу, зміна тимчасового пароля й сторінки помилок мають вигляд прототипу: власна тема `keycloak/themes/lad` (шаблони FreeMarker, стилі з дизайн-токенами frontend, шрифт Onest локально). Поле — «Логін», бо пошту система не зберігає; скидання пароля — через адміністратора. Тема записана в realm (`"loginTheme": "lad"`) для чистих установок. У Keycloak, що вже працює, її вмикає `make kc-theme` без `make kc-reset` — користувачі лишаються. Після зміни файлів теми — `make restart s=keycloak`.
+
 ## Маршрути шлюзу
 
 | Шлях | Куди | Примітка |
@@ -152,7 +157,7 @@ make test
 |---|---|
 | `tests/gateway.test.mjs` | маршрути шлюзу без зрізання префікса; адмінка Keycloak закрита разом з відомими обходами; ліміт `/api/v1/public`; заголовки безпеки; закодовані символи й заголовки-аліаси |
 | `tests/keycloak.test.mjs` | вхід і вміст токенів; перший вхід зі зміною пароля; незмінність `school_id`; блокування підбору; права сервісного акаунта tenant-service; адмін-консоль |
-| `tests/realm.test.mjs` | статичні перевірки `lad-realm.json`, без запуску Keycloak |
+| `tests/realm.test.mjs` | статичні перевірки `lad-realm.json` і файлів теми входу, без запуску Keycloak |
 | `tests/db-init.sh` | ідемпотентність `db-init`; ролі keycloak, tenant, school, timetable без зайвих прав і власники баз; межа між базами сервісів; `btree_gist` для timetable |
 | `tests/kafka-init.sh` | ідемпотентність `kafka-init`; рівно 6 топіків з маніфесту + 6 `.dlq`; строки зберігання 7 і 14 днів; 3 партиції |
 

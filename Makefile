@@ -4,7 +4,7 @@ TEST := docker compose -p lad-test -f docker-compose.yml -f docker-compose.test.
 TEST_SERVICES := postgres db-init kafka kafka-init keycloak traefik web-stub tenant-stub school-stub timetable-stub
 
 .DEFAULT_GOAL := help
-.PHONY: help env up up-apps down down-apps smoke restart ps logs config psql kafka-topics token kc-reset reset test test-down
+.PHONY: help env up up-apps down down-apps smoke kc-theme restart ps logs config psql kafka-topics token kc-reset reset test test-down
 
 help: ## Список команд
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
@@ -54,6 +54,12 @@ kafka-topics: ## Список топіків Kafka
 
 token: .env ## Access-токен: make token (демо-укладач) або make token u=sysadmin p=<пароль>
 	@set -a; . ./.env; set +a; bash scripts/token.sh "$(or $(u),demo)" "$(or $(p),$$DEMO_SCHEDULER_PASSWORD)" "$$LAD_PUBLIC_URL"
+
+kc-theme: .env ## Увімкнути тему входу «Лад» у вже працюючому Keycloak без перестворення realm (користувачі лишаються)
+	$(COMPOSE) exec -T keycloak bash -c '/opt/keycloak/bin/kcadm.sh config credentials --config /tmp/kcadm.config \
+	  --server http://localhost:8080/idp --realm master --user admin --password "$$KC_BOOTSTRAP_ADMIN_PASSWORD" >/dev/null \
+	  && /opt/keycloak/bin/kcadm.sh update realms/lad --config /tmp/kcadm.config -s loginTheme=lad \
+	  && echo "▶ тема входу lad увімкнена"'
 
 kc-reset: .env ## Перестворити realm lad з keycloak/realm/lad-realm.json (ВИДАЛЯЄ користувачів Keycloak)
 	@read -p "Видалити базу Keycloak і заново імпортувати realm lad? [y/N] " a; [ "$$a" = "y" ] || { echo "Скасовано"; exit 1; }

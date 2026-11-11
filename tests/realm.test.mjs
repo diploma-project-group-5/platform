@@ -1,7 +1,7 @@
 // Статичні перевірки файлу realm (картка #18): швидко ловлять небезпечну правку ще до запуску Keycloak.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 
 const realm = JSON.parse(readFileSync(new URL('../keycloak/realm/lad-realm.json', import.meta.url), 'utf8'));
 const client = (id) => realm.clients.find((c) => c.clientId === id);
@@ -60,4 +60,18 @@ test('у файлі немає паролів і секретів — лише �
     ...realm.users.flatMap((u) => (u.credentials ?? []).map((c) => c.value)),
   ];
   for (const s of secrets) assert.match(s, /^\$\{[A-Z_]+\}$/);
+});
+
+test('тема входу lad: увімкнена в realm, файли теми на місці, поле «Логін», без пошти', () => {
+  assert.equal(realm.loginTheme, 'lad');
+  const theme = (f) => new URL(`../keycloak/themes/lad/login/${f}`, import.meta.url);
+  for (const f of ['theme.properties', 'template.ftl', 'login.ftl', 'resources/css/lad.css', 'messages/messages_uk.properties']) {
+    assert.ok(existsSync(theme(f)), `немає ${f}`);
+  }
+  const uk = readFileSync(theme('messages/messages_uk.properties'), 'utf8');
+  assert.match(uk, /^ladUsername=Логін$/m);
+  const login = readFileSync(theme('login.ftl'), 'utf8');
+  assert.doesNotMatch(login, /type="email"/);
+  // Сторонніх запитів зі сторінки входу немає: шрифт і стилі — лише файли теми.
+  assert.doesNotMatch(readFileSync(theme('resources/css/lad.css'), 'utf8'), /https?:\/\//);
 });

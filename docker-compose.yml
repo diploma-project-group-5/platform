@@ -90,6 +90,8 @@ services:
       - "127.0.0.1:${KC_ADMIN_PORT:-8180}:8080"
     volumes:
       - ./keycloak/realm:/opt/keycloak/data/import:ro
+      # Тема входу «Лад» (картка #75). Змінили файли теми — make restart s=keycloak (тема кешується).
+      - ./keycloak/themes/lad:/opt/keycloak/themes/lad:ro
     healthcheck:
       # Готовність — за HTTP-кодом (200/503), а не за текстом: «UP» є й у вкладених перевірках.
       # Чистий bash: /dev/tcp, printf, read і [[ ]] вбудовані; curl, head, grep в образі Keycloak може не бути.
