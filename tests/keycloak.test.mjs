@@ -67,6 +67,22 @@ describe('вхід і токени', () => {
     const html = await (await fetch(url)).text();
     assert.match(html, /<html[^>]*lang="uk"/);
   });
+
+  test('сторінка входу в темі «Лад»: картка, поле «Логін», кнопка «Увійти», підказки', async () => {
+    const url = `${oidc(`${env.gateway}/idp`)}/auth?client_id=web&response_type=code&scope=openid` +
+      `&redirect_uri=${encodeURIComponent(`${env.publicUrl}/cb`)}&code_challenge=${'a'.repeat(43)}&code_challenge_method=S256`;
+    const html = await (await fetch(url, { headers: { 'accept-language': 'uk' } })).text();
+    assert.match(html, /class="lad-card"/);
+    assert.match(html, /<form id="kc-form-login"[^>]*action="/);
+    assert.match(html, /<span>Логін<\/span>/);
+    assert.match(html, />Увійти</);
+    assert.match(html, /Зверніться до адміністратора системи/);
+    assert.match(html, /за QR-кодом/);
+    // Стилі теми віддаються через шлюз
+    const css = html.match(/href="([^"]+\/lad\.css)"/)?.[1];
+    assert.ok(css, 'немає посилання на lad.css');
+    assert.equal((await fetch(new URL(css, env.gateway))).status, 200);
+  });
 });
 
 describe('перший вхід з тимчасовим паролем', () => {
