@@ -1,0 +1,3050 @@
+{
+  "source": {
+    "generator": "lad-solver generate --classes 30 --shelter-ratio 0.55 --seed 0",
+    "problem": "seed/solver-problem.json",
+    "uuid_namespace": "2f6b1c7e-4d0a-4c55-9a3e-6e1d8b7f0c21"
+  },
+  "profile": {
+    "name": "Ліцей № 17",
+    "lessons_per_day": 7,
+    "saturday": false,
+    "shelter_capacity": 512,
+    "non_teaching_staff": 74,
+    "shelter_seats": 461
+  },
+  "bells": [
+    {
+      "lesson_no": 1,
+      "starts_at": "08:30",
+      "ends_at": "09:15"
+    },
+    {
+      "lesson_no": 2,
+      "starts_at": "09:25",
+      "ends_at": "10:10"
+    },
+    {
+      "lesson_no": 3,
+      "starts_at": "10:30",
+      "ends_at": "11:15"
+    },
+    {
+      "lesson_no": 4,
+      "starts_at": "11:35",
+      "ends_at": "12:20"
+    },
+    {
+      "lesson_no": 5,
+      "starts_at": "12:30",
+      "ends_at": "13:15"
+    },
+    {
+      "lesson_no": 6,
+      "starts_at": "13:25",
+      "ends_at": "14:10"
+    },
+    {
+      "lesson_no": 7,
+      "starts_at": "14:20",
+      "ends_at": "15:05"
+    }
+  ],
+  "holidays": {
+    "from": "2026-12-25",
+    "to": "2027-01-11"
+  },
+  "classes": [
+    {
+      "class_id": "44a0e811-e149-52c2-9456-aee7de4f31ce",
+      "source_id": "c01-a",
+      "name": "1-А",
+      "students": 26,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "2a41876d-bfd1-509d-b0cc-075476bdb96b",
+      "source_id": "c01-b",
+      "name": "1-Б",
+      "students": 26,
+      "in_person_priority": true
+    },
+    {
+      "class_id": "4b58eb75-c8c9-525e-b11a-66081f6c43c9",
+      "source_id": "c01-c",
+      "name": "1-В",
+      "students": 28,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "d026f74a-737b-581a-8f79-86472b25d759",
+      "source_id": "c02-a",
+      "name": "2-А",
+      "students": 32,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "001b1a08-ca84-5b77-bae2-dadf68efe749",
+      "source_id": "c02-b",
+      "name": "2-Б",
+      "students": 27,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "b040b342-9cc5-5a59-bb96-d3eafe3c08d4",
+      "source_id": "c02-c",
+      "name": "2-В",
+      "students": 23,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "b1ce6ffa-1f1a-5be5-85ea-44086060fa45",
+      "source_id": "c03-a",
+      "name": "3-А",
+      "students": 24,
+      "in_person_priority": true
+    },
+    {
+      "class_id": "6347bb81-0c55-5679-b4c2-fbc558c40bdf",
+      "source_id": "c03-b",
+      "name": "3-Б",
+      "students": 21,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "368785ca-6d24-5567-a15f-3f731d39fc34",
+      "source_id": "c03-c",
+      "name": "3-В",
+      "students": 24,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "f0339073-d826-55ba-946b-3cd27dc441a9",
+      "source_id": "c04-a",
+      "name": "4-А",
+      "students": 28,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "800a69a5-e858-56a2-9f6e-18813e0702da",
+      "source_id": "c04-b",
+      "name": "4-Б",
+      "students": 32,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "58916228-206b-5949-9100-bdb1d86794c2",
+      "source_id": "c05-a",
+      "name": "5-А",
+      "students": 22,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "1c68faad-f608-5af1-920e-4e51d9aeb7ee",
+      "source_id": "c05-b",
+      "name": "5-Б",
+      "students": 31,
+      "in_person_priority": true
+    },
+    {
+      "class_id": "47bf5611-5c9c-5fd9-8c85-04f3547d4694",
+      "source_id": "c05-c",
+      "name": "5-В",
+      "students": 30,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "719bc7a5-96d5-5e10-ba21-3892f0120c74",
+      "source_id": "c06-a",
+      "name": "6-А",
+      "students": 28,
+      "in_person_priority": true
+    },
+    {
+      "class_id": "181d1bd6-0c99-5ef4-9706-264574bcce98",
+      "source_id": "c06-b",
+      "name": "6-Б",
+      "students": 26,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "b4eee47d-f628-5073-84f4-cea58a980fc3",
+      "source_id": "c06-c",
+      "name": "6-В",
+      "students": 30,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "source_id": "c07-a",
+      "name": "7-А",
+      "students": 28,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "source_id": "c07-b",
+      "name": "7-Б",
+      "students": 28,
+      "in_person_priority": true
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "source_id": "c07-c",
+      "name": "7-В",
+      "students": 32,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "source_id": "c08-a",
+      "name": "8-А",
+      "students": 20,
+      "in_person_priority": true
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "source_id": "c08-b",
+      "name": "8-Б",
+      "students": 26,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "source_id": "c09-a",
+      "name": "9-А",
+      "students": 32,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "source_id": "c09-b",
+      "name": "9-Б",
+      "students": 20,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "source_id": "c09-c",
+      "name": "9-В",
+      "students": 25,
+      "in_person_priority": true
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "source_id": "c10-a",
+      "name": "10-А",
+      "students": 25,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "source_id": "c10-b",
+      "name": "10-Б",
+      "students": 21,
+      "in_person_priority": true
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "source_id": "c10-c",
+      "name": "10-В",
+      "students": 29,
+      "in_person_priority": true
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "source_id": "c11-a",
+      "name": "11-А",
+      "students": 32,
+      "in_person_priority": false
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "source_id": "c11-b",
+      "name": "11-Б",
+      "students": 32,
+      "in_person_priority": false
+    }
+  ],
+  "subjects": [
+    {
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "source_id": "ukr_lang",
+      "name": "Українська мова",
+      "short_name": "Укр. мова",
+      "education_area": "language_literature",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "source_id": "ukr_lit",
+      "name": "Українська література",
+      "short_name": "Укр. літ.",
+      "education_area": "language_literature",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "source_id": "foreign_lang",
+      "name": "Англійська мова",
+      "short_name": "Англ. мова",
+      "education_area": "language_literature",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "source_id": "foreign_lit",
+      "name": "Зарубіжна література",
+      "short_name": "Зар. літ.",
+      "education_area": "language_literature",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "source_id": "math",
+      "name": "Математика",
+      "short_name": "Матем.",
+      "education_area": "math",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "43272fa4-ccf8-5fd9-bf6d-e5b7bd12692e",
+      "source_id": "algebra",
+      "name": "Алгебра",
+      "short_name": "Алгебра",
+      "education_area": "math",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "29d5c351-1b16-50a0-a315-dac2ed3f47e1",
+      "source_id": "geometry",
+      "name": "Геометрія",
+      "short_name": "Геометр.",
+      "education_area": "math",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "d2fc8e64-62a2-50e1-b2dd-5e724d18c51b",
+      "source_id": "explore_world",
+      "name": "Я досліджую світ",
+      "short_name": "ЯДС",
+      "education_area": "science",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "cf291cbd-9bd5-5604-9be5-0a4d372011cf",
+      "source_id": "science",
+      "name": "Пізнаємо природу",
+      "short_name": "Природа",
+      "education_area": "science",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "93cf1c39-452c-561e-b779-654acaa12818",
+      "source_id": "biology",
+      "name": "Біологія",
+      "short_name": "Біол.",
+      "education_area": "science",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "source_id": "geography",
+      "name": "Географія",
+      "short_name": "Геогр.",
+      "education_area": "science",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "d65d4346-37c8-5112-abb1-06ac98e59b41",
+      "source_id": "physics",
+      "name": "Фізика",
+      "short_name": "Фізика",
+      "education_area": "science",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "edd6c737-8bf2-54ec-b9c8-b562f366b04e",
+      "source_id": "chemistry",
+      "name": "Хімія",
+      "short_name": "Хімія",
+      "education_area": "science",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "source_id": "history",
+      "name": "Історія",
+      "short_name": "Історія",
+      "education_area": "civic_history",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "d2e35496-848e-5833-aed2-c689c9e5e3af",
+      "source_id": "civics",
+      "name": "Громадянська освіта",
+      "short_name": "Гром. осв.",
+      "education_area": "civic_history",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "source_id": "informatics",
+      "name": "Інформатика",
+      "short_name": "Інформ.",
+      "education_area": "informatics",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "source_id": "arts",
+      "name": "Мистецтво",
+      "short_name": "Мист.",
+      "education_area": "arts",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "source_id": "technology",
+      "name": "Технології",
+      "short_name": "Технол.",
+      "education_area": "technology",
+      "not_in_shelter": true
+    },
+    {
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "source_id": "health",
+      "name": "Здоров'я, безпека та добробут",
+      "short_name": "ЗБД",
+      "education_area": "social_health",
+      "not_in_shelter": false
+    },
+    {
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "source_id": "physical_education",
+      "name": "Фізична культура",
+      "short_name": "Фізкульт.",
+      "education_area": "physical",
+      "not_in_shelter": true
+    }
+  ],
+  "teachers": [
+    {
+      "teacher_id": "15d65935-2014-56c1-81c3-ba6d591a6413",
+      "source_id": "t001",
+      "teacher_no": 1,
+      "label": "Початкові класи-1",
+      "weekly_hours_limit": 19,
+      "unavailable_days": [
+        3
+      ]
+    },
+    {
+      "teacher_id": "d60151a1-68ec-580c-936b-bb3e30b0ab77",
+      "source_id": "t002",
+      "teacher_no": 2,
+      "label": "Початкові класи-2",
+      "weekly_hours_limit": 26,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "c06ed6d4-bdab-55f5-9feb-237b8da83c67",
+      "source_id": "t003",
+      "teacher_no": 3,
+      "label": "Початкові класи-3",
+      "weekly_hours_limit": 25,
+      "unavailable_days": [
+        5
+      ]
+    },
+    {
+      "teacher_id": "78bb0da4-38fd-5340-9988-6f15ff4300ad",
+      "source_id": "t004",
+      "teacher_no": 4,
+      "label": "Початкові класи-4",
+      "weekly_hours_limit": 22,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "1d7649bb-23ce-573a-a529-5d85977a7d0e",
+      "source_id": "t005",
+      "teacher_no": 5,
+      "label": "Початкові класи-5",
+      "weekly_hours_limit": 26,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "60a82c80-1110-56be-a339-76f0ec1fc44c",
+      "source_id": "t006",
+      "teacher_no": 6,
+      "label": "Початкові класи-6",
+      "weekly_hours_limit": 26,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "fd6aca9b-9785-549e-8a68-c4cf6a025007",
+      "source_id": "t007",
+      "teacher_no": 7,
+      "label": "Початкові класи-7",
+      "weekly_hours_limit": 27,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "5faea18b-de76-5f0d-972c-503aba2b582d",
+      "source_id": "t008",
+      "teacher_no": 8,
+      "label": "Початкові класи-8",
+      "weekly_hours_limit": 22,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "1026076b-c1cb-5685-a859-51c44bffecf3",
+      "source_id": "t009",
+      "teacher_no": 9,
+      "label": "Початкові класи-9",
+      "weekly_hours_limit": 27,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "36d58856-45c8-5084-9c16-ed0801079713",
+      "source_id": "t010",
+      "teacher_no": 10,
+      "label": "Початкові класи-10",
+      "weekly_hours_limit": 23,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "7c2c50a5-8f71-598e-99da-20493ea87a5a",
+      "source_id": "t011",
+      "teacher_no": 11,
+      "label": "Початкові класи-11",
+      "weekly_hours_limit": 22,
+      "unavailable_days": [
+        2
+      ]
+    },
+    {
+      "teacher_id": "ac366076-4e0a-570c-931d-db7c19294de1",
+      "source_id": "t012",
+      "teacher_no": 12,
+      "label": "Українська мова-1",
+      "weekly_hours_limit": 18,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "8e94e24e-d7be-5ed5-9e79-35e6b76ce2f0",
+      "source_id": "t013",
+      "teacher_no": 13,
+      "label": "Українська мова-2",
+      "weekly_hours_limit": 22,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "01393de8-86fa-53dc-a375-6bddec0294f4",
+      "source_id": "t014",
+      "teacher_no": 14,
+      "label": "Українська мова-3",
+      "weekly_hours_limit": 19,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "b528eb0e-1df3-5884-b18a-a20135ca71a0",
+      "source_id": "t015",
+      "teacher_no": 15,
+      "label": "Українська мова-4",
+      "weekly_hours_limit": 20,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "57df7fc8-46a0-590b-9b3c-135c5bad5191",
+      "source_id": "t016",
+      "teacher_no": 16,
+      "label": "Українська література-1",
+      "weekly_hours_limit": 18,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "ce5e5b33-e5e6-5c06-9469-004495c20d01",
+      "source_id": "t017",
+      "teacher_no": 17,
+      "label": "Українська література-2",
+      "weekly_hours_limit": 26,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "bd4a6621-76fd-512c-9320-076e1d689c34",
+      "source_id": "t018",
+      "teacher_no": 18,
+      "label": "Англійська мова-1",
+      "weekly_hours_limit": 26,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "4cac7db4-dc38-51f9-93ff-1b23dc7b1244",
+      "source_id": "t019",
+      "teacher_no": 19,
+      "label": "Англійська мова-2",
+      "weekly_hours_limit": 21,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "1a2436b4-be1c-5d90-bead-da4ccee1e440",
+      "source_id": "t020",
+      "teacher_no": 20,
+      "label": "Англійська мова-3",
+      "weekly_hours_limit": 27,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "7995f4ef-2716-56c0-bb64-f262af187bea",
+      "source_id": "t021",
+      "teacher_no": 21,
+      "label": "Англійська мова-4",
+      "weekly_hours_limit": 24,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "5caeb7e5-4f6c-54a1-a536-3078bbe2315c",
+      "source_id": "t022",
+      "teacher_no": 22,
+      "label": "Мистецтво-1",
+      "weekly_hours_limit": 25,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "aa22aa7d-a225-5cab-9b9a-5a0025794ce1",
+      "source_id": "t023",
+      "teacher_no": 23,
+      "label": "Зарубіжна література-1",
+      "weekly_hours_limit": 23,
+      "unavailable_days": [
+        5
+      ]
+    },
+    {
+      "teacher_id": "61e5431f-d2a8-5dcc-a60c-8dac8f6200e3",
+      "source_id": "t024",
+      "teacher_no": 24,
+      "label": "Зарубіжна література-2",
+      "weekly_hours_limit": 19,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "c9ff3e39-df3a-5471-b6b6-91766b896c5a",
+      "source_id": "t025",
+      "teacher_no": 25,
+      "label": "Математика-1",
+      "weekly_hours_limit": 23,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "b613ee66-7fba-5945-a5c1-6dcf397250b4",
+      "source_id": "t026",
+      "teacher_no": 26,
+      "label": "Алгебра-1",
+      "weekly_hours_limit": 21,
+      "unavailable_days": [
+        3
+      ]
+    },
+    {
+      "teacher_id": "88cc8701-7b6f-5e8c-b9b9-f20359d52ed8",
+      "source_id": "t027",
+      "teacher_no": 27,
+      "label": "Алгебра-2",
+      "weekly_hours_limit": 19,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "5e2b3c92-6cbd-5324-86b3-1bc5cf495dc6",
+      "source_id": "t028",
+      "teacher_no": 28,
+      "label": "Алгебра-3",
+      "weekly_hours_limit": 23,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "56f9dcf9-cb19-58af-a24d-a520c6248ab0",
+      "source_id": "t029",
+      "teacher_no": 29,
+      "label": "Алгебра-4",
+      "weekly_hours_limit": 23,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "ffa041b3-3167-591f-b5f7-fb4c8b3fcfbc",
+      "source_id": "t030",
+      "teacher_no": 30,
+      "label": "Пізнаємо природу-1",
+      "weekly_hours_limit": 18,
+      "unavailable_days": [
+        2
+      ]
+    },
+    {
+      "teacher_id": "6d2ebab2-64a5-5fb5-87f2-6ebaf0e1ff58",
+      "source_id": "t031",
+      "teacher_no": 31,
+      "label": "Біологія-1",
+      "weekly_hours_limit": 21,
+      "unavailable_days": [
+        5
+      ]
+    },
+    {
+      "teacher_id": "031e8790-5681-5e98-aa31-1c918b26ee9d",
+      "source_id": "t032",
+      "teacher_no": 32,
+      "label": "Біологія-2",
+      "weekly_hours_limit": 26,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "d06eb4ce-278b-5099-83a2-a48fe056d24a",
+      "source_id": "t033",
+      "teacher_no": 33,
+      "label": "Біологія-3",
+      "weekly_hours_limit": 19,
+      "unavailable_days": [
+        2
+      ]
+    },
+    {
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "source_id": "t034",
+      "teacher_no": 34,
+      "label": "Географія-1",
+      "weekly_hours_limit": 27,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "9494e435-31db-5744-90de-a323d678ad0a",
+      "source_id": "t035",
+      "teacher_no": 35,
+      "label": "Географія-2",
+      "weekly_hours_limit": 19,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "source_id": "t036",
+      "teacher_no": 36,
+      "label": "Інформатика-1",
+      "weekly_hours_limit": 23,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "1613ca5f-e035-5f03-b2d0-68db2df12eaf",
+      "source_id": "t037",
+      "teacher_no": 37,
+      "label": "Фізика-1",
+      "weekly_hours_limit": 19,
+      "unavailable_days": [
+        1
+      ]
+    },
+    {
+      "teacher_id": "6c0392b1-9fb7-5569-8de4-f94accc903e6",
+      "source_id": "t038",
+      "teacher_no": 38,
+      "label": "Фізика-2",
+      "weekly_hours_limit": 21,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "f0dcf8b8-32d5-5f08-8f55-5aa505fc8922",
+      "source_id": "t039",
+      "teacher_no": 39,
+      "label": "Фізика-3",
+      "weekly_hours_limit": 20,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "bfe9c2f5-bb3a-5e8e-97ad-a79d4fbc429c",
+      "source_id": "t040",
+      "teacher_no": 40,
+      "label": "Історія-1",
+      "weekly_hours_limit": 25,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "9fc69720-b354-57fb-8b50-3157b636ca4a",
+      "source_id": "t041",
+      "teacher_no": 41,
+      "label": "Історія-2",
+      "weekly_hours_limit": 18,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "9f118f55-2787-589f-89bb-1d7194c94de3",
+      "source_id": "t042",
+      "teacher_no": 42,
+      "label": "Історія-3",
+      "weekly_hours_limit": 18,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "d07d7647-9fb0-5300-8f05-fdcf1405133b",
+      "source_id": "t043",
+      "teacher_no": 43,
+      "label": "Технології-1",
+      "weekly_hours_limit": 27,
+      "unavailable_days": [
+        3
+      ]
+    },
+    {
+      "teacher_id": "4e87b218-2c00-5340-b0ad-5919bd70dc3c",
+      "source_id": "t044",
+      "teacher_no": 44,
+      "label": "Фізична культура-1",
+      "weekly_hours_limit": 19,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "adcbe121-d75c-5ce3-b741-6731e06f42fa",
+      "source_id": "t045",
+      "teacher_no": 45,
+      "label": "Фізична культура-2",
+      "weekly_hours_limit": 22,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "95f69c7a-1165-5de7-ae60-9a0257680003",
+      "source_id": "t046",
+      "teacher_no": 46,
+      "label": "Фізична культура-3",
+      "weekly_hours_limit": 20,
+      "unavailable_days": [
+        4
+      ]
+    },
+    {
+      "teacher_id": "4ce4bca1-6fa1-5e9b-950b-c677949e159e",
+      "source_id": "t047",
+      "teacher_no": 47,
+      "label": "Фізична культура-4",
+      "weekly_hours_limit": 18,
+      "unavailable_days": []
+    },
+    {
+      "teacher_id": "40883e40-4291-5917-b495-e50b471cf128",
+      "source_id": "t048",
+      "teacher_no": 48,
+      "label": "Фізична культура-5",
+      "weekly_hours_limit": 24,
+      "unavailable_days": [
+        3
+      ]
+    }
+  ],
+  "curriculum": [
+    {
+      "class_id": "44a0e811-e149-52c2-9456-aee7de4f31ce",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "15d65935-2014-56c1-81c3-ba6d591a6413",
+      "hours_per_week": 7
+    },
+    {
+      "class_id": "44a0e811-e149-52c2-9456-aee7de4f31ce",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "15d65935-2014-56c1-81c3-ba6d591a6413",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "44a0e811-e149-52c2-9456-aee7de4f31ce",
+      "subject_id": "d2fc8e64-62a2-50e1-b2dd-5e724d18c51b",
+      "teacher_id": "15d65935-2014-56c1-81c3-ba6d591a6413",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "44a0e811-e149-52c2-9456-aee7de4f31ce",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "15d65935-2014-56c1-81c3-ba6d591a6413",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "44a0e811-e149-52c2-9456-aee7de4f31ce",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "15d65935-2014-56c1-81c3-ba6d591a6413",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "2a41876d-bfd1-509d-b0cc-075476bdb96b",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "d60151a1-68ec-580c-936b-bb3e30b0ab77",
+      "hours_per_week": 7
+    },
+    {
+      "class_id": "2a41876d-bfd1-509d-b0cc-075476bdb96b",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "d60151a1-68ec-580c-936b-bb3e30b0ab77",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "2a41876d-bfd1-509d-b0cc-075476bdb96b",
+      "subject_id": "d2fc8e64-62a2-50e1-b2dd-5e724d18c51b",
+      "teacher_id": "d60151a1-68ec-580c-936b-bb3e30b0ab77",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "2a41876d-bfd1-509d-b0cc-075476bdb96b",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "d60151a1-68ec-580c-936b-bb3e30b0ab77",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "2a41876d-bfd1-509d-b0cc-075476bdb96b",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "d60151a1-68ec-580c-936b-bb3e30b0ab77",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "4b58eb75-c8c9-525e-b11a-66081f6c43c9",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "c06ed6d4-bdab-55f5-9feb-237b8da83c67",
+      "hours_per_week": 7
+    },
+    {
+      "class_id": "4b58eb75-c8c9-525e-b11a-66081f6c43c9",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "c06ed6d4-bdab-55f5-9feb-237b8da83c67",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "4b58eb75-c8c9-525e-b11a-66081f6c43c9",
+      "subject_id": "d2fc8e64-62a2-50e1-b2dd-5e724d18c51b",
+      "teacher_id": "c06ed6d4-bdab-55f5-9feb-237b8da83c67",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "4b58eb75-c8c9-525e-b11a-66081f6c43c9",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "c06ed6d4-bdab-55f5-9feb-237b8da83c67",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "4b58eb75-c8c9-525e-b11a-66081f6c43c9",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "c06ed6d4-bdab-55f5-9feb-237b8da83c67",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "d026f74a-737b-581a-8f79-86472b25d759",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "78bb0da4-38fd-5340-9988-6f15ff4300ad",
+      "hours_per_week": 7
+    },
+    {
+      "class_id": "d026f74a-737b-581a-8f79-86472b25d759",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "78bb0da4-38fd-5340-9988-6f15ff4300ad",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "d026f74a-737b-581a-8f79-86472b25d759",
+      "subject_id": "d2fc8e64-62a2-50e1-b2dd-5e724d18c51b",
+      "teacher_id": "78bb0da4-38fd-5340-9988-6f15ff4300ad",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "d026f74a-737b-581a-8f79-86472b25d759",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "78bb0da4-38fd-5340-9988-6f15ff4300ad",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "d026f74a-737b-581a-8f79-86472b25d759",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "78bb0da4-38fd-5340-9988-6f15ff4300ad",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "001b1a08-ca84-5b77-bae2-dadf68efe749",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "1d7649bb-23ce-573a-a529-5d85977a7d0e",
+      "hours_per_week": 7
+    },
+    {
+      "class_id": "001b1a08-ca84-5b77-bae2-dadf68efe749",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "1d7649bb-23ce-573a-a529-5d85977a7d0e",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "001b1a08-ca84-5b77-bae2-dadf68efe749",
+      "subject_id": "d2fc8e64-62a2-50e1-b2dd-5e724d18c51b",
+      "teacher_id": "1d7649bb-23ce-573a-a529-5d85977a7d0e",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "001b1a08-ca84-5b77-bae2-dadf68efe749",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "1d7649bb-23ce-573a-a529-5d85977a7d0e",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "001b1a08-ca84-5b77-bae2-dadf68efe749",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "1d7649bb-23ce-573a-a529-5d85977a7d0e",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "b040b342-9cc5-5a59-bb96-d3eafe3c08d4",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "60a82c80-1110-56be-a339-76f0ec1fc44c",
+      "hours_per_week": 7
+    },
+    {
+      "class_id": "b040b342-9cc5-5a59-bb96-d3eafe3c08d4",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "60a82c80-1110-56be-a339-76f0ec1fc44c",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "b040b342-9cc5-5a59-bb96-d3eafe3c08d4",
+      "subject_id": "d2fc8e64-62a2-50e1-b2dd-5e724d18c51b",
+      "teacher_id": "60a82c80-1110-56be-a339-76f0ec1fc44c",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "b040b342-9cc5-5a59-bb96-d3eafe3c08d4",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "60a82c80-1110-56be-a339-76f0ec1fc44c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "b040b342-9cc5-5a59-bb96-d3eafe3c08d4",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "60a82c80-1110-56be-a339-76f0ec1fc44c",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "b1ce6ffa-1f1a-5be5-85ea-44086060fa45",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "fd6aca9b-9785-549e-8a68-c4cf6a025007",
+      "hours_per_week": 7
+    },
+    {
+      "class_id": "b1ce6ffa-1f1a-5be5-85ea-44086060fa45",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "fd6aca9b-9785-549e-8a68-c4cf6a025007",
+      "hours_per_week": 5
+    },
+    {
+      "class_id": "b1ce6ffa-1f1a-5be5-85ea-44086060fa45",
+      "subject_id": "d2fc8e64-62a2-50e1-b2dd-5e724d18c51b",
+      "teacher_id": "fd6aca9b-9785-549e-8a68-c4cf6a025007",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "b1ce6ffa-1f1a-5be5-85ea-44086060fa45",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "fd6aca9b-9785-549e-8a68-c4cf6a025007",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "b1ce6ffa-1f1a-5be5-85ea-44086060fa45",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "fd6aca9b-9785-549e-8a68-c4cf6a025007",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "6347bb81-0c55-5679-b4c2-fbc558c40bdf",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "5faea18b-de76-5f0d-972c-503aba2b582d",
+      "hours_per_week": 7
+    },
+    {
+      "class_id": "6347bb81-0c55-5679-b4c2-fbc558c40bdf",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "5faea18b-de76-5f0d-972c-503aba2b582d",
+      "hours_per_week": 5
+    },
+    {
+      "class_id": "6347bb81-0c55-5679-b4c2-fbc558c40bdf",
+      "subject_id": "d2fc8e64-62a2-50e1-b2dd-5e724d18c51b",
+      "teacher_id": "5faea18b-de76-5f0d-972c-503aba2b582d",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "6347bb81-0c55-5679-b4c2-fbc558c40bdf",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "5faea18b-de76-5f0d-972c-503aba2b582d",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "6347bb81-0c55-5679-b4c2-fbc558c40bdf",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "5faea18b-de76-5f0d-972c-503aba2b582d",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "368785ca-6d24-5567-a15f-3f731d39fc34",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "1026076b-c1cb-5685-a859-51c44bffecf3",
+      "hours_per_week": 7
+    },
+    {
+      "class_id": "368785ca-6d24-5567-a15f-3f731d39fc34",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "1026076b-c1cb-5685-a859-51c44bffecf3",
+      "hours_per_week": 5
+    },
+    {
+      "class_id": "368785ca-6d24-5567-a15f-3f731d39fc34",
+      "subject_id": "d2fc8e64-62a2-50e1-b2dd-5e724d18c51b",
+      "teacher_id": "1026076b-c1cb-5685-a859-51c44bffecf3",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "368785ca-6d24-5567-a15f-3f731d39fc34",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "1026076b-c1cb-5685-a859-51c44bffecf3",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "368785ca-6d24-5567-a15f-3f731d39fc34",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "1026076b-c1cb-5685-a859-51c44bffecf3",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "f0339073-d826-55ba-946b-3cd27dc441a9",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "36d58856-45c8-5084-9c16-ed0801079713",
+      "hours_per_week": 7
+    },
+    {
+      "class_id": "f0339073-d826-55ba-946b-3cd27dc441a9",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "36d58856-45c8-5084-9c16-ed0801079713",
+      "hours_per_week": 5
+    },
+    {
+      "class_id": "f0339073-d826-55ba-946b-3cd27dc441a9",
+      "subject_id": "d2fc8e64-62a2-50e1-b2dd-5e724d18c51b",
+      "teacher_id": "36d58856-45c8-5084-9c16-ed0801079713",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "f0339073-d826-55ba-946b-3cd27dc441a9",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "36d58856-45c8-5084-9c16-ed0801079713",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "f0339073-d826-55ba-946b-3cd27dc441a9",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "36d58856-45c8-5084-9c16-ed0801079713",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "f0339073-d826-55ba-946b-3cd27dc441a9",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "36d58856-45c8-5084-9c16-ed0801079713",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "800a69a5-e858-56a2-9f6e-18813e0702da",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "7c2c50a5-8f71-598e-99da-20493ea87a5a",
+      "hours_per_week": 7
+    },
+    {
+      "class_id": "800a69a5-e858-56a2-9f6e-18813e0702da",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "7c2c50a5-8f71-598e-99da-20493ea87a5a",
+      "hours_per_week": 5
+    },
+    {
+      "class_id": "800a69a5-e858-56a2-9f6e-18813e0702da",
+      "subject_id": "d2fc8e64-62a2-50e1-b2dd-5e724d18c51b",
+      "teacher_id": "7c2c50a5-8f71-598e-99da-20493ea87a5a",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "800a69a5-e858-56a2-9f6e-18813e0702da",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "7c2c50a5-8f71-598e-99da-20493ea87a5a",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "800a69a5-e858-56a2-9f6e-18813e0702da",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "7c2c50a5-8f71-598e-99da-20493ea87a5a",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "800a69a5-e858-56a2-9f6e-18813e0702da",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "7c2c50a5-8f71-598e-99da-20493ea87a5a",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "58916228-206b-5949-9100-bdb1d86794c2",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "ac366076-4e0a-570c-931d-db7c19294de1",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "58916228-206b-5949-9100-bdb1d86794c2",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "ac366076-4e0a-570c-931d-db7c19294de1",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "1c68faad-f608-5af1-920e-4e51d9aeb7ee",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "ac366076-4e0a-570c-931d-db7c19294de1",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "1c68faad-f608-5af1-920e-4e51d9aeb7ee",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "ac366076-4e0a-570c-931d-db7c19294de1",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "47bf5611-5c9c-5fd9-8c85-04f3547d4694",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "ac366076-4e0a-570c-931d-db7c19294de1",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "47bf5611-5c9c-5fd9-8c85-04f3547d4694",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "ac366076-4e0a-570c-931d-db7c19294de1",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "719bc7a5-96d5-5e10-ba21-3892f0120c74",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "8e94e24e-d7be-5ed5-9e79-35e6b76ce2f0",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "719bc7a5-96d5-5e10-ba21-3892f0120c74",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "8e94e24e-d7be-5ed5-9e79-35e6b76ce2f0",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "181d1bd6-0c99-5ef4-9706-264574bcce98",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "8e94e24e-d7be-5ed5-9e79-35e6b76ce2f0",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "181d1bd6-0c99-5ef4-9706-264574bcce98",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "8e94e24e-d7be-5ed5-9e79-35e6b76ce2f0",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "b4eee47d-f628-5073-84f4-cea58a980fc3",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "8e94e24e-d7be-5ed5-9e79-35e6b76ce2f0",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "b4eee47d-f628-5073-84f4-cea58a980fc3",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "8e94e24e-d7be-5ed5-9e79-35e6b76ce2f0",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "01393de8-86fa-53dc-a375-6bddec0294f4",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "01393de8-86fa-53dc-a375-6bddec0294f4",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "01393de8-86fa-53dc-a375-6bddec0294f4",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "01393de8-86fa-53dc-a375-6bddec0294f4",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "01393de8-86fa-53dc-a375-6bddec0294f4",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "01393de8-86fa-53dc-a375-6bddec0294f4",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "b528eb0e-1df3-5884-b18a-a20135ca71a0",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "b528eb0e-1df3-5884-b18a-a20135ca71a0",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "b528eb0e-1df3-5884-b18a-a20135ca71a0",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "b528eb0e-1df3-5884-b18a-a20135ca71a0",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "b528eb0e-1df3-5884-b18a-a20135ca71a0",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "b528eb0e-1df3-5884-b18a-a20135ca71a0",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "b528eb0e-1df3-5884-b18a-a20135ca71a0",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "b528eb0e-1df3-5884-b18a-a20135ca71a0",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "57df7fc8-46a0-590b-9b3c-135c5bad5191",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "57df7fc8-46a0-590b-9b3c-135c5bad5191",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "57df7fc8-46a0-590b-9b3c-135c5bad5191",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "57df7fc8-46a0-590b-9b3c-135c5bad5191",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "57df7fc8-46a0-590b-9b3c-135c5bad5191",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "57df7fc8-46a0-590b-9b3c-135c5bad5191",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "ce5e5b33-e5e6-5c06-9469-004495c20d01",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "ce5e5b33-e5e6-5c06-9469-004495c20d01",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "ce5e5b33-e5e6-5c06-9469-004495c20d01",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "ce5e5b33-e5e6-5c06-9469-004495c20d01",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "subject_id": "0907ec1e-d2d6-5b97-a644-1bc3d2dc52b8",
+      "teacher_id": "ce5e5b33-e5e6-5c06-9469-004495c20d01",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "subject_id": "681b335f-c6d1-58bf-8c4b-90c5cb34b9ae",
+      "teacher_id": "ce5e5b33-e5e6-5c06-9469-004495c20d01",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "44a0e811-e149-52c2-9456-aee7de4f31ce",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "bd4a6621-76fd-512c-9320-076e1d689c34",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "2a41876d-bfd1-509d-b0cc-075476bdb96b",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "bd4a6621-76fd-512c-9320-076e1d689c34",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "4b58eb75-c8c9-525e-b11a-66081f6c43c9",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "bd4a6621-76fd-512c-9320-076e1d689c34",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "d026f74a-737b-581a-8f79-86472b25d759",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "bd4a6621-76fd-512c-9320-076e1d689c34",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "001b1a08-ca84-5b77-bae2-dadf68efe749",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "bd4a6621-76fd-512c-9320-076e1d689c34",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "b040b342-9cc5-5a59-bb96-d3eafe3c08d4",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "bd4a6621-76fd-512c-9320-076e1d689c34",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "b1ce6ffa-1f1a-5be5-85ea-44086060fa45",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "bd4a6621-76fd-512c-9320-076e1d689c34",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "6347bb81-0c55-5679-b4c2-fbc558c40bdf",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "bd4a6621-76fd-512c-9320-076e1d689c34",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "368785ca-6d24-5567-a15f-3f731d39fc34",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "bd4a6621-76fd-512c-9320-076e1d689c34",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "f0339073-d826-55ba-946b-3cd27dc441a9",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "4cac7db4-dc38-51f9-93ff-1b23dc7b1244",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "800a69a5-e858-56a2-9f6e-18813e0702da",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "4cac7db4-dc38-51f9-93ff-1b23dc7b1244",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "58916228-206b-5949-9100-bdb1d86794c2",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "4cac7db4-dc38-51f9-93ff-1b23dc7b1244",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "1c68faad-f608-5af1-920e-4e51d9aeb7ee",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "4cac7db4-dc38-51f9-93ff-1b23dc7b1244",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "47bf5611-5c9c-5fd9-8c85-04f3547d4694",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "4cac7db4-dc38-51f9-93ff-1b23dc7b1244",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "719bc7a5-96d5-5e10-ba21-3892f0120c74",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "4cac7db4-dc38-51f9-93ff-1b23dc7b1244",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "181d1bd6-0c99-5ef4-9706-264574bcce98",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "4cac7db4-dc38-51f9-93ff-1b23dc7b1244",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "b4eee47d-f628-5073-84f4-cea58a980fc3",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "1a2436b4-be1c-5d90-bead-da4ccee1e440",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "1a2436b4-be1c-5d90-bead-da4ccee1e440",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "1a2436b4-be1c-5d90-bead-da4ccee1e440",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "1a2436b4-be1c-5d90-bead-da4ccee1e440",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "1a2436b4-be1c-5d90-bead-da4ccee1e440",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "1a2436b4-be1c-5d90-bead-da4ccee1e440",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "1a2436b4-be1c-5d90-bead-da4ccee1e440",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "1a2436b4-be1c-5d90-bead-da4ccee1e440",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "1a2436b4-be1c-5d90-bead-da4ccee1e440",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "7995f4ef-2716-56c0-bb64-f262af187bea",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "7995f4ef-2716-56c0-bb64-f262af187bea",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "7995f4ef-2716-56c0-bb64-f262af187bea",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "7995f4ef-2716-56c0-bb64-f262af187bea",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "subject_id": "3f24bc37-c9c6-5238-b570-047338d8ffd0",
+      "teacher_id": "7995f4ef-2716-56c0-bb64-f262af187bea",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "58916228-206b-5949-9100-bdb1d86794c2",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "5caeb7e5-4f6c-54a1-a536-3078bbe2315c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "58916228-206b-5949-9100-bdb1d86794c2",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "5caeb7e5-4f6c-54a1-a536-3078bbe2315c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "1c68faad-f608-5af1-920e-4e51d9aeb7ee",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "5caeb7e5-4f6c-54a1-a536-3078bbe2315c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "1c68faad-f608-5af1-920e-4e51d9aeb7ee",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "5caeb7e5-4f6c-54a1-a536-3078bbe2315c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "47bf5611-5c9c-5fd9-8c85-04f3547d4694",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "5caeb7e5-4f6c-54a1-a536-3078bbe2315c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "47bf5611-5c9c-5fd9-8c85-04f3547d4694",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "5caeb7e5-4f6c-54a1-a536-3078bbe2315c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "719bc7a5-96d5-5e10-ba21-3892f0120c74",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "5caeb7e5-4f6c-54a1-a536-3078bbe2315c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "719bc7a5-96d5-5e10-ba21-3892f0120c74",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "5caeb7e5-4f6c-54a1-a536-3078bbe2315c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "181d1bd6-0c99-5ef4-9706-264574bcce98",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "5caeb7e5-4f6c-54a1-a536-3078bbe2315c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "181d1bd6-0c99-5ef4-9706-264574bcce98",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "5caeb7e5-4f6c-54a1-a536-3078bbe2315c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "b4eee47d-f628-5073-84f4-cea58a980fc3",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "5caeb7e5-4f6c-54a1-a536-3078bbe2315c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "b4eee47d-f628-5073-84f4-cea58a980fc3",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "5caeb7e5-4f6c-54a1-a536-3078bbe2315c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "aa22aa7d-a225-5cab-9b9a-5a0025794ce1",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "aa22aa7d-a225-5cab-9b9a-5a0025794ce1",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "aa22aa7d-a225-5cab-9b9a-5a0025794ce1",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "aa22aa7d-a225-5cab-9b9a-5a0025794ce1",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "aa22aa7d-a225-5cab-9b9a-5a0025794ce1",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "aa22aa7d-a225-5cab-9b9a-5a0025794ce1",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "aa22aa7d-a225-5cab-9b9a-5a0025794ce1",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "aa22aa7d-a225-5cab-9b9a-5a0025794ce1",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "aa22aa7d-a225-5cab-9b9a-5a0025794ce1",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "aa22aa7d-a225-5cab-9b9a-5a0025794ce1",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "aa22aa7d-a225-5cab-9b9a-5a0025794ce1",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "aa22aa7d-a225-5cab-9b9a-5a0025794ce1",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "aa22aa7d-a225-5cab-9b9a-5a0025794ce1",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "aa22aa7d-a225-5cab-9b9a-5a0025794ce1",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "61e5431f-d2a8-5dcc-a60c-8dac8f6200e3",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "61e5431f-d2a8-5dcc-a60c-8dac8f6200e3",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "61e5431f-d2a8-5dcc-a60c-8dac8f6200e3",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "61e5431f-d2a8-5dcc-a60c-8dac8f6200e3",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "61e5431f-d2a8-5dcc-a60c-8dac8f6200e3",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "61e5431f-d2a8-5dcc-a60c-8dac8f6200e3",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "61e5431f-d2a8-5dcc-a60c-8dac8f6200e3",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "61e5431f-d2a8-5dcc-a60c-8dac8f6200e3",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "61e5431f-d2a8-5dcc-a60c-8dac8f6200e3",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "61e5431f-d2a8-5dcc-a60c-8dac8f6200e3",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "subject_id": "bafa691e-e98b-517f-b7a8-163ebe2959fe",
+      "teacher_id": "61e5431f-d2a8-5dcc-a60c-8dac8f6200e3",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "subject_id": "23abece2-fde0-5921-8ff7-569aa058233d",
+      "teacher_id": "61e5431f-d2a8-5dcc-a60c-8dac8f6200e3",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "58916228-206b-5949-9100-bdb1d86794c2",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "c9ff3e39-df3a-5471-b6b6-91766b896c5a",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "1c68faad-f608-5af1-920e-4e51d9aeb7ee",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "c9ff3e39-df3a-5471-b6b6-91766b896c5a",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "47bf5611-5c9c-5fd9-8c85-04f3547d4694",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "c9ff3e39-df3a-5471-b6b6-91766b896c5a",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "719bc7a5-96d5-5e10-ba21-3892f0120c74",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "c9ff3e39-df3a-5471-b6b6-91766b896c5a",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "181d1bd6-0c99-5ef4-9706-264574bcce98",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "c9ff3e39-df3a-5471-b6b6-91766b896c5a",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "b4eee47d-f628-5073-84f4-cea58a980fc3",
+      "subject_id": "1c59175f-50bd-5947-9a4c-59ffb5756eb4",
+      "teacher_id": "b613ee66-7fba-5945-a5c1-6dcf397250b4",
+      "hours_per_week": 4
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "43272fa4-ccf8-5fd9-bf6d-e5b7bd12692e",
+      "teacher_id": "b613ee66-7fba-5945-a5c1-6dcf397250b4",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "29d5c351-1b16-50a0-a315-dac2ed3f47e1",
+      "teacher_id": "b613ee66-7fba-5945-a5c1-6dcf397250b4",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "43272fa4-ccf8-5fd9-bf6d-e5b7bd12692e",
+      "teacher_id": "b613ee66-7fba-5945-a5c1-6dcf397250b4",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "29d5c351-1b16-50a0-a315-dac2ed3f47e1",
+      "teacher_id": "b613ee66-7fba-5945-a5c1-6dcf397250b4",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "43272fa4-ccf8-5fd9-bf6d-e5b7bd12692e",
+      "teacher_id": "b613ee66-7fba-5945-a5c1-6dcf397250b4",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "29d5c351-1b16-50a0-a315-dac2ed3f47e1",
+      "teacher_id": "b613ee66-7fba-5945-a5c1-6dcf397250b4",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "43272fa4-ccf8-5fd9-bf6d-e5b7bd12692e",
+      "teacher_id": "88cc8701-7b6f-5e8c-b9b9-f20359d52ed8",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "29d5c351-1b16-50a0-a315-dac2ed3f47e1",
+      "teacher_id": "88cc8701-7b6f-5e8c-b9b9-f20359d52ed8",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "43272fa4-ccf8-5fd9-bf6d-e5b7bd12692e",
+      "teacher_id": "88cc8701-7b6f-5e8c-b9b9-f20359d52ed8",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "29d5c351-1b16-50a0-a315-dac2ed3f47e1",
+      "teacher_id": "88cc8701-7b6f-5e8c-b9b9-f20359d52ed8",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "43272fa4-ccf8-5fd9-bf6d-e5b7bd12692e",
+      "teacher_id": "88cc8701-7b6f-5e8c-b9b9-f20359d52ed8",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "29d5c351-1b16-50a0-a315-dac2ed3f47e1",
+      "teacher_id": "88cc8701-7b6f-5e8c-b9b9-f20359d52ed8",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "43272fa4-ccf8-5fd9-bf6d-e5b7bd12692e",
+      "teacher_id": "5e2b3c92-6cbd-5324-86b3-1bc5cf495dc6",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "29d5c351-1b16-50a0-a315-dac2ed3f47e1",
+      "teacher_id": "5e2b3c92-6cbd-5324-86b3-1bc5cf495dc6",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "43272fa4-ccf8-5fd9-bf6d-e5b7bd12692e",
+      "teacher_id": "5e2b3c92-6cbd-5324-86b3-1bc5cf495dc6",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "29d5c351-1b16-50a0-a315-dac2ed3f47e1",
+      "teacher_id": "5e2b3c92-6cbd-5324-86b3-1bc5cf495dc6",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "subject_id": "43272fa4-ccf8-5fd9-bf6d-e5b7bd12692e",
+      "teacher_id": "5e2b3c92-6cbd-5324-86b3-1bc5cf495dc6",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "subject_id": "29d5c351-1b16-50a0-a315-dac2ed3f47e1",
+      "teacher_id": "5e2b3c92-6cbd-5324-86b3-1bc5cf495dc6",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "subject_id": "43272fa4-ccf8-5fd9-bf6d-e5b7bd12692e",
+      "teacher_id": "5e2b3c92-6cbd-5324-86b3-1bc5cf495dc6",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "subject_id": "29d5c351-1b16-50a0-a315-dac2ed3f47e1",
+      "teacher_id": "5e2b3c92-6cbd-5324-86b3-1bc5cf495dc6",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "subject_id": "43272fa4-ccf8-5fd9-bf6d-e5b7bd12692e",
+      "teacher_id": "56f9dcf9-cb19-58af-a24d-a520c6248ab0",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "subject_id": "29d5c351-1b16-50a0-a315-dac2ed3f47e1",
+      "teacher_id": "56f9dcf9-cb19-58af-a24d-a520c6248ab0",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "subject_id": "43272fa4-ccf8-5fd9-bf6d-e5b7bd12692e",
+      "teacher_id": "56f9dcf9-cb19-58af-a24d-a520c6248ab0",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "subject_id": "29d5c351-1b16-50a0-a315-dac2ed3f47e1",
+      "teacher_id": "56f9dcf9-cb19-58af-a24d-a520c6248ab0",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "subject_id": "43272fa4-ccf8-5fd9-bf6d-e5b7bd12692e",
+      "teacher_id": "56f9dcf9-cb19-58af-a24d-a520c6248ab0",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "subject_id": "29d5c351-1b16-50a0-a315-dac2ed3f47e1",
+      "teacher_id": "56f9dcf9-cb19-58af-a24d-a520c6248ab0",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "58916228-206b-5949-9100-bdb1d86794c2",
+      "subject_id": "cf291cbd-9bd5-5604-9be5-0a4d372011cf",
+      "teacher_id": "ffa041b3-3167-591f-b5f7-fb4c8b3fcfbc",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "1c68faad-f608-5af1-920e-4e51d9aeb7ee",
+      "subject_id": "cf291cbd-9bd5-5604-9be5-0a4d372011cf",
+      "teacher_id": "ffa041b3-3167-591f-b5f7-fb4c8b3fcfbc",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "47bf5611-5c9c-5fd9-8c85-04f3547d4694",
+      "subject_id": "cf291cbd-9bd5-5604-9be5-0a4d372011cf",
+      "teacher_id": "ffa041b3-3167-591f-b5f7-fb4c8b3fcfbc",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "719bc7a5-96d5-5e10-ba21-3892f0120c74",
+      "subject_id": "cf291cbd-9bd5-5604-9be5-0a4d372011cf",
+      "teacher_id": "ffa041b3-3167-591f-b5f7-fb4c8b3fcfbc",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "181d1bd6-0c99-5ef4-9706-264574bcce98",
+      "subject_id": "cf291cbd-9bd5-5604-9be5-0a4d372011cf",
+      "teacher_id": "ffa041b3-3167-591f-b5f7-fb4c8b3fcfbc",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "b4eee47d-f628-5073-84f4-cea58a980fc3",
+      "subject_id": "cf291cbd-9bd5-5604-9be5-0a4d372011cf",
+      "teacher_id": "ffa041b3-3167-591f-b5f7-fb4c8b3fcfbc",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "93cf1c39-452c-561e-b779-654acaa12818",
+      "teacher_id": "ffa041b3-3167-591f-b5f7-fb4c8b3fcfbc",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "edd6c737-8bf2-54ec-b9c8-b562f366b04e",
+      "teacher_id": "ffa041b3-3167-591f-b5f7-fb4c8b3fcfbc",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "93cf1c39-452c-561e-b779-654acaa12818",
+      "teacher_id": "6d2ebab2-64a5-5fb5-87f2-6ebaf0e1ff58",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "edd6c737-8bf2-54ec-b9c8-b562f366b04e",
+      "teacher_id": "6d2ebab2-64a5-5fb5-87f2-6ebaf0e1ff58",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "93cf1c39-452c-561e-b779-654acaa12818",
+      "teacher_id": "6d2ebab2-64a5-5fb5-87f2-6ebaf0e1ff58",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "edd6c737-8bf2-54ec-b9c8-b562f366b04e",
+      "teacher_id": "6d2ebab2-64a5-5fb5-87f2-6ebaf0e1ff58",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "93cf1c39-452c-561e-b779-654acaa12818",
+      "teacher_id": "6d2ebab2-64a5-5fb5-87f2-6ebaf0e1ff58",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "edd6c737-8bf2-54ec-b9c8-b562f366b04e",
+      "teacher_id": "6d2ebab2-64a5-5fb5-87f2-6ebaf0e1ff58",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "93cf1c39-452c-561e-b779-654acaa12818",
+      "teacher_id": "6d2ebab2-64a5-5fb5-87f2-6ebaf0e1ff58",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "edd6c737-8bf2-54ec-b9c8-b562f366b04e",
+      "teacher_id": "6d2ebab2-64a5-5fb5-87f2-6ebaf0e1ff58",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "93cf1c39-452c-561e-b779-654acaa12818",
+      "teacher_id": "6d2ebab2-64a5-5fb5-87f2-6ebaf0e1ff58",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "edd6c737-8bf2-54ec-b9c8-b562f366b04e",
+      "teacher_id": "6d2ebab2-64a5-5fb5-87f2-6ebaf0e1ff58",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "93cf1c39-452c-561e-b779-654acaa12818",
+      "teacher_id": "031e8790-5681-5e98-aa31-1c918b26ee9d",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "edd6c737-8bf2-54ec-b9c8-b562f366b04e",
+      "teacher_id": "031e8790-5681-5e98-aa31-1c918b26ee9d",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "93cf1c39-452c-561e-b779-654acaa12818",
+      "teacher_id": "031e8790-5681-5e98-aa31-1c918b26ee9d",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "edd6c737-8bf2-54ec-b9c8-b562f366b04e",
+      "teacher_id": "031e8790-5681-5e98-aa31-1c918b26ee9d",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "subject_id": "93cf1c39-452c-561e-b779-654acaa12818",
+      "teacher_id": "031e8790-5681-5e98-aa31-1c918b26ee9d",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "subject_id": "edd6c737-8bf2-54ec-b9c8-b562f366b04e",
+      "teacher_id": "031e8790-5681-5e98-aa31-1c918b26ee9d",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "subject_id": "93cf1c39-452c-561e-b779-654acaa12818",
+      "teacher_id": "031e8790-5681-5e98-aa31-1c918b26ee9d",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "subject_id": "edd6c737-8bf2-54ec-b9c8-b562f366b04e",
+      "teacher_id": "031e8790-5681-5e98-aa31-1c918b26ee9d",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "subject_id": "93cf1c39-452c-561e-b779-654acaa12818",
+      "teacher_id": "031e8790-5681-5e98-aa31-1c918b26ee9d",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "subject_id": "edd6c737-8bf2-54ec-b9c8-b562f366b04e",
+      "teacher_id": "031e8790-5681-5e98-aa31-1c918b26ee9d",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "subject_id": "93cf1c39-452c-561e-b779-654acaa12818",
+      "teacher_id": "031e8790-5681-5e98-aa31-1c918b26ee9d",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "subject_id": "edd6c737-8bf2-54ec-b9c8-b562f366b04e",
+      "teacher_id": "031e8790-5681-5e98-aa31-1c918b26ee9d",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "subject_id": "93cf1c39-452c-561e-b779-654acaa12818",
+      "teacher_id": "d06eb4ce-278b-5099-83a2-a48fe056d24a",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "subject_id": "edd6c737-8bf2-54ec-b9c8-b562f366b04e",
+      "teacher_id": "d06eb4ce-278b-5099-83a2-a48fe056d24a",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "58916228-206b-5949-9100-bdb1d86794c2",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "1c68faad-f608-5af1-920e-4e51d9aeb7ee",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "47bf5611-5c9c-5fd9-8c85-04f3547d4694",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "719bc7a5-96d5-5e10-ba21-3892f0120c74",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "719bc7a5-96d5-5e10-ba21-3892f0120c74",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "181d1bd6-0c99-5ef4-9706-264574bcce98",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "181d1bd6-0c99-5ef4-9706-264574bcce98",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "b4eee47d-f628-5073-84f4-cea58a980fc3",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "b4eee47d-f628-5073-84f4-cea58a980fc3",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "502a9133-b048-5155-ab5c-37b83013fae5",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "9494e435-31db-5744-90de-a323d678ad0a",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "9494e435-31db-5744-90de-a323d678ad0a",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "9494e435-31db-5744-90de-a323d678ad0a",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "9494e435-31db-5744-90de-a323d678ad0a",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "9494e435-31db-5744-90de-a323d678ad0a",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "a04a00a8-dd2d-5038-8ab9-a2b0e74eb569",
+      "teacher_id": "9494e435-31db-5744-90de-a323d678ad0a",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "9494e435-31db-5744-90de-a323d678ad0a",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "9494e435-31db-5744-90de-a323d678ad0a",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "9494e435-31db-5744-90de-a323d678ad0a",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "9494e435-31db-5744-90de-a323d678ad0a",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "subject_id": "59d639b6-563b-549e-b23f-4e50824f1947",
+      "teacher_id": "9494e435-31db-5744-90de-a323d678ad0a",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "44a0e811-e149-52c2-9456-aee7de4f31ce",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "2a41876d-bfd1-509d-b0cc-075476bdb96b",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "4b58eb75-c8c9-525e-b11a-66081f6c43c9",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "d026f74a-737b-581a-8f79-86472b25d759",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "001b1a08-ca84-5b77-bae2-dadf68efe749",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "b040b342-9cc5-5a59-bb96-d3eafe3c08d4",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "b1ce6ffa-1f1a-5be5-85ea-44086060fa45",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "6347bb81-0c55-5679-b4c2-fbc558c40bdf",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "368785ca-6d24-5567-a15f-3f731d39fc34",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "f0339073-d826-55ba-946b-3cd27dc441a9",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "800a69a5-e858-56a2-9f6e-18813e0702da",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "58916228-206b-5949-9100-bdb1d86794c2",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "1c68faad-f608-5af1-920e-4e51d9aeb7ee",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "47bf5611-5c9c-5fd9-8c85-04f3547d4694",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "719bc7a5-96d5-5e10-ba21-3892f0120c74",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "181d1bd6-0c99-5ef4-9706-264574bcce98",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "b4eee47d-f628-5073-84f4-cea58a980fc3",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "d65d4346-37c8-5112-abb1-06ac98e59b41",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "d65d4346-37c8-5112-abb1-06ac98e59b41",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "18da1d19-0791-5461-b593-be4d6767e601",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "d65d4346-37c8-5112-abb1-06ac98e59b41",
+      "teacher_id": "1613ca5f-e035-5f03-b2d0-68db2df12eaf",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "1613ca5f-e035-5f03-b2d0-68db2df12eaf",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "d65d4346-37c8-5112-abb1-06ac98e59b41",
+      "teacher_id": "1613ca5f-e035-5f03-b2d0-68db2df12eaf",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "1613ca5f-e035-5f03-b2d0-68db2df12eaf",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "d65d4346-37c8-5112-abb1-06ac98e59b41",
+      "teacher_id": "1613ca5f-e035-5f03-b2d0-68db2df12eaf",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "1613ca5f-e035-5f03-b2d0-68db2df12eaf",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "d65d4346-37c8-5112-abb1-06ac98e59b41",
+      "teacher_id": "1613ca5f-e035-5f03-b2d0-68db2df12eaf",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "1613ca5f-e035-5f03-b2d0-68db2df12eaf",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "d65d4346-37c8-5112-abb1-06ac98e59b41",
+      "teacher_id": "1613ca5f-e035-5f03-b2d0-68db2df12eaf",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "1613ca5f-e035-5f03-b2d0-68db2df12eaf",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "d65d4346-37c8-5112-abb1-06ac98e59b41",
+      "teacher_id": "1613ca5f-e035-5f03-b2d0-68db2df12eaf",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "1613ca5f-e035-5f03-b2d0-68db2df12eaf",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "subject_id": "d65d4346-37c8-5112-abb1-06ac98e59b41",
+      "teacher_id": "6c0392b1-9fb7-5569-8de4-f94accc903e6",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "6c0392b1-9fb7-5569-8de4-f94accc903e6",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "subject_id": "d65d4346-37c8-5112-abb1-06ac98e59b41",
+      "teacher_id": "6c0392b1-9fb7-5569-8de4-f94accc903e6",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "6c0392b1-9fb7-5569-8de4-f94accc903e6",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "subject_id": "d65d4346-37c8-5112-abb1-06ac98e59b41",
+      "teacher_id": "6c0392b1-9fb7-5569-8de4-f94accc903e6",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "6c0392b1-9fb7-5569-8de4-f94accc903e6",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "subject_id": "d65d4346-37c8-5112-abb1-06ac98e59b41",
+      "teacher_id": "6c0392b1-9fb7-5569-8de4-f94accc903e6",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "6c0392b1-9fb7-5569-8de4-f94accc903e6",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "subject_id": "d65d4346-37c8-5112-abb1-06ac98e59b41",
+      "teacher_id": "f0dcf8b8-32d5-5f08-8f55-5aa505fc8922",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "subject_id": "f952fac3-5786-54de-880f-482045e6703c",
+      "teacher_id": "f0dcf8b8-32d5-5f08-8f55-5aa505fc8922",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "58916228-206b-5949-9100-bdb1d86794c2",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "bfe9c2f5-bb3a-5e8e-97ad-a79d4fbc429c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "1c68faad-f608-5af1-920e-4e51d9aeb7ee",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "bfe9c2f5-bb3a-5e8e-97ad-a79d4fbc429c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "47bf5611-5c9c-5fd9-8c85-04f3547d4694",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "bfe9c2f5-bb3a-5e8e-97ad-a79d4fbc429c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "719bc7a5-96d5-5e10-ba21-3892f0120c74",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "bfe9c2f5-bb3a-5e8e-97ad-a79d4fbc429c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "181d1bd6-0c99-5ef4-9706-264574bcce98",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "bfe9c2f5-bb3a-5e8e-97ad-a79d4fbc429c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "b4eee47d-f628-5073-84f4-cea58a980fc3",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "bfe9c2f5-bb3a-5e8e-97ad-a79d4fbc429c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "bfe9c2f5-bb3a-5e8e-97ad-a79d4fbc429c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "bfe9c2f5-bb3a-5e8e-97ad-a79d4fbc429c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "bfe9c2f5-bb3a-5e8e-97ad-a79d4fbc429c",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "bfe9c2f5-bb3a-5e8e-97ad-a79d4fbc429c",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "bfe9c2f5-bb3a-5e8e-97ad-a79d4fbc429c",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "9fc69720-b354-57fb-8b50-3157b636ca4a",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "9fc69720-b354-57fb-8b50-3157b636ca4a",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "9fc69720-b354-57fb-8b50-3157b636ca4a",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "9fc69720-b354-57fb-8b50-3157b636ca4a",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "subject_id": "d2e35496-848e-5833-aed2-c689c9e5e3af",
+      "teacher_id": "9fc69720-b354-57fb-8b50-3157b636ca4a",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "9fc69720-b354-57fb-8b50-3157b636ca4a",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "subject_id": "d2e35496-848e-5833-aed2-c689c9e5e3af",
+      "teacher_id": "9fc69720-b354-57fb-8b50-3157b636ca4a",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "9f118f55-2787-589f-89bb-1d7194c94de3",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "subject_id": "d2e35496-848e-5833-aed2-c689c9e5e3af",
+      "teacher_id": "9f118f55-2787-589f-89bb-1d7194c94de3",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "9f118f55-2787-589f-89bb-1d7194c94de3",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "subject_id": "d2e35496-848e-5833-aed2-c689c9e5e3af",
+      "teacher_id": "9f118f55-2787-589f-89bb-1d7194c94de3",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "subject_id": "304a3c07-23f9-5214-9bd3-e9b905c836f3",
+      "teacher_id": "9f118f55-2787-589f-89bb-1d7194c94de3",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "subject_id": "d2e35496-848e-5833-aed2-c689c9e5e3af",
+      "teacher_id": "9f118f55-2787-589f-89bb-1d7194c94de3",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "58916228-206b-5949-9100-bdb1d86794c2",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "d07d7647-9fb0-5300-8f05-fdcf1405133b",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "1c68faad-f608-5af1-920e-4e51d9aeb7ee",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "d07d7647-9fb0-5300-8f05-fdcf1405133b",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "47bf5611-5c9c-5fd9-8c85-04f3547d4694",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "d07d7647-9fb0-5300-8f05-fdcf1405133b",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "719bc7a5-96d5-5e10-ba21-3892f0120c74",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "d07d7647-9fb0-5300-8f05-fdcf1405133b",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "181d1bd6-0c99-5ef4-9706-264574bcce98",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "d07d7647-9fb0-5300-8f05-fdcf1405133b",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "b4eee47d-f628-5073-84f4-cea58a980fc3",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "d07d7647-9fb0-5300-8f05-fdcf1405133b",
+      "hours_per_week": 2
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "d07d7647-9fb0-5300-8f05-fdcf1405133b",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "d07d7647-9fb0-5300-8f05-fdcf1405133b",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "d07d7647-9fb0-5300-8f05-fdcf1405133b",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "d07d7647-9fb0-5300-8f05-fdcf1405133b",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "d07d7647-9fb0-5300-8f05-fdcf1405133b",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "d07d7647-9fb0-5300-8f05-fdcf1405133b",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "d07d7647-9fb0-5300-8f05-fdcf1405133b",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "a3939fdb-dfab-5ed5-9577-8bf02a4d918f",
+      "teacher_id": "d07d7647-9fb0-5300-8f05-fdcf1405133b",
+      "hours_per_week": 1
+    },
+    {
+      "class_id": "44a0e811-e149-52c2-9456-aee7de4f31ce",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "4e87b218-2c00-5340-b0ad-5919bd70dc3c",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "2a41876d-bfd1-509d-b0cc-075476bdb96b",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "4e87b218-2c00-5340-b0ad-5919bd70dc3c",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "4b58eb75-c8c9-525e-b11a-66081f6c43c9",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "4e87b218-2c00-5340-b0ad-5919bd70dc3c",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "d026f74a-737b-581a-8f79-86472b25d759",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "4e87b218-2c00-5340-b0ad-5919bd70dc3c",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "001b1a08-ca84-5b77-bae2-dadf68efe749",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "4e87b218-2c00-5340-b0ad-5919bd70dc3c",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "b040b342-9cc5-5a59-bb96-d3eafe3c08d4",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "4e87b218-2c00-5340-b0ad-5919bd70dc3c",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "b1ce6ffa-1f1a-5be5-85ea-44086060fa45",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "adcbe121-d75c-5ce3-b741-6731e06f42fa",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "6347bb81-0c55-5679-b4c2-fbc558c40bdf",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "adcbe121-d75c-5ce3-b741-6731e06f42fa",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "368785ca-6d24-5567-a15f-3f731d39fc34",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "adcbe121-d75c-5ce3-b741-6731e06f42fa",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "f0339073-d826-55ba-946b-3cd27dc441a9",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "adcbe121-d75c-5ce3-b741-6731e06f42fa",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "800a69a5-e858-56a2-9f6e-18813e0702da",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "adcbe121-d75c-5ce3-b741-6731e06f42fa",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "58916228-206b-5949-9100-bdb1d86794c2",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "adcbe121-d75c-5ce3-b741-6731e06f42fa",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "1c68faad-f608-5af1-920e-4e51d9aeb7ee",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "adcbe121-d75c-5ce3-b741-6731e06f42fa",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "47bf5611-5c9c-5fd9-8c85-04f3547d4694",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "95f69c7a-1165-5de7-ae60-9a0257680003",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "719bc7a5-96d5-5e10-ba21-3892f0120c74",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "95f69c7a-1165-5de7-ae60-9a0257680003",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "181d1bd6-0c99-5ef4-9706-264574bcce98",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "95f69c7a-1165-5de7-ae60-9a0257680003",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "b4eee47d-f628-5073-84f4-cea58a980fc3",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "95f69c7a-1165-5de7-ae60-9a0257680003",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "3f80633b-71e0-5b3e-b57e-95f322427d2e",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "95f69c7a-1165-5de7-ae60-9a0257680003",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "5e74b0ee-a51e-592d-a840-cfce0539351c",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "95f69c7a-1165-5de7-ae60-9a0257680003",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "86ad895a-91da-500d-a2a5-bdb4e0013ee1",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "4ce4bca1-6fa1-5e9b-950b-c677949e159e",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "a47ee0cf-cc6e-5878-a5cc-f5338316d63d",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "4ce4bca1-6fa1-5e9b-950b-c677949e159e",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "523d8c0b-0081-58a7-896e-3cc1ed803ce7",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "4ce4bca1-6fa1-5e9b-950b-c677949e159e",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "5c413e70-46a0-5f51-8a9a-5f41bfc12e5d",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "4ce4bca1-6fa1-5e9b-950b-c677949e159e",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "51b052ad-c705-56a5-90a9-fecdac45a31b",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "4ce4bca1-6fa1-5e9b-950b-c677949e159e",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "ec555223-2faa-5bc1-aa7b-f9930de83c0a",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "4ce4bca1-6fa1-5e9b-950b-c677949e159e",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "e6cb560f-14e3-5962-a0f1-f9d364b6ddca",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "40883e40-4291-5917-b495-e50b471cf128",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "e1c9002a-7c71-5011-a656-cf640f0a4bfa",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "40883e40-4291-5917-b495-e50b471cf128",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "7ed28ea3-6095-546d-af8e-5c2340f574a1",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "40883e40-4291-5917-b495-e50b471cf128",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "304935b5-515f-56e8-ab4a-4b49b2627723",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "40883e40-4291-5917-b495-e50b471cf128",
+      "hours_per_week": 3
+    },
+    {
+      "class_id": "b278fb15-683e-5e60-8e18-97ce19712621",
+      "subject_id": "3c7656c9-0ebb-53fd-9016-f9cf649b0365",
+      "teacher_id": "40883e40-4291-5917-b495-e50b471cf128",
+      "hours_per_week": 3
+    }
+  ]
+}
