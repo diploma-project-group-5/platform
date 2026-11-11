@@ -73,5 +73,8 @@ test('тема входу lad: увімкнена в realm, файли теми 
   const login = readFileSync(theme('login.ftl'), 'utf8');
   assert.doesNotMatch(login, /type="email"/);
   // Сторонніх запитів зі сторінки входу немає: шрифт і стилі — лише файли теми.
-  assert.doesNotMatch(readFileSync(theme('resources/css/lad.css'), 'utf8'), /https?:\/\//);
+  const css = readFileSync(theme('resources/css/lad.css'), 'utf8');
+  assert.doesNotMatch(css, /https?:\/\//);
+  // Keycloak віддає CSS без charset, тож без @charset браузер читає кирилицю в коментарях як Latin-1.
+  assert.ok(css.startsWith('@charset "UTF-8";\n'), 'lad.css має починатися з @charset "UTF-8";');
 });
