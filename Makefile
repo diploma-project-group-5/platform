@@ -4,7 +4,7 @@ TEST := docker compose -p lad-test -f docker-compose.yml -f docker-compose.test.
 TEST_SERVICES := postgres db-init kafka kafka-init keycloak traefik web-stub tenant-stub school-stub timetable-stub
 
 .DEFAULT_GOAL := help
-.PHONY: help env up up-apps down down-apps smoke kc-theme restart ps logs config psql kafka-topics token kc-reset reset test test-down
+.PHONY: help env up up-apps down down-apps smoke seed kc-theme restart ps logs config psql kafka-topics token kc-reset reset test test-down
 
 help: ## Список команд
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
@@ -33,6 +33,9 @@ down-apps: ## Зупинити все, включно з контейнерам�
 
 smoke: .env ## Наскрізна перевірка після make up-apps: шлюз, сервіси, реєстрація закладу доходить до school
 	@bash tests/smoke.sh
+
+seed: .env ## Завантажити демо-заклад із seed/demo-school.json (після make up-apps; повтор повертає дані до файлу)
+	@bash scripts/seed.sh
 
 restart: .env ## Перезапустити все або один сервіс: make restart s=traefik
 	$(COMPOSE) restart $(s)
