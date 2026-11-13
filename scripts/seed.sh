@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # make seed: завантажує демо-заклад із seed/demo-school.json у бази tenant, school і timetable
-# (картка #21). Потрібен стенд make up-apps: міграції сервісів мають бути застосовані.
-# Ідемпотентно: повторний запуск повертає дані закладу до стану з файлу, QR-токени не змінюються.
+# (картка #21): дані закладу, QR і розклад від solver (чинна версія 1.1 та шаблон тривог 1.2).
+# Потрібен стенд make up-apps: міграції сервісів мають бути застосовані.
+# Ідемпотентно: повторний запуск повертає заклад і розклад до стану з файлів (задачі, публікації,
+# активації тривог і заміни попереднього прогону демо прибираються); QR-токени не змінюються.
 #
 # Заклад — DEMO_SCHOOL_ID з .env; укладач — користувач demo з realm (той самий school_id).
 # SQL друкує seed/sql.mjs у контейнері node:24 (Node на машині не потрібен), виконує psql
@@ -44,7 +46,7 @@ export SNAPSHOT_VERSION
 gen timetable | psql_as "$TIMETABLE_APP_DB_PASSWORD" timetable_app timetable
 
 # Перевірка: усе з файлу на місці, snapshot_version однаковий у school і timetable.
-read -r classes subjects teachers rows bells tokens < <(gen counts)
+read -r classes subjects teachers rows bells tokens main_lessons main_formats alert_lessons alert_bells < <(gen counts)
 id="'$DEMO_SCHOOL_ID'"
 pass=0; bad=0
 expect() {
@@ -63,5 +65,15 @@ expect "timetable: «Стан закладу» з тим самим snapshot_ver
   "$(psql_su timetable "select known_snapshot_version from school_state where school_id = $id")" "$SNAPSHOT_VERSION"
 expect "timetable: $tokens активних QR (класи й вчителі)" \
   "$(psql_su timetable "select count(*) from access_tokens where school_id = $id and revoked_at is null")" "$tokens"
+expect "timetable: чинна версія 1.1 опублікована, $main_lessons уроків, $main_formats форматів днів, той самий snapshot_version" \
+  "$(psql_su timetable "select concat_ws(' ', t.state, t.effective_from <= current_date, t.snapshot_version,
+     (select count(*) from lessons l where l.timetable_id = t.timetable_id),
+     (select count(*) from day_formats f where f.timetable_id = t.timetable_id))
+     from timetables t where t.school_id = $id and t.kind = 'main'")" "published t $SNAPSHOT_VERSION $main_lessons $main_formats"
+expect "timetable: шаблон тривог 1.2 ($alert_lessons уроків), план — чернетка, $alert_bells дзвінків тривог" \
+  "$(psql_su timetable "select concat_ws(' ', p.state,
+     (select count(*) from lessons l where l.timetable_id = p.timetable_id),
+     (select count(*) from alert_bells b where b.school_id = $id))
+     from alert_plan p where p.school_id = $id")" "draft $alert_lessons $alert_bells"
 echo "ℹ сід: пройдено $pass, не пройдено $bad"
 [ "$bad" -eq 0 ]
