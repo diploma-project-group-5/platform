@@ -64,6 +64,27 @@ export const BELLS = [
   ['14:20', '15:05'],
 ];
 
+// Дзвінки розкладу тривог (модель 1.2): 7 скорочених уроків по 30 хв. Кількість уроків має
+// збігатися з lessons_per_day задачі --kind alert, з якої solver порахував seed/timetable-alert.json.
+export const ALERT_BELLS = [
+  ['08:30', '09:00'],
+  ['09:10', '09:40'],
+  ['09:50', '10:20'],
+  ['10:30', '11:00'],
+  ['11:10', '11:40'],
+  ['11:50', '12:20'],
+  ['12:30', '13:00'],
+];
+
+// Чинна версія з минулою датою (розділ 01, етап 1): на демо одразу працюють QR і /load.
+export const PUBLICATION = {
+  order_no: '1-ОД',
+  order_date: '2026-10-30',
+  approved_by: 'Директор ліцею',
+  effective_from: '2026-11-02',
+  published_at: '2026-10-30T12:00:00Z',
+};
+
 // Облаштовані навчальні місця від паспортної місткості (як SEATS_SHARE у генераторі).
 const SEATS_SHARE = 0.9;
 
@@ -115,7 +136,9 @@ export function build(problem) {
       starts_at,
       ends_at,
     })),
+    alert_bells: ALERT_BELLS.map(([starts_at, ends_at], i) => ({ lesson_no: i + 1, starts_at, ends_at })),
     holidays: { from: '2026-12-25', to: '2027-01-11' },
+    publication: PUBLICATION,
     classes: problem.classes.map((c) => ({
       class_id: uuid5(`class:${c.id}`),
       source_id: c.id,

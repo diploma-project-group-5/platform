@@ -10,11 +10,12 @@
 // Використання (змінні середовища):
 //   node seed/sql.mjs tenant     DEMO_SCHOOL_ID, DEMO_USER_ID (id користувача demo у Keycloak)
 //   node seed/sql.mjs school     DEMO_SCHOOL_ID — останній рядок виводу psql: новий snapshot_version
-//   node seed/sql.mjs timetable  DEMO_SCHOOL_ID, SNAPSHOT_VERSION (з кроку school)
+//   node seed/sql.mjs timetable  DEMO_SCHOOL_ID, SNAPSHOT_VERSION (з кроку school); бере й
+//                                розклад solver: seed/timetable-main.json, seed/timetable-alert.json
 //   node seed/sql.mjs counts     очікувані кількості рядків для перевірки після сіду
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { SEED_PATH } from './build.mjs';
+import { SEED_PATH, uuid5 } from './build.mjs';
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
 export const DEMO_LOGIN = 'demo';
@@ -90,11 +91,83 @@ select snapshot_version from school_profile;`,
   );
 }
 
-export function timetableSql(seed, schoolId, snapshotVersion) {
+// Пріоритетні освітні галузі timetable-service (DEFAULT_PRIORITY_AREAS у config.ts).
+export const PRIORITY_AREAS = ['math', 'science', 'language_literature', 'civic_history'];
+export const MAIN_ID = uuid5('timetable:main');
+export const ALERT_ID = uuid5('timetable:alert');
+
+/**
+ * Версія розкладу з результату solver (id генератора) у термінах timetable-service: UUID сіду,
+ * input — та сама проєкція знімка, що будує projection.ts для solver і validator-lib, names — копія
+ * назв і підписів. Невідомий id генератора — помилка: розклад не від цього сід-файлу.
+ */
+export function versionOf(seed, kind, result) {
+  const map = (list, key) => new Map(list.map((x) => [x.source_id, x[key]]));
+  const cls = map(seed.classes, 'class_id');
+  const sub = map(seed.subjects, 'subject_id');
+  const tch = map(seed.teachers, 'teacher_id');
+  const id = (m, v, what) => {
+    const u = m.get(v);
+    if (!u) throw new Error(`розклад ${kind}: невідомий ${what} «${v}» — не з seed/solver-problem.json`);
+    return u;
+  };
+  if (!['OPTIMAL', 'FEASIBLE'].includes(result.status)) throw new Error(`розклад ${kind}: status ${result.status}`);
+  const p = seed.profile;
+  const input = {
+    kind,
+    school_days: p.saturday ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4, 5],
+    lessons_per_day: kind === 'alert' ? seed.alert_bells.length : p.lessons_per_day,
+    staff: p.non_teaching_staff,
+    capacity: kind === 'alert' ? { seats: p.shelter_seats, passport: p.shelter_capacity } : { passport: p.shelter_capacity },
+    classes: seed.classes.map((c) => ({ id: c.class_id, students: c.students, priority: c.in_person_priority })),
+    subjects: seed.subjects.map((s) => ({ id: s.subject_id, priority_area: PRIORITY_AREAS.includes(s.education_area), no_shelter: s.not_in_shelter })),
+    teachers: seed.teachers.map((t) => ({ id: t.teacher_id, weekly_limit: t.weekly_hours_limit, unavailable_days: [...t.unavailable_days].sort((a, b) => a - b) })),
+    rows: seed.curriculum.map((r) => ({ class_id: r.class_id, subject_id: r.subject_id, teacher_id: r.teacher_id, hours: r.hours_per_week })),
+  };
+  const names = {
+    classes: seed.classes.map((c) => ({ class_id: c.class_id, name: c.name })),
+    teachers: seed.teachers.map((t) => ({ teacher_id: t.teacher_id, label: t.label })),
+    subjects: seed.subjects.map((s) => ({ subject_id: s.subject_id, name: s.name, short_name: s.short_name })),
+  };
+  const lessons = result.lessons.map((l) => ({
+    class_id: id(cls, l.class_id, 'клас'),
+    day: l.day,
+    lesson_no: l.lesson_no,
+    subject_id: id(sub, l.subject_id, 'предмет'),
+    teacher_id: id(tch, l.teacher_id, 'вчитель'),
+  }));
+  const day_formats = result.day_formats.map((f) => ({ class_id: id(cls, f.class_id, 'клас'), day: f.day, in_person: f.in_person }));
+  const wall = result.stats?.wall_time_s;
+  return {
+    timetable_id: kind === 'alert' ? ALERT_ID : MAIN_ID,
+    kind,
+    input,
+    names,
+    lessons,
+    day_formats,
+    build_ms: typeof wall === 'number' ? Math.round(wall * 1000) : null,
+  };
+}
+
+function versionSql(s, v, version, publication) {
+  const published = publication
+    ? `'published', ${lit(publication.order_no)}, ${lit(publication.order_date)}, ${lit(publication.approved_by)}, ${lit(publication.effective_from)}, ${lit(publication.published_at)}`
+    : `'validated', null, null, null, null, null`;
+  return `insert into timetables (school_id, timetable_id, kind, state, order_no, order_date, approved_by, effective_from, published_at, snapshot_version, input, names, build_ms) values
+  (${s}, '${version.timetable_id}', ${lit(version.kind)}, ${published}, ${v}, ${lit(JSON.stringify(version.input))}::jsonb, ${lit(JSON.stringify(version.names))}::jsonb, ${version.build_ms ?? 'null'});
+insert into lessons (school_id, timetable_id, class_id, day, lesson_no, subject_id, teacher_id) values
+${values(version.lessons.map((l) => [s, `'${version.timetable_id}'`, `'${l.class_id}'`, l.day, l.lesson_no, `'${l.subject_id}'`, `'${l.teacher_id}'`]))};
+insert into day_formats (school_id, timetable_id, class_id, day, in_person) values
+${values(version.day_formats.map((f) => [s, `'${version.timetable_id}'`, `'${f.class_id}'`, f.day, f.in_person]))};`;
+}
+
+export function timetableSql(seed, schoolId, snapshotVersion, timetables) {
   uuid(schoolId, 'DEMO_SCHOOL_ID');
   const v = Number(snapshotVersion);
   if (!Number.isInteger(v) || v < 1) throw new Error(`SNAPSHOT_VERSION: потрібне ціле ≥ 1, отримано «${snapshotVersion ?? ''}»`);
   const s = `'${schoolId}'::uuid`;
+  const main = versionOf(seed, 'main', timetables.main);
+  const alert = versionOf(seed, 'alert', timetables.alert);
   const bells = JSON.stringify(seed.bells.map((b) => ({ lesson_no: b.lesson_no, start: b.starts_at, end: b.ends_at })));
   const targets = [
     ...seed.classes.map((c) => ['class', c.class_id]),
@@ -118,20 +191,49 @@ on conflict (school_id, scope, target_id) do update set revoked_at = null;
 update access_tokens set revoked_at = now()
 where revoked_at is null
   and not ((scope = 'class' and target_id in (${ids(seed.classes, 'class_id')}))
-        or (scope = 'teacher' and target_id in (${ids(seed.teachers, 'teacher_id')})));`,
+        or (scope = 'teacher' and target_id in (${ids(seed.teachers, 'teacher_id')})));
+
+-- Розклад демо-закладу з нуля: усе, що наробили на попередньому прогоні демо (задачі, версії,
+-- публікації, план і активації тривог, облік тривог, відсутності й заміни), прибираємо.
+-- Уроки й формати днів видаляються каскадом разом з версіями.
+delete from substitutions;
+delete from absences;
+delete from alert_activations;
+delete from alert_hours;
+delete from alert_plan;
+delete from alert_bells;
+delete from timetables;
+delete from jobs;
+
+insert into alert_bells (school_id, lesson_no, starts_at, ends_at) values
+${values(seed.alert_bells.map((b) => [s, b.lesson_no, lit(b.starts_at), lit(b.ends_at)]))};
+
+-- Чинна основна версія (1.1), опублікована наказом з минулою датою.
+${versionSql(s, v, main, seed.publication)}
+
+-- Шаблон розкладу тривог (1.2): validated, план тривог — чернетка, яку на демо погоджують і активують.
+${versionSql(s, v, alert, null)}
+insert into alert_plan (school_id, timetable_id) values (${s}, '${alert.timetable_id}');`,
   );
 }
 
 export const loadSeed = () => JSON.parse(readFileSync(SEED_PATH, 'utf8'));
+const readJson = (name) => JSON.parse(readFileSync(new URL(`./${name}`, import.meta.url), 'utf8'));
+export const loadTimetables = () => ({ main: readJson('timetable-main.json'), alert: readJson('timetable-alert.json') });
 
-/** Очікувані кількості для перевірки після сіду: класи, предмети, вчителі, рядки плану, дзвінки, QR. */
-export const counts = (seed) => [
+/** Очікувані кількості для перевірки після сіду: класи, предмети, вчителі, рядки плану, дзвінки, QR,
+ *  уроки й формати днів основної версії, уроки шаблону тривог, дзвінки тривог. */
+export const counts = (seed, timetables = loadTimetables()) => [
   seed.classes.length,
   seed.subjects.length,
   seed.teachers.length,
   seed.curriculum.length,
   seed.bells.length,
   seed.classes.length + seed.teachers.length,
+  timetables.main.lessons.length,
+  timetables.main.day_formats.length,
+  timetables.alert.lessons.length,
+  seed.alert_bells.length,
 ];
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
@@ -141,7 +243,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   try {
     if (target === 'tenant') process.stdout.write(tenantSql(seed, DEMO_SCHOOL_ID, DEMO_USER_ID));
     else if (target === 'school') process.stdout.write(schoolSql(seed, DEMO_SCHOOL_ID));
-    else if (target === 'timetable') process.stdout.write(timetableSql(seed, DEMO_SCHOOL_ID, SNAPSHOT_VERSION));
+    else if (target === 'timetable') process.stdout.write(timetableSql(seed, DEMO_SCHOOL_ID, SNAPSHOT_VERSION, loadTimetables()));
     else if (target === 'counts') console.log(counts(seed).join(' '));
     else throw new Error('вкажіть базу: tenant, school або timetable (або counts)');
   } catch (e) {

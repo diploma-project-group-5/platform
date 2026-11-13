@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { PROBLEM_PATH, SEED_PATH, render, uuid5 } from '../seed/build.mjs';
-import { counts, schoolSql, tenantSql, timetableSql } from '../seed/sql.mjs';
+import { ALERT_ID, MAIN_ID, counts, loadTimetables, schoolSql, tenantSql, timetableSql, versionOf } from '../seed/sql.mjs';
 
 const text = readFileSync(SEED_PATH, 'utf8');
 const seed = JSON.parse(text);
@@ -84,10 +84,11 @@ test('план: посилання цілі, години в межах, нав�
 
 // SQL сіду (seed/sql.mjs): виконується на стенді через make seed, тут — що генерується правильно.
 const SCHOOL = '5d0b6a1e-7c3f-4b2a-9e41-0a1d2c3b4e5f';
+const timetables = loadTimetables();
 
 test('SQL сіду: заклад лише з set_config у транзакції, інших school_id немає', () => {
-  const own = new Set([SCHOOL, ...seed.classes.map((c) => c.class_id), ...seed.subjects.map((x) => x.subject_id), ...seed.teachers.map((t) => t.teacher_id)]);
-  for (const sql of [schoolSql(seed, SCHOOL), timetableSql(seed, SCHOOL, 1)]) {
+  const own = new Set([SCHOOL, MAIN_ID, ALERT_ID, ...seed.classes.map((c) => c.class_id), ...seed.subjects.map((x) => x.subject_id), ...seed.teachers.map((t) => t.teacher_id)]);
+  for (const sql of [schoolSql(seed, SCHOOL), timetableSql(seed, SCHOOL, 1, timetables)]) {
     assert.match(sql, /^begin;\ndo \$\$ begin perform set_config\('app\.school_id', '5d0b6a1e-7c3f-4b2a-9e41-0a1d2c3b4e5f', true\); end \$\$;/);
     assert.match(sql, /\ncommit;\n$/);
     const foreign = [...sql.matchAll(/'([0-9a-f]{8}-[0-9a-f-]{27})'/g)].map((m) => m[1]).filter((x) => !own.has(x));
@@ -109,7 +110,7 @@ test('SQL сіду: апостроф у назві екрановано, ряд�
 });
 
 test('SQL сіду: дзвінки в «Стані закладу» у форматі timetable, QR на кожен клас і вчителя', () => {
-  const sql = timetableSql(seed, SCHOOL, 7);
+  const sql = timetableSql(seed, SCHOOL, 7, timetables);
   assert.ok(sql.includes('{"lesson_no":1,"start":"08:30","end":"09:15"}'));
   assert.equal((sql.match(/gen_random_uuid\(\)/g) ?? []).length, counts(seed)[5]);
   assert.match(sql, /values \('5d0b6a1e-[^']+'::uuid, 7,/);
@@ -118,6 +119,43 @@ test('SQL сіду: дзвінки в «Стані закладу» у форм�
 test('SQL сіду: неправильні DEMO_SCHOOL_ID, DEMO_USER_ID, SNAPSHOT_VERSION відхиляються', () => {
   assert.throws(() => schoolSql(seed, "x'; drop table classes; --"), /DEMO_SCHOOL_ID/);
   assert.throws(() => tenantSql(seed, SCHOOL, ''), /DEMO_USER_ID/);
-  assert.throws(() => timetableSql(seed, SCHOOL, 0), /SNAPSHOT_VERSION/);
-  assert.throws(() => timetableSql(seed, SCHOOL, '1; drop'), /SNAPSHOT_VERSION/);
+  assert.throws(() => timetableSql(seed, SCHOOL, 0, timetables), /SNAPSHOT_VERSION/);
+  assert.throws(() => timetableSql(seed, SCHOOL, '1; drop', timetables), /SNAPSHOT_VERSION/);
+});
+
+// Розклад від solver (#72): seed/timetable-main.json і seed/timetable-alert.json з id генератора.
+for (const kind of ['main', 'alert']) {
+  test(`розклад ${kind}: id генератора відомі сіду, уроки точно за планом, формат на кожен день класу`, () => {
+    const v = versionOf(seed, kind, timetables[kind]);
+    const plan = new Map(seed.curriculum.map((r) => [`${r.class_id}/${r.subject_id}`, r]));
+    const hours = new Map();
+    const slots = new Set();
+    for (const l of v.lessons) {
+      const row = plan.get(`${l.class_id}/${l.subject_id}`);
+      assert.ok(row, `урок поза планом: ${l.class_id}/${l.subject_id}`);
+      assert.equal(l.teacher_id, row.teacher_id, 'вчитель уроку не з плану');
+      assert.ok(l.day >= 1 && l.day <= 5 && l.lesson_no >= 1 && l.lesson_no <= v.input.lessons_per_day);
+      const slot = `${l.class_id}/${l.day}/${l.lesson_no}`;
+      assert.ok(!slots.has(slot), `два уроки в одному слоті ${slot}`);
+      slots.add(slot);
+      hours.set(`${l.class_id}/${l.subject_id}`, (hours.get(`${l.class_id}/${l.subject_id}`) ?? 0) + 1);
+    }
+    for (const [key, row] of plan) assert.equal(hours.get(key) ?? 0, row.hours_per_week, `години ${key}`);
+    assert.equal(v.day_formats.length, seed.classes.length * 5);
+    for (const c of seed.classes) assert.ok(v.day_formats.some((f) => f.class_id === c.class_id && f.in_person), `клас ${c.name} без очних днів`);
+    assert.deepEqual(timetables[kind].conflicts, []);
+  });
+}
+
+test('розклад: шаблон тривог на дзвінках тривог з двома умовами, чинна версія з минулою датою', () => {
+  const alert = versionOf(seed, 'alert', timetables.alert);
+  assert.equal(alert.input.lessons_per_day, seed.alert_bells.length);
+  assert.deepEqual(alert.input.capacity, { seats: seed.profile.shelter_seats, passport: seed.profile.shelter_capacity });
+  assert.equal(versionOf(seed, 'main', timetables.main).input.lessons_per_day, seed.profile.lessons_per_day);
+  assert.notEqual(MAIN_ID, ALERT_ID);
+  const sql = timetableSql(seed, SCHOOL, 3, timetables);
+  assert.match(sql, /'published', '1-ОД', '2026-10-30', 'Директор ліцею', '2026-11-02'/);
+  assert.match(sql, new RegExp(`insert into alert_plan \\(school_id, timetable_id\\) values \\('${SCHOOL}'::uuid, '${ALERT_ID}'\\)`));
+  assert.ok(seed.publication.effective_from <= new Date().toISOString().slice(0, 10));
+  assert.equal(new Date(`${seed.publication.effective_from}T12:00:00Z`).getUTCDay(), 1, 'effective_from — понеділок');
 });
