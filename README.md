@@ -153,6 +153,22 @@ curl -H "Authorization: Bearer $(make -s token)" http://localhost/api/v1/school/
 
 Файл не пишеться вручну. Його збирає `node seed/build.mjs` з `seed/solver-problem.json` — виводу генератора solver (`lad-solver generate --classes 30 --shelter-ratio 0.55 --seed 0`). Ідентифікатори класів, предметів і вчителів — UUIDv5 від id генератора, тож чинна версія розкладу, яку solver порахує з того самого `solver-problem.json` (картка #72), збігається з даними сіду.
 
+Розклад демо-закладу (картка #72) теж пораховано solver-ом з того самого `solver-problem.json`. Файли не перегенеровуються в CI, а id в них — id генератора, як у `solver-problem.json`:
+
+| Файл | Що це | Вхід |
+|---|---|---|
+| `seed/timetable-main.json` | чинна версія `kind=main` (модель 1.1) | `seed/solver-problem.json` |
+| `seed/timetable-alert.json` | шаблон тривог `kind=alert` (модель 1.2) | той самий генератор з `--kind alert`: відрізняється лише `kind` і `capacity` (`seats` 461 = `shelter_seats`) |
+
+Обидва файли — результат `lad-solver solve` як є: `status`, `lessons`, `day_formats`, `conflicts`, `stats` і `provenance` (версії solver, моделі й OR-Tools, `input_sha256` канонічного JSON задачі, параметри). Команда:
+
+```bash
+lad-solver solve --in <problem.json> --out <result.json> \
+  --time-limit 3000 --deterministic-time 120 --workers 2 --seed 0 --interleave
+```
+
+`--deterministic-time` разом з `--interleave` роблять результат відтворюваним: два прогони дають ті самі уроки й формати днів (настінний час у `stats` відрізняється). Обидва файли пройшли `lad-validate` (validator-lib 0.2.0, contracts 0.3.0) без конфліктів, і в жодному немає класу без очних днів.
+
 Завантаження — `make seed` після `make up-apps`:
 
 ```bash
