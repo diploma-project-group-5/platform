@@ -4,8 +4,11 @@
 
 http:
   routers:
+    # Усе, що не API й не /idp, — застосунок web. Крім /internal: внутрішні маршрути сервісів
+    # (/internal/v1/…) захищені лише мережею compose, тож шлюз не має й натяку на них — на
+    # /internal немає жодного маршруту, і Traefik сам відповідає 404 (platform #17).
     web:
-      rule: "PathPrefix(`/`)"
+      rule: 'PathPrefix(`/`) && !PathRegexp(`(?i)^/+internal(/|$)`)'
       priority: 1
       entryPoints: [web]
       service: web
@@ -66,6 +69,10 @@ http:
         referrerPolicy: "no-referrer"
         # SAMEORIGIN, а не DENY: keycloak-js вбудовує iframe зі своєї ж адреси.
         customFrameOptionsValue: "SAMEORIGIN"
+        # HSTS: браузер далі ходить лише по https (platform #18). Traefik додає заголовок лише
+        # до відповідей по https, тож на http://localhost нічого не змінюється. Без includeSubdomains:
+        # домен ВМ — піддомен чужого сервісу (DuckDNS, sslip.io).
+        stsSeconds: 31536000
 
     deny-external:
       ipAllowList:

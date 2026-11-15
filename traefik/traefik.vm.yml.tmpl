@@ -1,0 +1,61 @@
+# Статична конфігурація Traefik для ВМ (platform #18). Шаблон: make deploy підставляє
+# __LAD_DOMAIN__ і __ACME_EMAIL__ з .env і пише traefik/traefik.vm.yml (у git не потрапляє).
+#
+# Відмінність від traefik.yml — лише вхідні точки й сертифікат:
+#   web  — тепер :443 з TLS. Ім'я те саме, тож усі маршрути dynamic/routes.yml (entryPoints: [web])
+#          працюють без змін і лише через HTTPS. Захисні налаштування — ті самі, що в traefik.yml.
+#   http — :80, лише редірект на https і перевірка Let's Encrypt (HTTP-01).
+# keycloak-js входить через PKCE (Web Crypto), який браузер дає лише на https або localhost:
+# без цього файлу на ВМ вхід не відкриється.
+
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false
+
+entryPoints:
+  http:
+    address: ":80"
+    http:
+      redirections:
+        entryPoint:
+          to: web
+          scheme: https
+          permanent: true
+  web:
+    address: ":443"
+    http:
+      aliasHeadersStrategy: delete
+      encodedCharacters:
+        allowEncodedSlash: false
+        allowEncodedBackSlash: false
+        allowEncodedSemicolon: false
+        allowEncodedNullCharacter: false
+      tls:
+        certResolver: le
+        domains:
+          - main: "__LAD_DOMAIN__"
+  ping:
+    address: ":8082"
+    http:
+      aliasHeadersStrategy: delete
+
+certificatesResolvers:
+  le:
+    acme:
+      email: "__ACME_EMAIL__"
+      storage: /acme/acme.json
+      httpChallenge:
+        entryPoint: http
+
+ping:
+  entryPoint: ping
+
+providers:
+  file:
+    directory: /etc/traefik/dynamic
+    watch: true
+
+log:
+  level: INFO
+
+accessLog: {}

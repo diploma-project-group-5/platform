@@ -10,9 +10,11 @@
 // Використання (змінні середовища):
 //   node seed/sql.mjs tenant     DEMO_SCHOOL_ID, DEMO_USER_ID (id користувача demo у Keycloak)
 //   node seed/sql.mjs school     DEMO_SCHOOL_ID — останній рядок виводу psql: новий snapshot_version
-//   node seed/sql.mjs timetable  DEMO_SCHOOL_ID, SNAPSHOT_VERSION (з кроку school); бере й
+//   node seed/sql.mjs timetable  DEMO_SCHOOL_ID, SNAPSHOT_VERSION (з кроку school), PRIORITY_AREAS
+//                                (як у контейнері timetable; не задано — за замовчуванням); бере й
 //                                розклад solver: seed/timetable-main.json, seed/timetable-alert.json
 //   node seed/sql.mjs counts     очікувані кількості рядків для перевірки після сіду
+//   node seed/sql.mjs priority   пріоритетні галузі з PRIORITY_AREAS (помилка — до будь-якого запису в БД)
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { SEED_PATH, uuid5 } from './build.mjs';
@@ -91,8 +93,24 @@ select snapshot_version from school_profile;`,
   );
 }
 
-// Пріоритетні освітні галузі timetable-service (DEFAULT_PRIORITY_AREAS у config.ts).
-export const PRIORITY_AREAS = ['math', 'science', 'language_literature', 'civic_history'];
+// Освітні галузі school-service (EDUCATION_AREAS) і пріоритетні за замовчуванням у timetable-service
+// (DEFAULT_PRIORITY_AREAS у config.ts). Фактичний список make seed бере з контейнера timetable
+// (PRIORITY_AREAS), щоб проєкція версії збігалася з тією, яку будує сервіс (platform #15).
+export const EDUCATION_AREAS = ['math', 'science', 'language_literature', 'civic_history', 'informatics', 'arts', 'technology', 'social_health', 'physical'];
+export const DEFAULT_PRIORITY_AREAS = ['math', 'science', 'language_literature', 'civic_history'];
+
+/**
+ * PRIORITY_AREAS як у timetable-service: не задано — список за замовчуванням. Задано порожнім або
+ * з невідомою галуззю — помилка: timetable тоді мовчки будує без пріоритетів (баг 4 звіту 15.11).
+ */
+export function parsePriorityAreas(raw) {
+  if (raw === undefined) return DEFAULT_PRIORITY_AREAS;
+  const list = raw.split(',').map((x) => x.trim()).filter(Boolean);
+  if (list.length === 0) throw new Error('PRIORITY_AREAS задано порожнім: timetable-service будуватиме розклад без пріоритетних предметів');
+  const unknown = list.filter((x) => !EDUCATION_AREAS.includes(x));
+  if (unknown.length > 0) throw new Error(`PRIORITY_AREAS: невідомі галузі ${unknown.join(', ')} (є: ${EDUCATION_AREAS.join(', ')})`);
+  return list;
+}
 export const MAIN_ID = uuid5('timetable:main');
 export const ALERT_ID = uuid5('timetable:alert');
 
@@ -101,7 +119,7 @@ export const ALERT_ID = uuid5('timetable:alert');
  * input — та сама проєкція знімка, що будує projection.ts для solver і validator-lib, names — копія
  * назв і підписів. Невідомий id генератора — помилка: розклад не від цього сід-файлу.
  */
-export function versionOf(seed, kind, result) {
+export function versionOf(seed, kind, result, priorityAreas = DEFAULT_PRIORITY_AREAS) {
   const map = (list, key) => new Map(list.map((x) => [x.source_id, x[key]]));
   const cls = map(seed.classes, 'class_id');
   const sub = map(seed.subjects, 'subject_id');
@@ -120,7 +138,7 @@ export function versionOf(seed, kind, result) {
     staff: p.non_teaching_staff,
     capacity: kind === 'alert' ? { seats: p.shelter_seats, passport: p.shelter_capacity } : { passport: p.shelter_capacity },
     classes: seed.classes.map((c) => ({ id: c.class_id, students: c.students, priority: c.in_person_priority })),
-    subjects: seed.subjects.map((s) => ({ id: s.subject_id, priority_area: PRIORITY_AREAS.includes(s.education_area), no_shelter: s.not_in_shelter })),
+    subjects: seed.subjects.map((s) => ({ id: s.subject_id, priority_area: priorityAreas.includes(s.education_area), no_shelter: s.not_in_shelter })),
     teachers: seed.teachers.map((t) => ({ id: t.teacher_id, weekly_limit: t.weekly_hours_limit, unavailable_days: [...t.unavailable_days].sort((a, b) => a - b) })),
     rows: seed.curriculum.map((r) => ({ class_id: r.class_id, subject_id: r.subject_id, teacher_id: r.teacher_id, hours: r.hours_per_week })),
   };
@@ -161,13 +179,13 @@ insert into day_formats (school_id, timetable_id, class_id, day, in_person) valu
 ${values(version.day_formats.map((f) => [s, `'${version.timetable_id}'`, `'${f.class_id}'`, f.day, f.in_person]))};`;
 }
 
-export function timetableSql(seed, schoolId, snapshotVersion, timetables) {
+export function timetableSql(seed, schoolId, snapshotVersion, timetables, priorityAreas = DEFAULT_PRIORITY_AREAS) {
   uuid(schoolId, 'DEMO_SCHOOL_ID');
   const v = Number(snapshotVersion);
   if (!Number.isInteger(v) || v < 1) throw new Error(`SNAPSHOT_VERSION: потрібне ціле ≥ 1, отримано «${snapshotVersion ?? ''}»`);
   const s = `'${schoolId}'::uuid`;
-  const main = versionOf(seed, 'main', timetables.main);
-  const alert = versionOf(seed, 'alert', timetables.alert);
+  const main = versionOf(seed, 'main', timetables.main, priorityAreas);
+  const alert = versionOf(seed, 'alert', timetables.alert, priorityAreas);
   const bells = JSON.stringify(seed.bells.map((b) => ({ lesson_no: b.lesson_no, start: b.starts_at, end: b.ends_at })));
   const targets = [
     ...seed.classes.map((c) => ['class', c.class_id]),
@@ -243,8 +261,9 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   try {
     if (target === 'tenant') process.stdout.write(tenantSql(seed, DEMO_SCHOOL_ID, DEMO_USER_ID));
     else if (target === 'school') process.stdout.write(schoolSql(seed, DEMO_SCHOOL_ID));
-    else if (target === 'timetable') process.stdout.write(timetableSql(seed, DEMO_SCHOOL_ID, SNAPSHOT_VERSION, loadTimetables()));
+    else if (target === 'timetable') process.stdout.write(timetableSql(seed, DEMO_SCHOOL_ID, SNAPSHOT_VERSION, loadTimetables(), parsePriorityAreas(process.env.PRIORITY_AREAS)));
     else if (target === 'counts') console.log(counts(seed).join(' '));
+    else if (target === 'priority') console.log(parsePriorityAreas(process.env.PRIORITY_AREAS).join(','));
     else throw new Error('вкажіть базу: tenant, school або timetable (або counts)');
   } catch (e) {
     console.error(`✖ seed/sql.mjs: ${e.message}`);

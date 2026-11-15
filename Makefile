@@ -4,7 +4,7 @@ TEST := docker compose -p lad-test -f docker-compose.yml -f docker-compose.test.
 TEST_SERVICES := postgres db-init kafka kafka-init keycloak traefik web-stub tenant-stub school-stub timetable-stub
 
 .DEFAULT_GOAL := help
-.PHONY: help env up up-apps down down-apps smoke seed kc-theme restart ps logs config psql kafka-topics token kc-reset reset test test-down
+.PHONY: help env env-quiet up up-apps demo deploy down down-apps smoke seed kc-theme restart ps logs config psql kafka-topics token kc-reset reset test test-down
 
 help: ## Список команд
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
@@ -15,15 +15,27 @@ help: ## Список команд
 env: ## Створити .env або дописати змінні, яких бракує, з .env.example (наявні не чіпає)
 	@bash scripts/env-sync.sh
 
-up: .env ## Підняти інфраструктуру й дочекатися, поки всі healthcheck зелені
+# Те саме мовчки: друкує лише те, що дописано (platform #14).
+env-quiet:
+	@bash scripts/env-sync.sh | grep -v 'актуальний' || true
+
+# up, up-apps, demo і deploy спершу дописують у .env змінні, яких бракує (make env): інакше після
+# оновлення platform старий .env валить compose помилкою про відсутній пароль (platform #14).
+up: env-quiet ## Підняти інфраструктуру й дочекатися, поки всі healthcheck зелені
 	$(COMPOSE) up -d --wait
 
 # Шлюз веде на контейнери сервісів замість сервісів на хості (make dev). Змінні оболонки
 # мають пріоритет над .env, тож .env для розробки на хості лишається без змін.
 APPS_UPSTREAMS := WEB_UPSTREAM=http://web:8080 TENANT_UPSTREAM=http://tenant-service:3001 SCHOOL_UPSTREAM=http://school-service:3002 TIMETABLE_UPSTREAM=http://timetable-service:3003
 
-up-apps: .env ## Підняти все разом із web, tenant, school і timetable у контейнерах (збирає образи з сусідніх папок)
+up-apps: env-quiet ## Підняти все разом із web, tenant, school і timetable у контейнерах (збирає образи з сусідніх папок)
 	$(APPS_UPSTREAMS) $(COMPOSE) --profile apps up -d --wait --build
+
+demo: env-quiet ## Стенд для показу однією командою: звільнити порти, підняти з нуля разом із solver, make seed
+	@bash scripts/demo.sh
+
+deploy: env-quiet ## ВМ: перевірити .env, оновити клони, solver на SOLVER_REF, HTTPS, smoke (make deploy SEED=1 — ще й сід)
+	@bash scripts/deploy.sh $(if $(SEED),--seed)
 
 down: ## Зупинити контейнери (дані в томах лишаються)
 	$(COMPOSE) down
@@ -76,7 +88,12 @@ reset: ## Зупинити й ВИДАЛИТИ всі дані (бази, топ
 
 test: .env ## Усі тести platform на окремому стенді lad-test (робоче оточення не зачіпає)
 	@bash tests/env-sync.sh
+	@bash tests/deploy-check.sh
 	@$(COMPOSE) config --quiet && echo "▶ docker-compose.yml і .env: OK"
+	@$(COMPOSE) -f docker-compose.yml --profile apps --profile solver config --format json \
+	  | docker run --rm -i -v "$(CURDIR)":/work:ro -w /work node:24-bookworm-slim node tests/compose-check.mjs
+	@$(COMPOSE) -f docker-compose.yml -f docker-compose.vm.yml --profile apps --profile solver config --format json \
+	  | docker run --rm -i -v "$(CURDIR)":/work:ro -w /work node:24-bookworm-slim node tests/compose-check.mjs --vm
 	@set -e; \
 	trap '$(TEST) down -v --remove-orphans >/dev/null 2>&1' EXIT; \
 	echo "▶ Піднімаю стенд lad-test (перший раз — до 2 хв)…"; \

@@ -16,7 +16,7 @@ fail() { echo "  ✖ $1" >&2; exit 1; }
 running() { [ "$(docker inspect -f '{{.State.Running}}' "$1" 2>/dev/null)" = "true" ]; }
 # SQL з seed/sql.mjs для бази $1; змінні DEMO_* і SNAPSHOT_VERSION передаються з оточення.
 gen() {
-  docker run --rm -v "$PWD":/work:ro -w /work -e DEMO_SCHOOL_ID -e DEMO_USER_ID -e SNAPSHOT_VERSION \
+  docker run --rm -v "$PWD":/work:ro -w /work -e DEMO_SCHOOL_ID -e DEMO_USER_ID -e SNAPSHOT_VERSION -e PRIORITY_AREAS \
     node:24-bookworm-slim node seed/sql.mjs "$1"
 }
 # psql роллю $2 до бази $3 з паролем $1; SQL — зі stdin.
@@ -32,6 +32,17 @@ for check in "tenant schools" "school curriculum" "timetable school_state"; do
 done
 
 # id користувача demo в Keycloak: реєстр tenant зберігає його як scheduler_user_id.
+# Пріоритетні галузі — ті самі, з якими будує timetable-service (platform #15): не задано в
+# контейнері — список за замовчуванням, задано порожнім або з помилкою — seed/sql.mjs зупинить сід.
+running lad-timetable-service || fail "немає lad-timetable-service — спершу make up-apps"
+if PRIORITY_AREAS="$(docker exec lad-timetable-service printenv PRIORITY_AREAS)"; then
+  export PRIORITY_AREAS
+else
+  unset PRIORITY_AREAS
+fi
+areas="$(gen priority)" || fail "PRIORITY_AREAS у lad-timetable-service некоректний — виправте його в docker-compose.yml і make up-apps"
+echo "  ℹ пріоритетні галузі: $areas"
+
 DEMO_USER_ID="$(docker exec lad-keycloak bash -c '/opt/keycloak/bin/kcadm.sh config credentials --config /tmp/kcadm.config \
   --server http://localhost:8080/idp --realm master --user admin --password "$KC_BOOTSTRAP_ADMIN_PASSWORD" >/dev/null \
   && /opt/keycloak/bin/kcadm.sh get users -r lad --config /tmp/kcadm.config -q username=demo -q exact=true \
