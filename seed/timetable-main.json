@@ -5,575 +5,561 @@
    "class_id": "c01-a",
    "day": 1,
    "lesson_no": 1,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c01-a",
-   "day": 1,
-   "lesson_no": 2,
-   "subject_id": "math",
-   "teacher_id": "t001"
-  },
-  {
-   "class_id": "c01-a",
-   "day": 1,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t001"
-  },
-  {
-   "class_id": "c01-a",
-   "day": 1,
-   "lesson_no": 4,
-   "subject_id": "explore_world",
-   "teacher_id": "t001"
-  },
-  {
-   "class_id": "c01-a",
-   "day": 1,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t001"
-  },
-  {
-   "class_id": "c01-a",
-   "day": 1,
-   "lesson_no": 6,
-   "subject_id": "math",
-   "teacher_id": "t001"
-  },
-  {
-   "class_id": "c01-a",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "math",
-   "teacher_id": "t001"
-  },
-  {
-   "class_id": "c01-a",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "explore_world",
-   "teacher_id": "t001"
-  },
-  {
-   "class_id": "c01-a",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t001"
-  },
-  {
-   "class_id": "c01-a",
-   "day": 2,
-   "lesson_no": 4,
-   "subject_id": "math",
-   "teacher_id": "t001"
-  },
-  {
-   "class_id": "c01-a",
-   "day": 2,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t001"
-  },
-  {
-   "class_id": "c01-a",
-   "day": 2,
-   "lesson_no": 6,
-   "subject_id": "explore_world",
-   "teacher_id": "t001"
-  },
-  {
-   "class_id": "c01-a",
-   "day": 2,
-   "lesson_no": 7,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c01-a",
-   "day": 3,
-   "lesson_no": 1,
    "subject_id": "physical_education",
    "teacher_id": "t044"
   },
   {
    "class_id": "c01-a",
-   "day": 3,
+   "day": 1,
+   "lesson_no": 2,
+   "subject_id": "physical_education",
+   "teacher_id": "t044"
+  },
+  {
+   "class_id": "c01-a",
+   "day": 1,
    "lesson_no": 3,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t001"
+  },
+  {
+   "class_id": "c01-a",
+   "day": 1,
+   "lesson_no": 4,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t001"
+  },
+  {
+   "class_id": "c01-a",
+   "day": 1,
+   "lesson_no": 5,
    "subject_id": "informatics",
    "teacher_id": "t036"
   },
   {
    "class_id": "c01-a",
-   "day": 3,
+   "day": 1,
    "lesson_no": 6,
-   "subject_id": "physical_education",
-   "teacher_id": "t044"
-  },
-  {
-   "class_id": "c01-a",
-   "day": 4,
-   "lesson_no": 1,
    "subject_id": "technology",
    "teacher_id": "t001"
   },
   {
    "class_id": "c01-a",
-   "day": 4,
+   "day": 2,
+   "lesson_no": 1,
+   "subject_id": "explore_world",
+   "teacher_id": "t001"
+  },
+  {
+   "class_id": "c01-a",
+   "day": 2,
    "lesson_no": 2,
+   "subject_id": "explore_world",
+   "teacher_id": "t001"
+  },
+  {
+   "class_id": "c01-a",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "arts",
+   "teacher_id": "t001"
+  },
+  {
+   "class_id": "c01-a",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t001"
+  },
+  {
+   "class_id": "c01-a",
+   "day": 2,
+   "lesson_no": 5,
+   "subject_id": "arts",
+   "teacher_id": "t001"
+  },
+  {
+   "class_id": "c01-a",
+   "day": 2,
+   "lesson_no": 6,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t001"
+  },
+  {
+   "class_id": "c01-a",
+   "day": 3,
+   "lesson_no": 1,
    "subject_id": "physical_education",
    "teacher_id": "t044"
   },
   {
    "class_id": "c01-a",
    "day": 4,
-   "lesson_no": 3,
+   "lesson_no": 1,
+   "subject_id": "math",
+   "teacher_id": "t001"
+  },
+  {
+   "class_id": "c01-a",
+   "day": 4,
+   "lesson_no": 2,
    "subject_id": "ukr_lang",
+   "teacher_id": "t001"
+  },
+  {
+   "class_id": "c01-a",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "math",
    "teacher_id": "t001"
   },
   {
    "class_id": "c01-a",
    "day": 5,
    "lesson_no": 1,
-   "subject_id": "arts",
+   "subject_id": "explore_world",
    "teacher_id": "t001"
   },
   {
    "class_id": "c01-a",
    "day": 5,
    "lesson_no": 2,
-   "subject_id": "arts",
+   "subject_id": "math",
    "teacher_id": "t001"
   },
   {
    "class_id": "c01-a",
    "day": 5,
    "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t001"
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
   },
   {
    "class_id": "c01-a",
    "day": 5,
    "lesson_no": 4,
+   "subject_id": "math",
+   "teacher_id": "t001"
+  },
+  {
+   "class_id": "c01-a",
+   "day": 5,
+   "lesson_no": 5,
    "subject_id": "ukr_lang",
    "teacher_id": "t001"
   },
   {
-   "class_id": "c01-b",
-   "day": 1,
-   "lesson_no": 1,
-   "subject_id": "explore_world",
-   "teacher_id": "t002"
+   "class_id": "c01-a",
+   "day": 5,
+   "lesson_no": 6,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t001"
   },
   {
-   "class_id": "c01-b",
-   "day": 1,
-   "lesson_no": 2,
+   "class_id": "c01-a",
+   "day": 5,
+   "lesson_no": 7,
    "subject_id": "foreign_lang",
    "teacher_id": "t018"
   },
   {
    "class_id": "c01-b",
    "day": 1,
+   "lesson_no": 1,
+   "subject_id": "math",
+   "teacher_id": "t002"
+  },
+  {
+   "class_id": "c01-b",
+   "day": 1,
+   "lesson_no": 2,
+   "subject_id": "math",
+   "teacher_id": "t002"
+  },
+  {
+   "class_id": "c01-b",
+   "day": 1,
    "lesson_no": 3,
-   "subject_id": "explore_world",
+   "subject_id": "ukr_lang",
    "teacher_id": "t002"
   },
   {
    "class_id": "c01-b",
    "day": 1,
    "lesson_no": 4,
-   "subject_id": "math",
+   "subject_id": "ukr_lang",
    "teacher_id": "t002"
   },
   {
    "class_id": "c01-b",
    "day": 1,
    "lesson_no": 5,
-   "subject_id": "ukr_lang",
+   "subject_id": "explore_world",
    "teacher_id": "t002"
   },
   {
    "class_id": "c01-b",
    "day": 1,
    "lesson_no": 6,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t002"
-  },
-  {
-   "class_id": "c01-b",
-   "day": 1,
-   "lesson_no": 7,
-   "subject_id": "math",
-   "teacher_id": "t002"
-  },
-  {
-   "class_id": "c01-b",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "math",
-   "teacher_id": "t002"
-  },
-  {
-   "class_id": "c01-b",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t002"
-  },
-  {
-   "class_id": "c01-b",
-   "day": 2,
-   "lesson_no": 3,
    "subject_id": "explore_world",
    "teacher_id": "t002"
   },
   {
    "class_id": "c01-b",
-   "day": 3,
+   "day": 2,
    "lesson_no": 1,
-   "subject_id": "informatics",
-   "teacher_id": "t036"
-  },
-  {
-   "class_id": "c01-b",
-   "day": 3,
-   "lesson_no": 2,
-   "subject_id": "arts",
-   "teacher_id": "t002"
-  },
-  {
-   "class_id": "c01-b",
-   "day": 3,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t002"
-  },
-  {
-   "class_id": "c01-b",
-   "day": 3,
-   "lesson_no": 4,
    "subject_id": "physical_education",
    "teacher_id": "t044"
   },
   {
    "class_id": "c01-b",
-   "day": 4,
-   "lesson_no": 1,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
+   "day": 2,
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t002"
   },
   {
    "class_id": "c01-b",
-   "day": 4,
-   "lesson_no": 2,
+   "day": 2,
+   "lesson_no": 3,
    "subject_id": "arts",
    "teacher_id": "t002"
   },
   {
    "class_id": "c01-b",
-   "day": 4,
-   "lesson_no": 3,
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "arts",
+   "teacher_id": "t002"
+  },
+  {
+   "class_id": "c01-b",
+   "day": 2,
+   "lesson_no": 5,
    "subject_id": "technology",
    "teacher_id": "t002"
   },
   {
    "class_id": "c01-b",
-   "day": 4,
-   "lesson_no": 4,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t002"
-  },
-  {
-   "class_id": "c01-b",
-   "day": 4,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t002"
-  },
-  {
-   "class_id": "c01-b",
-   "day": 5,
+   "day": 3,
    "lesson_no": 1,
-   "subject_id": "math",
-   "teacher_id": "t002"
+   "subject_id": "informatics",
+   "teacher_id": "t036"
   },
   {
    "class_id": "c01-b",
-   "day": 5,
+   "day": 3,
    "lesson_no": 2,
    "subject_id": "ukr_lang",
    "teacher_id": "t002"
   },
   {
    "class_id": "c01-b",
-   "day": 5,
+   "day": 3,
    "lesson_no": 3,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t002"
+  },
+  {
+   "class_id": "c01-b",
+   "day": 4,
+   "lesson_no": 1,
+   "subject_id": "physical_education",
+   "teacher_id": "t044"
+  },
+  {
+   "class_id": "c01-b",
+   "day": 4,
+   "lesson_no": 2,
    "subject_id": "physical_education",
    "teacher_id": "t044"
   },
   {
    "class_id": "c01-b",
    "day": 5,
+   "lesson_no": 1,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t002"
+  },
+  {
+   "class_id": "c01-b",
+   "day": 5,
+   "lesson_no": 2,
+   "subject_id": "explore_world",
+   "teacher_id": "t002"
+  },
+  {
+   "class_id": "c01-b",
+   "day": 5,
+   "lesson_no": 3,
+   "subject_id": "math",
+   "teacher_id": "t002"
+  },
+  {
+   "class_id": "c01-b",
+   "day": 5,
    "lesson_no": 4,
-   "subject_id": "physical_education",
-   "teacher_id": "t044"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t002"
+  },
+  {
+   "class_id": "c01-b",
+   "day": 5,
+   "lesson_no": 5,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c01-b",
+   "day": 5,
+   "lesson_no": 6,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c01-b",
+   "day": 5,
+   "lesson_no": 7,
+   "subject_id": "math",
+   "teacher_id": "t002"
   },
   {
    "class_id": "c01-c",
    "day": 1,
    "lesson_no": 1,
+   "subject_id": "explore_world",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 1,
+   "lesson_no": 2,
+   "subject_id": "math",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 1,
+   "lesson_no": 3,
+   "subject_id": "math",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 1,
+   "lesson_no": 4,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 1,
+   "lesson_no": 5,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 1,
+   "lesson_no": 6,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 2,
+   "lesson_no": 1,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 2,
+   "lesson_no": 2,
+   "subject_id": "math",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "explore_world",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 2,
+   "lesson_no": 5,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 2,
+   "lesson_no": 6,
+   "subject_id": "math",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 2,
+   "lesson_no": 7,
+   "subject_id": "explore_world",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 3,
+   "lesson_no": 1,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 3,
+   "lesson_no": 2,
+   "subject_id": "physical_education",
+   "teacher_id": "t044"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "physical_education",
+   "teacher_id": "t044"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 3,
+   "lesson_no": 4,
+   "subject_id": "arts",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 3,
+   "lesson_no": 5,
+   "subject_id": "arts",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 4,
+   "lesson_no": 1,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 4,
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t003"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "physical_education",
+   "teacher_id": "t044"
+  },
+  {
+   "class_id": "c01-c",
+   "day": 4,
+   "lesson_no": 4,
    "subject_id": "technology",
    "teacher_id": "t003"
   },
   {
    "class_id": "c01-c",
-   "day": 1,
-   "lesson_no": 2,
-   "subject_id": "explore_world",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 1,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 1,
-   "lesson_no": 4,
-   "subject_id": "explore_world",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 1,
+   "day": 4,
    "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 1,
-   "lesson_no": 6,
-   "subject_id": "math",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 1,
-   "lesson_no": 7,
-   "subject_id": "math",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "explore_world",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "math",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 2,
-   "lesson_no": 4,
-   "subject_id": "math",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 2,
-   "lesson_no": 5,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 2,
-   "lesson_no": 6,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 2,
-   "lesson_no": 7,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 3,
-   "lesson_no": 1,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 3,
-   "lesson_no": 3,
-   "subject_id": "physical_education",
-   "teacher_id": "t044"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 3,
-   "lesson_no": 6,
-   "subject_id": "informatics",
-   "teacher_id": "t036"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 4,
-   "lesson_no": 1,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 4,
-   "lesson_no": 2,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "arts",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 4,
-   "lesson_no": 4,
-   "subject_id": "arts",
-   "teacher_id": "t003"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 5,
-   "lesson_no": 1,
-   "subject_id": "physical_education",
-   "teacher_id": "t044"
-  },
-  {
-   "class_id": "c01-c",
-   "day": 5,
-   "lesson_no": 6,
-   "subject_id": "physical_education",
-   "teacher_id": "t044"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 1,
-   "lesson_no": 1,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t004"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 1,
-   "lesson_no": 2,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t004"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 1,
-   "lesson_no": 3,
-   "subject_id": "math",
-   "teacher_id": "t004"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 1,
-   "lesson_no": 4,
-   "subject_id": "explore_world",
-   "teacher_id": "t004"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 1,
-   "lesson_no": 5,
-   "subject_id": "explore_world",
-   "teacher_id": "t004"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 1,
-   "lesson_no": 6,
-   "subject_id": "math",
-   "teacher_id": "t004"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 1,
-   "lesson_no": 7,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t004"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "arts",
-   "teacher_id": "t004"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "physical_education",
-   "teacher_id": "t044"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 2,
-   "lesson_no": 4,
    "subject_id": "informatics",
    "teacher_id": "t036"
   },
   {
    "class_id": "c02-a",
-   "day": 2,
+   "day": 1,
+   "lesson_no": 1,
+   "subject_id": "math",
+   "teacher_id": "t004"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 1,
+   "lesson_no": 2,
+   "subject_id": "math",
+   "teacher_id": "t004"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 1,
+   "lesson_no": 3,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t004"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 1,
+   "lesson_no": 4,
+   "subject_id": "explore_world",
+   "teacher_id": "t004"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 1,
    "lesson_no": 5,
+   "subject_id": "explore_world",
+   "teacher_id": "t004"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 1,
+   "lesson_no": 6,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 1,
+   "lesson_no": 7,
    "subject_id": "ukr_lang",
    "teacher_id": "t004"
   },
   {
    "class_id": "c02-a",
    "day": 2,
-   "lesson_no": 6,
+   "lesson_no": 1,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t004"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 2,
+   "lesson_no": 2,
    "subject_id": "physical_education",
    "teacher_id": "t044"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "physical_education",
+   "teacher_id": "t044"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "arts",
+   "teacher_id": "t004"
   },
   {
    "class_id": "c02-a",
@@ -586,865 +572,886 @@
    "class_id": "c02-a",
    "day": 3,
    "lesson_no": 2,
-   "subject_id": "physical_education",
-   "teacher_id": "t044"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 3,
-   "lesson_no": 3,
    "subject_id": "ukr_lang",
    "teacher_id": "t004"
   },
   {
    "class_id": "c02-a",
-   "day": 4,
-   "lesson_no": 1,
+   "day": 3,
+   "lesson_no": 3,
    "subject_id": "arts",
    "teacher_id": "t004"
   },
   {
    "class_id": "c02-a",
-   "day": 5,
-   "lesson_no": 1,
-   "subject_id": "explore_world",
-   "teacher_id": "t004"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 5,
-   "lesson_no": 2,
-   "subject_id": "math",
-   "teacher_id": "t004"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 5,
-   "lesson_no": 3,
-   "subject_id": "math",
-   "teacher_id": "t004"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 5,
+   "day": 3,
    "lesson_no": 4,
+   "subject_id": "physical_education",
+   "teacher_id": "t044"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 4,
+   "lesson_no": 1,
    "subject_id": "ukr_lang",
    "teacher_id": "t004"
   },
   {
    "class_id": "c02-a",
-   "day": 5,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t004"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 5,
-   "lesson_no": 6,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c02-a",
-   "day": 5,
-   "lesson_no": 7,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 1,
-   "lesson_no": 1,
-   "subject_id": "technology",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 1,
-   "lesson_no": 2,
-   "subject_id": "physical_education",
-   "teacher_id": "t044"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 1,
-   "lesson_no": 3,
-   "subject_id": "physical_education",
-   "teacher_id": "t044"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "explore_world",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "math",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 2,
-   "lesson_no": 4,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 2,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 2,
-   "lesson_no": 6,
-   "subject_id": "explore_world",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 2,
-   "lesson_no": 7,
-   "subject_id": "math",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 3,
-   "lesson_no": 1,
-   "subject_id": "arts",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 3,
-   "lesson_no": 2,
-   "subject_id": "informatics",
-   "teacher_id": "t036"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 3,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 3,
-   "lesson_no": 4,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 4,
-   "lesson_no": 1,
-   "subject_id": "arts",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 4,
-   "lesson_no": 2,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "physical_education",
-   "teacher_id": "t044"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 5,
-   "lesson_no": 1,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 5,
-   "lesson_no": 2,
-   "subject_id": "explore_world",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 5,
-   "lesson_no": 3,
-   "subject_id": "math",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 5,
-   "lesson_no": 4,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 5,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 5,
-   "lesson_no": 6,
-   "subject_id": "math",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-b",
-   "day": 5,
-   "lesson_no": 7,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t005"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 1,
-   "lesson_no": 1,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 1,
-   "lesson_no": 2,
-   "subject_id": "math",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 1,
-   "lesson_no": 3,
-   "subject_id": "math",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 1,
-   "lesson_no": 4,
-   "subject_id": "explore_world",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 1,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 1,
-   "lesson_no": 6,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "explore_world",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "math",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 2,
-   "lesson_no": 4,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 2,
-   "lesson_no": 5,
-   "subject_id": "math",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 2,
-   "lesson_no": 6,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 2,
-   "lesson_no": 7,
-   "subject_id": "explore_world",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 3,
-   "lesson_no": 1,
-   "subject_id": "technology",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 3,
-   "lesson_no": 2,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 4,
-   "lesson_no": 1,
-   "subject_id": "arts",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 4,
-   "lesson_no": 2,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 4,
-   "lesson_no": 4,
-   "subject_id": "physical_education",
-   "teacher_id": "t044"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 4,
-   "lesson_no": 5,
-   "subject_id": "arts",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 4,
-   "lesson_no": 6,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t006"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 5,
-   "lesson_no": 2,
-   "subject_id": "physical_education",
-   "teacher_id": "t044"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 5,
-   "lesson_no": 3,
-   "subject_id": "informatics",
-   "teacher_id": "t036"
-  },
-  {
-   "class_id": "c02-c",
-   "day": 5,
-   "lesson_no": 7,
-   "subject_id": "physical_education",
-   "teacher_id": "t044"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 1,
-   "lesson_no": 1,
-   "subject_id": "math",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 1,
-   "lesson_no": 2,
-   "subject_id": "math",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 1,
-   "lesson_no": 3,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 1,
-   "lesson_no": 4,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 1,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 1,
-   "lesson_no": 6,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 1,
-   "lesson_no": 7,
-   "subject_id": "explore_world",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "math",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 2,
-   "lesson_no": 4,
-   "subject_id": "explore_world",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 2,
-   "lesson_no": 5,
-   "subject_id": "math",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 2,
-   "lesson_no": 6,
-   "subject_id": "explore_world",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 2,
-   "lesson_no": 7,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 3,
-   "lesson_no": 1,
-   "subject_id": "arts",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 3,
-   "lesson_no": 5,
-   "subject_id": "informatics",
-   "teacher_id": "t036"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 4,
-   "lesson_no": 1,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 4,
-   "lesson_no": 2,
-   "subject_id": "physical_education",
-   "teacher_id": "t045"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 5,
-   "lesson_no": 1,
-   "subject_id": "technology",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 5,
-   "lesson_no": 2,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 5,
-   "lesson_no": 3,
-   "subject_id": "physical_education",
-   "teacher_id": "t045"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 5,
-   "lesson_no": 4,
-   "subject_id": "arts",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 5,
-   "lesson_no": 5,
-   "subject_id": "math",
-   "teacher_id": "t007"
-  },
-  {
-   "class_id": "c03-a",
-   "day": 5,
-   "lesson_no": 6,
-   "subject_id": "physical_education",
-   "teacher_id": "t045"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 1,
-   "lesson_no": 1,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t008"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 1,
-   "lesson_no": 2,
-   "subject_id": "math",
-   "teacher_id": "t008"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 1,
-   "lesson_no": 3,
-   "subject_id": "explore_world",
-   "teacher_id": "t008"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 1,
-   "lesson_no": 4,
-   "subject_id": "math",
-   "teacher_id": "t008"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 1,
-   "lesson_no": 5,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 1,
-   "lesson_no": 6,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t008"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 1,
-   "lesson_no": 7,
-   "subject_id": "explore_world",
-   "teacher_id": "t008"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "math",
-   "teacher_id": "t008"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t008"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "physical_education",
-   "teacher_id": "t045"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 2,
-   "lesson_no": 4,
-   "subject_id": "physical_education",
-   "teacher_id": "t045"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 2,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t008"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 3,
-   "lesson_no": 1,
-   "subject_id": "explore_world",
-   "teacher_id": "t008"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 3,
-   "lesson_no": 2,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t008"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 3,
-   "lesson_no": 3,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 3,
-   "lesson_no": 4,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t008"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 3,
-   "lesson_no": 5,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 3,
-   "lesson_no": 6,
-   "subject_id": "math",
-   "teacher_id": "t008"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 3,
-   "lesson_no": 7,
-   "subject_id": "math",
-   "teacher_id": "t008"
-  },
-  {
-   "class_id": "c03-b",
-   "day": 4,
-   "lesson_no": 1,
-   "subject_id": "technology",
-   "teacher_id": "t008"
-  },
-  {
-   "class_id": "c03-b",
    "day": 4,
    "lesson_no": 2,
    "subject_id": "informatics",
    "teacher_id": "t036"
   },
   {
-   "class_id": "c03-b",
+   "class_id": "c02-a",
+   "day": 5,
+   "lesson_no": 1,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 5,
+   "lesson_no": 2,
+   "subject_id": "math",
+   "teacher_id": "t004"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 5,
+   "lesson_no": 3,
+   "subject_id": "explore_world",
+   "teacher_id": "t004"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 5,
+   "lesson_no": 4,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 5,
+   "lesson_no": 5,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t004"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 5,
+   "lesson_no": 6,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t004"
+  },
+  {
+   "class_id": "c02-a",
+   "day": 5,
+   "lesson_no": 7,
+   "subject_id": "math",
+   "teacher_id": "t004"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 1,
+   "lesson_no": 1,
+   "subject_id": "math",
+   "teacher_id": "t005"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 1,
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t005"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 1,
+   "lesson_no": 3,
+   "subject_id": "math",
+   "teacher_id": "t005"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 1,
+   "lesson_no": 4,
+   "subject_id": "explore_world",
+   "teacher_id": "t005"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 1,
+   "lesson_no": 5,
+   "subject_id": "explore_world",
+   "teacher_id": "t005"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 1,
+   "lesson_no": 6,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t005"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 1,
+   "lesson_no": 7,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 2,
+   "lesson_no": 1,
+   "subject_id": "explore_world",
+   "teacher_id": "t005"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 2,
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t005"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "math",
+   "teacher_id": "t005"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 2,
+   "lesson_no": 5,
+   "subject_id": "math",
+   "teacher_id": "t005"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 2,
+   "lesson_no": 6,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 2,
+   "lesson_no": 7,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t005"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 3,
+   "lesson_no": 6,
+   "subject_id": "informatics",
+   "teacher_id": "t036"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 3,
+   "lesson_no": 7,
+   "subject_id": "physical_education",
+   "teacher_id": "t044"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 4,
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t005"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "technology",
+   "teacher_id": "t005"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 4,
+   "lesson_no": 4,
+   "subject_id": "physical_education",
+   "teacher_id": "t044"
+  },
+  {
+   "class_id": "c02-b",
+   "day": 4,
+   "lesson_no": 5,
+   "subject_id": "physical_education",
+   "teacher_id": "t044"
+  },
+  {
+   "class_id": "c02-b",
    "day": 5,
    "lesson_no": 1,
    "subject_id": "ukr_lang",
-   "teacher_id": "t008"
+   "teacher_id": "t005"
   },
   {
-   "class_id": "c03-b",
+   "class_id": "c02-b",
    "day": 5,
    "lesson_no": 2,
    "subject_id": "arts",
-   "teacher_id": "t008"
+   "teacher_id": "t005"
   },
   {
-   "class_id": "c03-b",
+   "class_id": "c02-b",
    "day": 5,
    "lesson_no": 3,
    "subject_id": "arts",
-   "teacher_id": "t008"
+   "teacher_id": "t005"
   },
   {
-   "class_id": "c03-b",
+   "class_id": "c02-b",
+   "day": 5,
+   "lesson_no": 4,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t005"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 1,
+   "lesson_no": 1,
+   "subject_id": "math",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 1,
+   "lesson_no": 2,
+   "subject_id": "math",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 1,
+   "lesson_no": 3,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 1,
+   "lesson_no": 4,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 1,
+   "lesson_no": 5,
+   "subject_id": "explore_world",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 2,
+   "lesson_no": 1,
+   "subject_id": "explore_world",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 2,
+   "lesson_no": 2,
+   "subject_id": "math",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "explore_world",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 2,
+   "lesson_no": 5,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 2,
+   "lesson_no": 6,
+   "subject_id": "math",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 2,
+   "lesson_no": 7,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 3,
+   "lesson_no": 1,
+   "subject_id": "arts",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 3,
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "arts",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 3,
+   "lesson_no": 4,
+   "subject_id": "technology",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 3,
+   "lesson_no": 5,
+   "subject_id": "physical_education",
+   "teacher_id": "t044"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 3,
+   "lesson_no": 6,
+   "subject_id": "physical_education",
+   "teacher_id": "t044"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 3,
+   "lesson_no": 7,
+   "subject_id": "informatics",
+   "teacher_id": "t036"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 4,
+   "lesson_no": 1,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 4,
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 4,
+   "lesson_no": 4,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t006"
+  },
+  {
+   "class_id": "c02-c",
+   "day": 5,
+   "lesson_no": 1,
+   "subject_id": "physical_education",
+   "teacher_id": "t044"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 1,
+   "lesson_no": 1,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 1,
+   "lesson_no": 2,
+   "subject_id": "math",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 1,
+   "lesson_no": 3,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 1,
+   "lesson_no": 4,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 1,
+   "lesson_no": 5,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 1,
+   "lesson_no": 6,
+   "subject_id": "explore_world",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 1,
+   "lesson_no": 7,
+   "subject_id": "math",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 2,
+   "lesson_no": 1,
+   "subject_id": "explore_world",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 2,
+   "lesson_no": 2,
+   "subject_id": "explore_world",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "math",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "math",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 2,
+   "lesson_no": 5,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 2,
+   "lesson_no": 6,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 2,
+   "lesson_no": 7,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 3,
+   "lesson_no": 1,
+   "subject_id": "arts",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 3,
+   "lesson_no": 2,
+   "subject_id": "arts",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "technology",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 3,
+   "lesson_no": 4,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 4,
+   "lesson_no": 1,
+   "subject_id": "physical_education",
+   "teacher_id": "t045"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 4,
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "informatics",
+   "teacher_id": "t036"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 4,
+   "lesson_no": 4,
+   "subject_id": "math",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 5,
+   "lesson_no": 2,
+   "subject_id": "physical_education",
+   "teacher_id": "t045"
+  },
+  {
+   "class_id": "c03-a",
+   "day": 5,
+   "lesson_no": 3,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t007"
+  },
+  {
+   "class_id": "c03-a",
    "day": 5,
    "lesson_no": 4,
    "subject_id": "physical_education",
    "teacher_id": "t045"
   },
   {
-   "class_id": "c03-c",
+   "class_id": "c03-b",
    "day": 1,
    "lesson_no": 1,
-   "subject_id": "arts",
-   "teacher_id": "t009"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t008"
   },
   {
-   "class_id": "c03-c",
+   "class_id": "c03-b",
    "day": 1,
    "lesson_no": 2,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 1,
+   "lesson_no": 3,
+   "subject_id": "explore_world",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 1,
+   "lesson_no": 4,
+   "subject_id": "explore_world",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 1,
+   "lesson_no": 5,
+   "subject_id": "math",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 1,
+   "lesson_no": 6,
+   "subject_id": "math",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 1,
+   "lesson_no": 7,
    "subject_id": "ukr_lang",
-   "teacher_id": "t009"
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 2,
+   "lesson_no": 1,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 2,
+   "lesson_no": 2,
+   "subject_id": "math",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "physical_education",
+   "teacher_id": "t045"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 3,
+   "lesson_no": 1,
+   "subject_id": "explore_world",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 3,
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "math",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 3,
+   "lesson_no": 4,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 3,
+   "lesson_no": 5,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 3,
+   "lesson_no": 6,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 3,
+   "lesson_no": 7,
+   "subject_id": "math",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 4,
+   "lesson_no": 1,
+   "subject_id": "informatics",
+   "teacher_id": "t036"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 4,
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "arts",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 4,
+   "lesson_no": 4,
+   "subject_id": "arts",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 5,
+   "lesson_no": 1,
+   "subject_id": "physical_education",
+   "teacher_id": "t045"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 5,
+   "lesson_no": 2,
+   "subject_id": "technology",
+   "teacher_id": "t008"
+  },
+  {
+   "class_id": "c03-b",
+   "day": 5,
+   "lesson_no": 3,
+   "subject_id": "physical_education",
+   "teacher_id": "t045"
   },
   {
    "class_id": "c03-c",
    "day": 1,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t009"
-  },
-  {
-   "class_id": "c03-c",
-   "day": 2,
    "lesson_no": 1,
    "subject_id": "foreign_lang",
    "teacher_id": "t018"
   },
   {
    "class_id": "c03-c",
-   "day": 2,
+   "day": 1,
    "lesson_no": 2,
    "subject_id": "explore_world",
    "teacher_id": "t009"
   },
   {
    "class_id": "c03-c",
-   "day": 2,
+   "day": 1,
    "lesson_no": 3,
-   "subject_id": "math",
+   "subject_id": "explore_world",
    "teacher_id": "t009"
   },
   {
    "class_id": "c03-c",
-   "day": 2,
+   "day": 1,
    "lesson_no": 4,
    "subject_id": "ukr_lang",
    "teacher_id": "t009"
   },
   {
    "class_id": "c03-c",
-   "day": 2,
+   "day": 1,
    "lesson_no": 5,
-   "subject_id": "explore_world",
+   "subject_id": "ukr_lang",
    "teacher_id": "t009"
   },
   {
    "class_id": "c03-c",
-   "day": 2,
+   "day": 1,
    "lesson_no": 6,
    "subject_id": "math",
    "teacher_id": "t009"
   },
   {
    "class_id": "c03-c",
-   "day": 2,
+   "day": 1,
    "lesson_no": 7,
+   "subject_id": "math",
+   "teacher_id": "t009"
+  },
+  {
+   "class_id": "c03-c",
+   "day": 2,
+   "lesson_no": 1,
+   "subject_id": "math",
+   "teacher_id": "t009"
+  },
+  {
+   "class_id": "c03-c",
+   "day": 2,
+   "lesson_no": 2,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c03-c",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t018"
+  },
+  {
+   "class_id": "c03-c",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "explore_world",
+   "teacher_id": "t009"
+  },
+  {
+   "class_id": "c03-c",
+   "day": 2,
+   "lesson_no": 5,
    "subject_id": "ukr_lang",
    "teacher_id": "t009"
   },
   {
    "class_id": "c03-c",
-   "day": 3,
-   "lesson_no": 1,
-   "subject_id": "technology",
+   "day": 2,
+   "lesson_no": 6,
+   "subject_id": "ukr_lang",
    "teacher_id": "t009"
   },
   {
    "class_id": "c03-c",
-   "day": 3,
-   "lesson_no": 2,
+   "day": 2,
+   "lesson_no": 7,
    "subject_id": "math",
    "teacher_id": "t009"
   },
   {
    "class_id": "c03-c",
    "day": 3,
-   "lesson_no": 3,
-   "subject_id": "physical_education",
-   "teacher_id": "t045"
+   "lesson_no": 1,
+   "subject_id": "math",
+   "teacher_id": "t009"
   },
   {
    "class_id": "c03-c",
    "day": 3,
-   "lesson_no": 4,
+   "lesson_no": 2,
    "subject_id": "informatics",
    "teacher_id": "t036"
   },
   {
    "class_id": "c03-c",
-   "day": 3,
-   "lesson_no": 5,
-   "subject_id": "physical_education",
-   "teacher_id": "t045"
-  },
-  {
-   "class_id": "c03-c",
    "day": 4,
    "lesson_no": 1,
    "subject_id": "ukr_lang",
@@ -1454,35 +1461,35 @@
    "class_id": "c03-c",
    "day": 4,
    "lesson_no": 2,
+   "subject_id": "technology",
+   "teacher_id": "t009"
+  },
+  {
+   "class_id": "c03-c",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "physical_education",
+   "teacher_id": "t045"
+  },
+  {
+   "class_id": "c03-c",
+   "day": 5,
+   "lesson_no": 1,
    "subject_id": "arts",
    "teacher_id": "t009"
   },
   {
    "class_id": "c03-c",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "physical_education",
-   "teacher_id": "t045"
-  },
-  {
-   "class_id": "c03-c",
    "day": 5,
-   "lesson_no": 1,
-   "subject_id": "math",
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
    "teacher_id": "t009"
   },
   {
    "class_id": "c03-c",
    "day": 5,
-   "lesson_no": 2,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
-  },
-  {
-   "class_id": "c03-c",
-   "day": 5,
    "lesson_no": 3,
-   "subject_id": "ukr_lang",
+   "subject_id": "arts",
    "teacher_id": "t009"
   },
   {
@@ -1496,54 +1503,47 @@
    "class_id": "c03-c",
    "day": 5,
    "lesson_no": 5,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t018"
+   "subject_id": "physical_education",
+   "teacher_id": "t045"
   },
   {
    "class_id": "c03-c",
    "day": 5,
    "lesson_no": 6,
-   "subject_id": "explore_world",
-   "teacher_id": "t009"
-  },
-  {
-   "class_id": "c03-c",
-   "day": 5,
-   "lesson_no": 7,
-   "subject_id": "math",
-   "teacher_id": "t009"
+   "subject_id": "physical_education",
+   "teacher_id": "t045"
   },
   {
    "class_id": "c04-a",
    "day": 1,
    "lesson_no": 1,
-   "subject_id": "ukr_lang",
+   "subject_id": "math",
    "teacher_id": "t010"
   },
   {
    "class_id": "c04-a",
    "day": 1,
    "lesson_no": 2,
+   "subject_id": "math",
+   "teacher_id": "t010"
+  },
+  {
+   "class_id": "c04-a",
+   "day": 1,
+   "lesson_no": 3,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t010"
+  },
+  {
+   "class_id": "c04-a",
+   "day": 1,
+   "lesson_no": 4,
    "subject_id": "foreign_lang",
    "teacher_id": "t019"
   },
   {
    "class_id": "c04-a",
    "day": 1,
-   "lesson_no": 3,
-   "subject_id": "explore_world",
-   "teacher_id": "t010"
-  },
-  {
-   "class_id": "c04-a",
-   "day": 1,
-   "lesson_no": 4,
-   "subject_id": "math",
-   "teacher_id": "t010"
-  },
-  {
-   "class_id": "c04-a",
-   "day": 1,
    "lesson_no": 5,
    "subject_id": "ukr_lang",
    "teacher_id": "t010"
@@ -1559,36 +1559,50 @@
    "class_id": "c04-a",
    "day": 1,
    "lesson_no": 7,
-   "subject_id": "math",
+   "subject_id": "explore_world",
    "teacher_id": "t010"
   },
   {
    "class_id": "c04-a",
    "day": 2,
    "lesson_no": 1,
-   "subject_id": "arts",
+   "subject_id": "ukr_lang",
    "teacher_id": "t010"
   },
   {
    "class_id": "c04-a",
    "day": 2,
    "lesson_no": 2,
-   "subject_id": "informatics",
-   "teacher_id": "t036"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t010"
   },
   {
    "class_id": "c04-a",
-   "day": 3,
-   "lesson_no": 1,
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "math",
+   "teacher_id": "t010"
+  },
+  {
+   "class_id": "c04-a",
+   "day": 2,
+   "lesson_no": 4,
    "subject_id": "technology",
    "teacher_id": "t010"
   },
   {
    "class_id": "c04-a",
    "day": 3,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
+   "lesson_no": 2,
+   "subject_id": "arts",
    "teacher_id": "t010"
+  },
+  {
+   "class_id": "c04-a",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "physical_education",
+   "teacher_id": "t045"
   },
   {
    "class_id": "c04-a",
@@ -1600,99 +1614,85 @@
   {
    "class_id": "c04-a",
    "day": 3,
-   "lesson_no": 7,
+   "lesson_no": 5,
+   "subject_id": "informatics",
+   "teacher_id": "t036"
+  },
+  {
+   "class_id": "c04-a",
+   "day": 4,
+   "lesson_no": 1,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t010"
+  },
+  {
+   "class_id": "c04-a",
+   "day": 4,
+   "lesson_no": 2,
    "subject_id": "physical_education",
    "teacher_id": "t045"
   },
   {
    "class_id": "c04-a",
    "day": 4,
-   "lesson_no": 1,
+   "lesson_no": 3,
+   "subject_id": "arts",
+   "teacher_id": "t010"
+  },
+  {
+   "class_id": "c04-a",
+   "day": 4,
+   "lesson_no": 4,
    "subject_id": "health",
    "teacher_id": "t010"
   },
   {
    "class_id": "c04-a",
-   "day": 4,
-   "lesson_no": 2,
-   "subject_id": "math",
-   "teacher_id": "t010"
-  },
-  {
-   "class_id": "c04-a",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "arts",
-   "teacher_id": "t010"
-  },
-  {
-   "class_id": "c04-a",
-   "day": 4,
-   "lesson_no": 4,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t010"
-  },
-  {
-   "class_id": "c04-a",
-   "day": 4,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t010"
-  },
-  {
-   "class_id": "c04-a",
-   "day": 4,
-   "lesson_no": 6,
-   "subject_id": "physical_education",
-   "teacher_id": "t045"
-  },
-  {
-   "class_id": "c04-a",
    "day": 5,
    "lesson_no": 1,
-   "subject_id": "math",
-   "teacher_id": "t010"
-  },
-  {
-   "class_id": "c04-a",
-   "day": 5,
-   "lesson_no": 2,
-   "subject_id": "math",
-   "teacher_id": "t010"
-  },
-  {
-   "class_id": "c04-a",
-   "day": 5,
-   "lesson_no": 3,
-   "subject_id": "explore_world",
-   "teacher_id": "t010"
-  },
-  {
-   "class_id": "c04-a",
-   "day": 5,
-   "lesson_no": 4,
-   "subject_id": "explore_world",
-   "teacher_id": "t010"
-  },
-  {
-   "class_id": "c04-a",
-   "day": 5,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t010"
-  },
-  {
-   "class_id": "c04-a",
-   "day": 5,
-   "lesson_no": 6,
    "subject_id": "foreign_lang",
    "teacher_id": "t019"
   },
   {
    "class_id": "c04-a",
    "day": 5,
-   "lesson_no": 7,
+   "lesson_no": 2,
+   "subject_id": "math",
+   "teacher_id": "t010"
+  },
+  {
+   "class_id": "c04-a",
+   "day": 5,
+   "lesson_no": 3,
+   "subject_id": "explore_world",
+   "teacher_id": "t010"
+  },
+  {
+   "class_id": "c04-a",
+   "day": 5,
+   "lesson_no": 4,
+   "subject_id": "explore_world",
+   "teacher_id": "t010"
+  },
+  {
+   "class_id": "c04-a",
+   "day": 5,
+   "lesson_no": 5,
    "subject_id": "ukr_lang",
+   "teacher_id": "t010"
+  },
+  {
+   "class_id": "c04-a",
+   "day": 5,
+   "lesson_no": 6,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t010"
+  },
+  {
+   "class_id": "c04-a",
+   "day": 5,
+   "lesson_no": 7,
+   "subject_id": "math",
    "teacher_id": "t010"
   },
   {
@@ -1706,14 +1706,14 @@
    "class_id": "c04-b",
    "day": 1,
    "lesson_no": 2,
-   "subject_id": "math",
-   "teacher_id": "t011"
+   "subject_id": "foreign_lang",
+   "teacher_id": "t019"
   },
   {
    "class_id": "c04-b",
    "day": 1,
    "lesson_no": 3,
-   "subject_id": "explore_world",
+   "subject_id": "ukr_lang",
    "teacher_id": "t011"
   },
   {
@@ -1727,8 +1727,8 @@
    "class_id": "c04-b",
    "day": 1,
    "lesson_no": 5,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t019"
+   "subject_id": "explore_world",
+   "teacher_id": "t011"
   },
   {
    "class_id": "c04-b",
@@ -1741,7 +1741,7 @@
    "class_id": "c04-b",
    "day": 1,
    "lesson_no": 7,
-   "subject_id": "ukr_lang",
+   "subject_id": "math",
    "teacher_id": "t011"
   },
   {
@@ -1762,7 +1762,7 @@
    "class_id": "c04-b",
    "day": 3,
    "lesson_no": 1,
-   "subject_id": "arts",
+   "subject_id": "math",
    "teacher_id": "t011"
   },
   {
@@ -1776,19 +1776,47 @@
    "class_id": "c04-b",
    "day": 3,
    "lesson_no": 3,
-   "subject_id": "math",
-   "teacher_id": "t011"
-  },
-  {
-   "class_id": "c04-b",
-   "day": 3,
-   "lesson_no": 4,
    "subject_id": "ukr_lang",
    "teacher_id": "t011"
   },
   {
    "class_id": "c04-b",
    "day": 3,
+   "lesson_no": 4,
+   "subject_id": "informatics",
+   "teacher_id": "t036"
+  },
+  {
+   "class_id": "c04-b",
+   "day": 4,
+   "lesson_no": 1,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t011"
+  },
+  {
+   "class_id": "c04-b",
+   "day": 4,
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t011"
+  },
+  {
+   "class_id": "c04-b",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "technology",
+   "teacher_id": "t011"
+  },
+  {
+   "class_id": "c04-b",
+   "day": 4,
+   "lesson_no": 4,
+   "subject_id": "arts",
+   "teacher_id": "t011"
+  },
+  {
+   "class_id": "c04-b",
+   "day": 4,
    "lesson_no": 5,
    "subject_id": "health",
    "teacher_id": "t011"
@@ -1796,64 +1824,36 @@
   {
    "class_id": "c04-b",
    "day": 4,
-   "lesson_no": 1,
-   "subject_id": "technology",
-   "teacher_id": "t011"
-  },
-  {
-   "class_id": "c04-b",
-   "day": 4,
-   "lesson_no": 2,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t011"
-  },
-  {
-   "class_id": "c04-b",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t011"
-  },
-  {
-   "class_id": "c04-b",
-   "day": 4,
-   "lesson_no": 4,
+   "lesson_no": 6,
    "subject_id": "physical_education",
    "teacher_id": "t045"
   },
   {
    "class_id": "c04-b",
-   "day": 4,
-   "lesson_no": 5,
-   "subject_id": "informatics",
-   "teacher_id": "t036"
+   "day": 5,
+   "lesson_no": 1,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t011"
   },
   {
    "class_id": "c04-b",
    "day": 5,
-   "lesson_no": 1,
+   "lesson_no": 2,
    "subject_id": "explore_world",
    "teacher_id": "t011"
   },
   {
    "class_id": "c04-b",
    "day": 5,
-   "lesson_no": 2,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t019"
-  },
-  {
-   "class_id": "c04-b",
-   "day": 5,
    "lesson_no": 3,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t019"
+   "subject_id": "math",
+   "teacher_id": "t011"
   },
   {
    "class_id": "c04-b",
    "day": 5,
    "lesson_no": 4,
-   "subject_id": "math",
+   "subject_id": "ukr_lang",
    "teacher_id": "t011"
   },
   {
@@ -1867,29 +1867,29 @@
    "class_id": "c04-b",
    "day": 5,
    "lesson_no": 6,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t011"
+   "subject_id": "foreign_lang",
+   "teacher_id": "t019"
   },
   {
    "class_id": "c04-b",
    "day": 5,
    "lesson_no": 7,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t011"
+   "subject_id": "foreign_lang",
+   "teacher_id": "t019"
   },
   {
    "class_id": "c05-a",
    "day": 1,
    "lesson_no": 1,
-   "subject_id": "history",
-   "teacher_id": "t040"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 1,
-   "lesson_no": 2,
    "subject_id": "math",
    "teacher_id": "t025"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 1,
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t012"
   },
   {
    "class_id": "c05-a",
@@ -1902,175 +1902,175 @@
    "class_id": "c05-a",
    "day": 1,
    "lesson_no": 4,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t012"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 1,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t012"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 1,
-   "lesson_no": 6,
    "subject_id": "math",
    "teacher_id": "t025"
   },
   {
    "class_id": "c05-a",
    "day": 1,
-   "lesson_no": 7,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t019"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "technology",
-   "teacher_id": "t043"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t019"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "informatics",
-   "teacher_id": "t036"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 2,
    "lesson_no": 5,
-   "subject_id": "physical_education",
-   "teacher_id": "t045"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 2,
-   "lesson_no": 6,
-   "subject_id": "physical_education",
-   "teacher_id": "t045"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 3,
-   "lesson_no": 1,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t012"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 3,
-   "lesson_no": 2,
    "subject_id": "foreign_lang",
    "teacher_id": "t019"
   },
   {
    "class_id": "c05-a",
-   "day": 3,
-   "lesson_no": 3,
-   "subject_id": "science",
-   "teacher_id": "t030"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 3,
-   "lesson_no": 4,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t022"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 3,
-   "lesson_no": 5,
-   "subject_id": "science",
-   "teacher_id": "t030"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 3,
+   "day": 1,
    "lesson_no": 6,
    "subject_id": "history",
    "teacher_id": "t040"
   },
   {
    "class_id": "c05-a",
-   "day": 3,
+   "day": 1,
    "lesson_no": 7,
-   "subject_id": "math",
-   "teacher_id": "t025"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t012"
   },
   {
    "class_id": "c05-a",
-   "day": 4,
-   "lesson_no": 1,
-   "subject_id": "physical_education",
-   "teacher_id": "t045"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 4,
-   "lesson_no": 2,
-   "subject_id": "arts",
-   "teacher_id": "t022"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 5,
-   "lesson_no": 1,
-   "subject_id": "arts",
-   "teacher_id": "t022"
-  },
-  {
-   "class_id": "c05-a",
-   "day": 5,
+   "day": 2,
    "lesson_no": 2,
    "subject_id": "technology",
    "teacher_id": "t043"
   },
   {
    "class_id": "c05-a",
-   "day": 5,
+   "day": 2,
    "lesson_no": 3,
+   "subject_id": "technology",
+   "teacher_id": "t043"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "physical_education",
+   "teacher_id": "t045"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 2,
+   "lesson_no": 5,
+   "subject_id": "physical_education",
+   "teacher_id": "t045"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 3,
+   "lesson_no": 1,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 3,
+   "lesson_no": 2,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t022"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "math",
+   "teacher_id": "t025"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 3,
+   "lesson_no": 4,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t019"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 3,
+   "lesson_no": 5,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t019"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 3,
+   "lesson_no": 6,
    "subject_id": "health",
    "teacher_id": "t034"
   },
   {
    "class_id": "c05-a",
-   "day": 5,
+   "day": 3,
+   "lesson_no": 7,
+   "subject_id": "science",
+   "teacher_id": "t030"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "science",
+   "teacher_id": "t030"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 4,
    "lesson_no": 4,
-   "subject_id": "math",
-   "teacher_id": "t025"
+   "subject_id": "physical_education",
+   "teacher_id": "t045"
   },
   {
    "class_id": "c05-a",
-   "day": 5,
+   "day": 4,
    "lesson_no": 5,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t012"
+   "subject_id": "foreign_lit",
+   "teacher_id": "t022"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 4,
+   "lesson_no": 6,
+   "subject_id": "informatics",
+   "teacher_id": "t036"
   },
   {
    "class_id": "c05-a",
    "day": 5,
-   "lesson_no": 6,
+   "lesson_no": 1,
    "subject_id": "ukr_lang",
    "teacher_id": "t012"
   },
   {
    "class_id": "c05-a",
    "day": 5,
-   "lesson_no": 7,
-   "subject_id": "foreign_lit",
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t012"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 5,
+   "lesson_no": 3,
+   "subject_id": "math",
+   "teacher_id": "t025"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 5,
+   "lesson_no": 4,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t012"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 5,
+   "lesson_no": 5,
+   "subject_id": "arts",
+   "teacher_id": "t022"
+  },
+  {
+   "class_id": "c05-a",
+   "day": 5,
+   "lesson_no": 6,
+   "subject_id": "arts",
    "teacher_id": "t022"
   },
   {
@@ -2084,39 +2084,46 @@
    "class_id": "c05-b",
    "day": 1,
    "lesson_no": 2,
+   "subject_id": "math",
+   "teacher_id": "t025"
+  },
+  {
+   "class_id": "c05-b",
+   "day": 1,
+   "lesson_no": 3,
+   "subject_id": "math",
+   "teacher_id": "t025"
+  },
+  {
+   "class_id": "c05-b",
+   "day": 1,
+   "lesson_no": 4,
    "subject_id": "ukr_lang",
    "teacher_id": "t012"
   },
   {
    "class_id": "c05-b",
    "day": 1,
-   "lesson_no": 3,
+   "lesson_no": 5,
+   "subject_id": "physical_education",
+   "teacher_id": "t045"
+  },
+  {
+   "class_id": "c05-b",
+   "day": 1,
+   "lesson_no": 6,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t012"
+  },
+  {
+   "class_id": "c05-b",
+   "day": 1,
+   "lesson_no": 7,
    "subject_id": "foreign_lang",
    "teacher_id": "t019"
   },
   {
    "class_id": "c05-b",
-   "day": 1,
-   "lesson_no": 4,
-   "subject_id": "math",
-   "teacher_id": "t025"
-  },
-  {
-   "class_id": "c05-b",
-   "day": 1,
-   "lesson_no": 5,
-   "subject_id": "math",
-   "teacher_id": "t025"
-  },
-  {
-   "class_id": "c05-b",
-   "day": 1,
-   "lesson_no": 6,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t012"
-  },
-  {
-   "class_id": "c05-b",
    "day": 2,
    "lesson_no": 1,
    "subject_id": "ukr_lit",
@@ -2126,15 +2133,15 @@
    "class_id": "c05-b",
    "day": 2,
    "lesson_no": 2,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t022"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t012"
   },
   {
    "class_id": "c05-b",
    "day": 2,
    "lesson_no": 3,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t022"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t012"
   },
   {
    "class_id": "c05-b",
@@ -2147,22 +2154,22 @@
    "class_id": "c05-b",
    "day": 2,
    "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t012"
-  },
-  {
-   "class_id": "c05-b",
-   "day": 2,
-   "lesson_no": 6,
    "subject_id": "math",
    "teacher_id": "t025"
   },
   {
    "class_id": "c05-b",
    "day": 2,
+   "lesson_no": 6,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t022"
+  },
+  {
+   "class_id": "c05-b",
+   "day": 2,
    "lesson_no": 7,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t012"
+   "subject_id": "foreign_lit",
+   "teacher_id": "t022"
   },
   {
    "class_id": "c05-b",
@@ -2181,7 +2188,7 @@
   {
    "class_id": "c05-b",
    "day": 3,
-   "lesson_no": 7,
+   "lesson_no": 3,
    "subject_id": "informatics",
    "teacher_id": "t036"
   },
@@ -2189,54 +2196,40 @@
    "class_id": "c05-b",
    "day": 4,
    "lesson_no": 1,
-   "subject_id": "arts",
-   "teacher_id": "t022"
+   "subject_id": "technology",
+   "teacher_id": "t043"
   },
   {
    "class_id": "c05-b",
    "day": 4,
    "lesson_no": 2,
-   "subject_id": "technology",
-   "teacher_id": "t043"
-  },
-  {
-   "class_id": "c05-b",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "technology",
-   "teacher_id": "t043"
-  },
-  {
-   "class_id": "c05-b",
-   "day": 4,
-   "lesson_no": 4,
    "subject_id": "arts",
    "teacher_id": "t022"
   },
   {
    "class_id": "c05-b",
    "day": 4,
-   "lesson_no": 5,
-   "subject_id": "physical_education",
-   "teacher_id": "t045"
+   "lesson_no": 3,
+   "subject_id": "arts",
+   "teacher_id": "t022"
   },
   {
    "class_id": "c05-b",
    "day": 4,
-   "lesson_no": 6,
+   "lesson_no": 4,
+   "subject_id": "technology",
+   "teacher_id": "t043"
+  },
+  {
+   "class_id": "c05-b",
+   "day": 5,
+   "lesson_no": 1,
    "subject_id": "health",
    "teacher_id": "t034"
   },
   {
    "class_id": "c05-b",
    "day": 5,
-   "lesson_no": 1,
-   "subject_id": "science",
-   "teacher_id": "t030"
-  },
-  {
-   "class_id": "c05-b",
-   "day": 5,
    "lesson_no": 2,
    "subject_id": "science",
    "teacher_id": "t030"
@@ -2245,8 +2238,8 @@
    "class_id": "c05-b",
    "day": 5,
    "lesson_no": 3,
-   "subject_id": "history",
-   "teacher_id": "t040"
+   "subject_id": "foreign_lang",
+   "teacher_id": "t019"
   },
   {
    "class_id": "c05-b",
@@ -2259,13 +2252,20 @@
    "class_id": "c05-b",
    "day": 5,
    "lesson_no": 5,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t019"
+   "subject_id": "science",
+   "teacher_id": "t030"
   },
   {
    "class_id": "c05-b",
    "day": 5,
    "lesson_no": 6,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c05-b",
+   "day": 5,
+   "lesson_no": 7,
    "subject_id": "history",
    "teacher_id": "t040"
   },
@@ -2280,225 +2280,232 @@
    "class_id": "c05-c",
    "day": 1,
    "lesson_no": 2,
+   "subject_id": "health",
+   "teacher_id": "t034"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 1,
+   "lesson_no": 3,
+   "subject_id": "informatics",
+   "teacher_id": "t036"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 1,
+   "lesson_no": 4,
    "subject_id": "arts",
    "teacher_id": "t022"
   },
   {
    "class_id": "c05-c",
    "day": 1,
-   "lesson_no": 3,
-   "subject_id": "science",
-   "teacher_id": "t030"
+   "lesson_no": 5,
+   "subject_id": "arts",
+   "teacher_id": "t022"
   },
   {
    "class_id": "c05-c",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "informatics",
-   "teacher_id": "t036"
+   "day": 1,
+   "lesson_no": 6,
+   "subject_id": "technology",
+   "teacher_id": "t043"
   },
   {
    "class_id": "c05-c",
-   "day": 2,
-   "lesson_no": 2,
+   "day": 1,
+   "lesson_no": 7,
    "subject_id": "physical_education",
    "teacher_id": "t046"
   },
   {
    "class_id": "c05-c",
    "day": 2,
+   "lesson_no": 1,
+   "subject_id": "technology",
+   "teacher_id": "t043"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 3,
+   "lesson_no": 1,
+   "subject_id": "math",
+   "teacher_id": "t025"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 3,
+   "lesson_no": 2,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t019"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 3,
    "lesson_no": 3,
-   "subject_id": "technology",
-   "teacher_id": "t043"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t012"
   },
   {
    "class_id": "c05-c",
-   "day": 2,
+   "day": 3,
    "lesson_no": 4,
-   "subject_id": "technology",
-   "teacher_id": "t043"
+   "subject_id": "science",
+   "teacher_id": "t030"
   },
   {
    "class_id": "c05-c",
-   "day": 2,
+   "day": 3,
+   "lesson_no": 5,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 3,
+   "lesson_no": 6,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t019"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 3,
+   "lesson_no": 7,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t012"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 4,
+   "lesson_no": 1,
+   "subject_id": "math",
+   "teacher_id": "t025"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 4,
+   "lesson_no": 2,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t019"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "math",
+   "teacher_id": "t025"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 4,
+   "lesson_no": 4,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t012"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 4,
+   "lesson_no": 5,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t012"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 4,
+   "lesson_no": 6,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 4,
+   "lesson_no": 7,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t012"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 5,
+   "lesson_no": 1,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t022"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 5,
+   "lesson_no": 2,
+   "subject_id": "math",
+   "teacher_id": "t025"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 5,
+   "lesson_no": 3,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t012"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 5,
+   "lesson_no": 4,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t022"
+  },
+  {
+   "class_id": "c05-c",
+   "day": 5,
    "lesson_no": 5,
    "subject_id": "physical_education",
    "teacher_id": "t046"
   },
   {
    "class_id": "c05-c",
-   "day": 3,
-   "lesson_no": 1,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t019"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 3,
-   "lesson_no": 2,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t022"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 3,
-   "lesson_no": 3,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t019"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 3,
-   "lesson_no": 4,
-   "subject_id": "math",
-   "teacher_id": "t025"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 3,
-   "lesson_no": 5,
-   "subject_id": "history",
-   "teacher_id": "t040"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 3,
+   "day": 5,
    "lesson_no": 6,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t022"
+   "subject_id": "physical_education",
+   "teacher_id": "t046"
   },
   {
-   "class_id": "c05-c",
-   "day": 3,
-   "lesson_no": 7,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t012"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 4,
+   "class_id": "c06-a",
+   "day": 1,
    "lesson_no": 1,
-   "subject_id": "math",
-   "teacher_id": "t025"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 4,
-   "lesson_no": 2,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t012"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t012"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 4,
-   "lesson_no": 4,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t012"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 4,
-   "lesson_no": 5,
-   "subject_id": "history",
-   "teacher_id": "t040"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 4,
-   "lesson_no": 6,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t019"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 4,
-   "lesson_no": 7,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t012"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 5,
-   "lesson_no": 1,
-   "subject_id": "math",
-   "teacher_id": "t025"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 5,
-   "lesson_no": 2,
-   "subject_id": "math",
-   "teacher_id": "t025"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 5,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t012"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 5,
-   "lesson_no": 4,
    "subject_id": "arts",
    "teacher_id": "t022"
   },
   {
-   "class_id": "c05-c",
-   "day": 5,
-   "lesson_no": 5,
-   "subject_id": "health",
-   "teacher_id": "t034"
-  },
-  {
-   "class_id": "c05-c",
-   "day": 5,
-   "lesson_no": 6,
-   "subject_id": "physical_education",
-   "teacher_id": "t046"
-  },
-  {
    "class_id": "c06-a",
    "day": 1,
-   "lesson_no": 1,
-   "subject_id": "technology",
-   "teacher_id": "t043"
-  },
-  {
-   "class_id": "c06-a",
-   "day": 1,
-   "lesson_no": 3,
-   "subject_id": "technology",
-   "teacher_id": "t043"
-  },
-  {
-   "class_id": "c06-a",
-   "day": 1,
-   "lesson_no": 4,
+   "lesson_no": 2,
    "subject_id": "informatics",
    "teacher_id": "t036"
   },
   {
    "class_id": "c06-a",
    "day": 1,
+   "lesson_no": 3,
+   "subject_id": "technology",
+   "teacher_id": "t043"
+  },
+  {
+   "class_id": "c06-a",
+   "day": 1,
+   "lesson_no": 4,
+   "subject_id": "health",
+   "teacher_id": "t034"
+  },
+  {
+   "class_id": "c06-a",
+   "day": 1,
    "lesson_no": 5,
-   "subject_id": "physical_education",
-   "teacher_id": "t046"
+   "subject_id": "technology",
+   "teacher_id": "t043"
   },
   {
    "class_id": "c06-a",
    "day": 1,
    "lesson_no": 6,
-   "subject_id": "health",
-   "teacher_id": "t034"
+   "subject_id": "physical_education",
+   "teacher_id": "t046"
   },
   {
    "class_id": "c06-a",
@@ -2511,8 +2518,8 @@
    "class_id": "c06-a",
    "day": 2,
    "lesson_no": 2,
-   "subject_id": "history",
-   "teacher_id": "t040"
+   "subject_id": "foreign_lit",
+   "teacher_id": "t022"
   },
   {
    "class_id": "c06-a",
@@ -2532,89 +2539,89 @@
    "class_id": "c06-a",
    "day": 2,
    "lesson_no": 5,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t022"
-  },
-  {
-   "class_id": "c06-a",
-   "day": 2,
-   "lesson_no": 6,
    "subject_id": "geography",
    "teacher_id": "t034"
   },
   {
    "class_id": "c06-a",
    "day": 2,
+   "lesson_no": 6,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c06-a",
+   "day": 2,
    "lesson_no": 7,
-   "subject_id": "math",
-   "teacher_id": "t025"
+   "subject_id": "history",
+   "teacher_id": "t040"
   },
   {
    "class_id": "c06-a",
    "day": 3,
    "lesson_no": 1,
-   "subject_id": "science",
-   "teacher_id": "t030"
-  },
-  {
-   "class_id": "c06-a",
-   "day": 3,
-   "lesson_no": 2,
-   "subject_id": "science",
-   "teacher_id": "t030"
-  },
-  {
-   "class_id": "c06-a",
-   "day": 3,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t013"
-  },
-  {
-   "class_id": "c06-a",
-   "day": 3,
-   "lesson_no": 4,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t019"
-  },
-  {
-   "class_id": "c06-a",
-   "day": 3,
-   "lesson_no": 5,
    "subject_id": "ukr_lit",
    "teacher_id": "t013"
   },
   {
    "class_id": "c06-a",
    "day": 3,
-   "lesson_no": 6,
+   "lesson_no": 2,
+   "subject_id": "science",
+   "teacher_id": "t030"
+  },
+  {
+   "class_id": "c06-a",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "science",
+   "teacher_id": "t030"
+  },
+  {
+   "class_id": "c06-a",
+   "day": 3,
+   "lesson_no": 4,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t013"
+  },
+  {
+   "class_id": "c06-a",
+   "day": 3,
+   "lesson_no": 5,
    "subject_id": "math",
    "teacher_id": "t025"
   },
   {
    "class_id": "c06-a",
    "day": 3,
+   "lesson_no": 6,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t013"
+  },
+  {
+   "class_id": "c06-a",
+   "day": 3,
    "lesson_no": 7,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t019"
+  },
+  {
+   "class_id": "c06-a",
+   "day": 4,
+   "lesson_no": 1,
    "subject_id": "ukr_lang",
    "teacher_id": "t013"
   },
   {
    "class_id": "c06-a",
    "day": 4,
-   "lesson_no": 1,
+   "lesson_no": 2,
    "subject_id": "ukr_lit",
    "teacher_id": "t013"
   },
   {
    "class_id": "c06-a",
    "day": 4,
-   "lesson_no": 2,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t019"
-  },
-  {
-   "class_id": "c06-a",
-   "day": 4,
    "lesson_no": 3,
    "subject_id": "foreign_lang",
    "teacher_id": "t019"
@@ -2623,29 +2630,29 @@
    "class_id": "c06-a",
    "day": 4,
    "lesson_no": 4,
-   "subject_id": "history",
-   "teacher_id": "t040"
-  },
-  {
-   "class_id": "c06-a",
-   "day": 4,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t013"
-  },
-  {
-   "class_id": "c06-a",
-   "day": 4,
-   "lesson_no": 6,
    "subject_id": "math",
    "teacher_id": "t025"
   },
   {
    "class_id": "c06-a",
    "day": 4,
-   "lesson_no": 7,
+   "lesson_no": 5,
+   "subject_id": "math",
+   "teacher_id": "t025"
+  },
+  {
+   "class_id": "c06-a",
+   "day": 4,
+   "lesson_no": 6,
    "subject_id": "ukr_lang",
    "teacher_id": "t013"
+  },
+  {
+   "class_id": "c06-a",
+   "day": 4,
+   "lesson_no": 7,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t019"
   },
   {
    "class_id": "c06-a",
@@ -2658,8 +2665,8 @@
    "class_id": "c06-a",
    "day": 5,
    "lesson_no": 2,
-   "subject_id": "arts",
-   "teacher_id": "t022"
+   "subject_id": "physical_education",
+   "teacher_id": "t046"
   },
   {
    "class_id": "c06-a",
@@ -2669,13 +2676,6 @@
    "teacher_id": "t022"
   },
   {
-   "class_id": "c06-a",
-   "day": 5,
-   "lesson_no": 4,
-   "subject_id": "physical_education",
-   "teacher_id": "t046"
-  },
-  {
    "class_id": "c06-b",
    "day": 1,
    "lesson_no": 1,
@@ -2686,175 +2686,175 @@
    "class_id": "c06-b",
    "day": 1,
    "lesson_no": 2,
-   "subject_id": "geography",
-   "teacher_id": "t034"
+   "subject_id": "physical_education",
+   "teacher_id": "t046"
   },
   {
    "class_id": "c06-b",
    "day": 1,
    "lesson_no": 3,
-   "subject_id": "physical_education",
-   "teacher_id": "t046"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "geography",
-   "teacher_id": "t034"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "math",
-   "teacher_id": "t025"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "history",
-   "teacher_id": "t040"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 2,
-   "lesson_no": 4,
-   "subject_id": "history",
-   "teacher_id": "t040"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 2,
-   "lesson_no": 5,
-   "subject_id": "math",
-   "teacher_id": "t025"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 2,
-   "lesson_no": 6,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t022"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 2,
-   "lesson_no": 7,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t022"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 3,
-   "lesson_no": 1,
-   "subject_id": "math",
-   "teacher_id": "t025"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 3,
-   "lesson_no": 2,
-   "subject_id": "math",
-   "teacher_id": "t025"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 3,
-   "lesson_no": 3,
-   "subject_id": "physical_education",
-   "teacher_id": "t046"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 3,
-   "lesson_no": 4,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t013"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 3,
-   "lesson_no": 5,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t019"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 3,
-   "lesson_no": 6,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t013"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 3,
-   "lesson_no": 7,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t019"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 4,
-   "lesson_no": 1,
-   "subject_id": "informatics",
-   "teacher_id": "t036"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 4,
-   "lesson_no": 2,
    "subject_id": "health",
    "teacher_id": "t034"
   },
   {
    "class_id": "c06-b",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "arts",
-   "teacher_id": "t022"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 4,
+   "day": 1,
    "lesson_no": 4,
-   "subject_id": "technology",
-   "teacher_id": "t043"
+   "subject_id": "informatics",
+   "teacher_id": "t036"
   },
   {
    "class_id": "c06-b",
-   "day": 4,
-   "lesson_no": 5,
-   "subject_id": "technology",
-   "teacher_id": "t043"
-  },
-  {
-   "class_id": "c06-b",
-   "day": 4,
-   "lesson_no": 6,
-   "subject_id": "arts",
+   "day": 2,
+   "lesson_no": 1,
+   "subject_id": "foreign_lit",
    "teacher_id": "t022"
   },
   {
    "class_id": "c06-b",
-   "day": 5,
+   "day": 2,
+   "lesson_no": 2,
+   "subject_id": "geography",
+   "teacher_id": "t034"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t022"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 2,
+   "lesson_no": 5,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 2,
+   "lesson_no": 6,
+   "subject_id": "math",
+   "teacher_id": "t025"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 2,
+   "lesson_no": 7,
+   "subject_id": "math",
+   "teacher_id": "t025"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 3,
    "lesson_no": 1,
    "subject_id": "foreign_lang",
    "teacher_id": "t019"
   },
   {
    "class_id": "c06-b",
-   "day": 5,
+   "day": 3,
    "lesson_no": 2,
+   "subject_id": "math",
+   "teacher_id": "t025"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 3,
+   "lesson_no": 3,
    "subject_id": "ukr_lang",
    "teacher_id": "t013"
   },
   {
    "class_id": "c06-b",
+   "day": 3,
+   "lesson_no": 4,
+   "subject_id": "geography",
+   "teacher_id": "t034"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 3,
+   "lesson_no": 5,
+   "subject_id": "physical_education",
+   "teacher_id": "t046"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 3,
+   "lesson_no": 6,
+   "subject_id": "math",
+   "teacher_id": "t025"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 3,
+   "lesson_no": 7,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t013"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 4,
+   "lesson_no": 1,
+   "subject_id": "arts",
+   "teacher_id": "t022"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 4,
+   "lesson_no": 2,
+   "subject_id": "science",
+   "teacher_id": "t030"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "technology",
+   "teacher_id": "t043"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 4,
+   "lesson_no": 4,
+   "subject_id": "arts",
+   "teacher_id": "t022"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 4,
+   "lesson_no": 5,
+   "subject_id": "technology",
+   "teacher_id": "t043"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 5,
+   "lesson_no": 1,
+   "subject_id": "science",
+   "teacher_id": "t030"
+  },
+  {
+   "class_id": "c06-b",
+   "day": 5,
+   "lesson_no": 2,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t019"
+  },
+  {
+   "class_id": "c06-b",
    "day": 5,
    "lesson_no": 3,
-   "subject_id": "ukr_lang",
+   "subject_id": "ukr_lit",
    "teacher_id": "t013"
   },
   {
@@ -2868,43 +2868,64 @@
    "class_id": "c06-b",
    "day": 5,
    "lesson_no": 5,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t013"
+   "subject_id": "foreign_lang",
+   "teacher_id": "t019"
   },
   {
    "class_id": "c06-b",
    "day": 5,
    "lesson_no": 6,
-   "subject_id": "science",
-   "teacher_id": "t030"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t013"
   },
   {
    "class_id": "c06-b",
    "day": 5,
    "lesson_no": 7,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t013"
+  },
+  {
+   "class_id": "c06-c",
+   "day": 1,
+   "lesson_no": 1,
+   "subject_id": "informatics",
+   "teacher_id": "t036"
+  },
+  {
+   "class_id": "c06-c",
+   "day": 1,
+   "lesson_no": 2,
    "subject_id": "science",
    "teacher_id": "t030"
   },
   {
    "class_id": "c06-c",
    "day": 1,
-   "lesson_no": 2,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
-  },
-  {
-   "class_id": "c06-c",
-   "day": 1,
    "lesson_no": 3,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
+   "subject_id": "arts",
+   "teacher_id": "t022"
   },
   {
    "class_id": "c06-c",
    "day": 1,
    "lesson_no": 4,
-   "subject_id": "geography",
-   "teacher_id": "t034"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t013"
+  },
+  {
+   "class_id": "c06-c",
+   "day": 1,
+   "lesson_no": 5,
+   "subject_id": "physical_education",
+   "teacher_id": "t046"
+  },
+  {
+   "class_id": "c06-c",
+   "day": 1,
+   "lesson_no": 6,
+   "subject_id": "arts",
+   "teacher_id": "t022"
   },
   {
    "class_id": "c06-c",
@@ -2931,42 +2952,42 @@
    "class_id": "c06-c",
    "day": 2,
    "lesson_no": 3,
-   "subject_id": "physical_education",
-   "teacher_id": "t046"
-  },
-  {
-   "class_id": "c06-c",
-   "day": 2,
-   "lesson_no": 4,
-   "subject_id": "physical_education",
-   "teacher_id": "t046"
-  },
-  {
-   "class_id": "c06-c",
-   "day": 2,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t013"
-  },
-  {
-   "class_id": "c06-c",
-   "day": 2,
-   "lesson_no": 6,
    "subject_id": "math",
    "teacher_id": "t026"
   },
   {
    "class_id": "c06-c",
-   "day": 3,
-   "lesson_no": 1,
+   "day": 2,
+   "lesson_no": 4,
    "subject_id": "ukr_lang",
    "teacher_id": "t013"
   },
   {
    "class_id": "c06-c",
+   "day": 2,
+   "lesson_no": 5,
+   "subject_id": "technology",
+   "teacher_id": "t043"
+  },
+  {
+   "class_id": "c06-c",
+   "day": 2,
+   "lesson_no": 6,
+   "subject_id": "technology",
+   "teacher_id": "t043"
+  },
+  {
+   "class_id": "c06-c",
+   "day": 3,
+   "lesson_no": 1,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c06-c",
    "day": 3,
    "lesson_no": 2,
-   "subject_id": "ukr_lit",
+   "subject_id": "ukr_lang",
    "teacher_id": "t013"
   },
   {
@@ -2980,8 +3001,8 @@
    "class_id": "c06-c",
    "day": 3,
    "lesson_no": 4,
-   "subject_id": "history",
-   "teacher_id": "t040"
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
   },
   {
    "class_id": "c06-c",
@@ -2994,78 +3015,71 @@
    "class_id": "c06-c",
    "day": 3,
    "lesson_no": 6,
-   "subject_id": "geography",
-   "teacher_id": "t034"
-  },
-  {
-   "class_id": "c06-c",
-   "day": 3,
-   "lesson_no": 7,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t022"
-  },
-  {
-   "class_id": "c06-c",
-   "day": 4,
-   "lesson_no": 1,
-   "subject_id": "math",
-   "teacher_id": "t026"
-  },
-  {
-   "class_id": "c06-c",
-   "day": 4,
-   "lesson_no": 2,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t013"
-  },
-  {
-   "class_id": "c06-c",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t013"
-  },
-  {
-   "class_id": "c06-c",
-   "day": 4,
-   "lesson_no": 4,
    "subject_id": "science",
    "teacher_id": "t030"
   },
   {
    "class_id": "c06-c",
-   "day": 4,
-   "lesson_no": 5,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
+   "day": 3,
+   "lesson_no": 7,
+   "subject_id": "history",
+   "teacher_id": "t040"
   },
   {
    "class_id": "c06-c",
    "day": 4,
-   "lesson_no": 6,
+   "lesson_no": 1,
    "subject_id": "math",
    "teacher_id": "t026"
   },
   {
    "class_id": "c06-c",
    "day": 4,
-   "lesson_no": 7,
-   "subject_id": "science",
-   "teacher_id": "t030"
+   "lesson_no": 2,
+   "subject_id": "geography",
+   "teacher_id": "t034"
   },
   {
    "class_id": "c06-c",
-   "day": 5,
-   "lesson_no": 1,
-   "subject_id": "technology",
-   "teacher_id": "t043"
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t013"
+  },
+  {
+   "class_id": "c06-c",
+   "day": 4,
+   "lesson_no": 4,
+   "subject_id": "geography",
+   "teacher_id": "t034"
+  },
+  {
+   "class_id": "c06-c",
+   "day": 4,
+   "lesson_no": 5,
+   "subject_id": "math",
+   "teacher_id": "t026"
+  },
+  {
+   "class_id": "c06-c",
+   "day": 4,
+   "lesson_no": 6,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c06-c",
+   "day": 4,
+   "lesson_no": 7,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t013"
   },
   {
    "class_id": "c06-c",
    "day": 5,
    "lesson_no": 2,
-   "subject_id": "informatics",
-   "teacher_id": "t036"
+   "subject_id": "foreign_lit",
+   "teacher_id": "t022"
   },
   {
    "class_id": "c06-c",
@@ -3078,526 +3092,512 @@
    "class_id": "c06-c",
    "day": 5,
    "lesson_no": 4,
-   "subject_id": "technology",
-   "teacher_id": "t043"
-  },
-  {
-   "class_id": "c06-c",
-   "day": 5,
-   "lesson_no": 5,
-   "subject_id": "arts",
-   "teacher_id": "t022"
-  },
-  {
-   "class_id": "c06-c",
-   "day": 5,
-   "lesson_no": 6,
-   "subject_id": "arts",
-   "teacher_id": "t022"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 1,
-   "lesson_no": 1,
-   "subject_id": "informatics",
-   "teacher_id": "t036"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 1,
-   "lesson_no": 2,
-   "subject_id": "technology",
-   "teacher_id": "t043"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 1,
-   "lesson_no": 3,
-   "subject_id": "health",
-   "teacher_id": "t034"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 1,
-   "lesson_no": 4,
-   "subject_id": "arts",
-   "teacher_id": "t023"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t014"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 2,
-   "lesson_no": 4,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t014"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 2,
-   "lesson_no": 5,
-   "subject_id": "history",
-   "teacher_id": "t040"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 2,
-   "lesson_no": 6,
-   "subject_id": "history",
-   "teacher_id": "t040"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 2,
-   "lesson_no": 7,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t014"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 3,
-   "lesson_no": 1,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t023"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 3,
-   "lesson_no": 2,
    "subject_id": "physical_education",
    "teacher_id": "t046"
   },
   {
    "class_id": "c07-a",
-   "day": 3,
-   "lesson_no": 3,
-   "subject_id": "geography",
-   "teacher_id": "t034"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 3,
-   "lesson_no": 4,
-   "subject_id": "chemistry",
-   "teacher_id": "t030"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 3,
-   "lesson_no": 5,
-   "subject_id": "geography",
-   "teacher_id": "t034"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 3,
-   "lesson_no": 6,
-   "subject_id": "biology",
-   "teacher_id": "t030"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 3,
-   "lesson_no": 7,
-   "subject_id": "chemistry",
-   "teacher_id": "t030"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 4,
+   "day": 1,
    "lesson_no": 1,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t023"
+   "subject_id": "geometry",
+   "teacher_id": "t026"
   },
   {
    "class_id": "c07-a",
-   "day": 4,
+   "day": 1,
    "lesson_no": 2,
-   "subject_id": "biology",
-   "teacher_id": "t030"
-  },
-  {
-   "class_id": "c07-a",
-   "day": 4,
-   "lesson_no": 3,
    "subject_id": "algebra",
    "teacher_id": "t026"
   },
   {
    "class_id": "c07-a",
-   "day": 4,
+   "day": 1,
+   "lesson_no": 3,
+   "subject_id": "physical_education",
+   "teacher_id": "t046"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 1,
    "lesson_no": 4,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
+   "subject_id": "physical_education",
+   "teacher_id": "t046"
   },
   {
    "class_id": "c07-a",
-   "day": 4,
+   "day": 1,
    "lesson_no": 5,
-   "subject_id": "algebra",
-   "teacher_id": "t026"
+   "subject_id": "arts",
+   "teacher_id": "t023"
   },
   {
    "class_id": "c07-a",
-   "day": 4,
+   "day": 1,
    "lesson_no": 6,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t014"
+   "subject_id": "health",
+   "teacher_id": "t034"
   },
   {
    "class_id": "c07-a",
-   "day": 4,
+   "day": 1,
    "lesson_no": 7,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t014"
+   "subject_id": "foreign_lit",
+   "teacher_id": "t023"
   },
   {
    "class_id": "c07-a",
-   "day": 5,
+   "day": 2,
    "lesson_no": 1,
    "subject_id": "physics",
    "teacher_id": "t036"
   },
   {
    "class_id": "c07-a",
-   "day": 5,
+   "day": 2,
    "lesson_no": 2,
+   "subject_id": "physics",
+   "teacher_id": "t036"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "geography",
+   "teacher_id": "t034"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 2,
+   "lesson_no": 5,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t014"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 2,
+   "lesson_no": 6,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 2,
+   "lesson_no": 7,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 3,
+   "lesson_no": 1,
+   "subject_id": "chemistry",
+   "teacher_id": "t030"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 3,
+   "lesson_no": 2,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t023"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t014"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 3,
+   "lesson_no": 4,
    "subject_id": "physical_education",
    "teacher_id": "t046"
   },
   {
    "class_id": "c07-a",
-   "day": 5,
+   "day": 3,
+   "lesson_no": 5,
+   "subject_id": "chemistry",
+   "teacher_id": "t030"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 3,
+   "lesson_no": 6,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t014"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 3,
+   "lesson_no": 7,
+   "subject_id": "geography",
+   "teacher_id": "t034"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 4,
+   "lesson_no": 1,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t014"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 4,
+   "lesson_no": 2,
+   "subject_id": "technology",
+   "teacher_id": "t043"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 4,
    "lesson_no": 3,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t014"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 4,
+   "lesson_no": 4,
+   "subject_id": "informatics",
+   "teacher_id": "t036"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 5,
+   "lesson_no": 1,
    "subject_id": "geometry",
    "teacher_id": "t026"
   },
   {
    "class_id": "c07-a",
    "day": 5,
+   "lesson_no": 2,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 5,
+   "lesson_no": 3,
+   "subject_id": "biology",
+   "teacher_id": "t030"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 5,
    "lesson_no": 4,
+   "subject_id": "biology",
+   "teacher_id": "t030"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 5,
+   "lesson_no": 5,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c07-a",
+   "day": 5,
+   "lesson_no": 6,
    "subject_id": "algebra",
    "teacher_id": "t026"
   },
   {
    "class_id": "c07-a",
    "day": 5,
+   "lesson_no": 7,
+   "subject_id": "algebra",
+   "teacher_id": "t026"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 1,
+   "lesson_no": 1,
+   "subject_id": "biology",
+   "teacher_id": "t031"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 1,
+   "lesson_no": 2,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 1,
+   "lesson_no": 3,
+   "subject_id": "chemistry",
+   "teacher_id": "t031"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 1,
+   "lesson_no": 4,
+   "subject_id": "biology",
+   "teacher_id": "t031"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 1,
    "lesson_no": 5,
+   "subject_id": "chemistry",
+   "teacher_id": "t031"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 2,
+   "lesson_no": 1,
    "subject_id": "physical_education",
    "teacher_id": "t046"
   },
   {
-   "class_id": "c07-a",
-   "day": 5,
+   "class_id": "c07-b",
+   "day": 2,
+   "lesson_no": 2,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t014"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 2,
+   "lesson_no": 5,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 2,
+   "lesson_no": 6,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t014"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 2,
+   "lesson_no": 7,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t014"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 3,
+   "lesson_no": 1,
+   "subject_id": "arts",
+   "teacher_id": "t023"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 3,
+   "lesson_no": 2,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "physical_education",
+   "teacher_id": "t046"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 3,
+   "lesson_no": 4,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t014"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 3,
+   "lesson_no": 5,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t014"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 3,
+   "lesson_no": 6,
+   "subject_id": "physical_education",
+   "teacher_id": "t046"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 3,
+   "lesson_no": 7,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t023"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 4,
+   "lesson_no": 1,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t023"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 4,
+   "lesson_no": 2,
+   "subject_id": "geometry",
+   "teacher_id": "t026"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "geography",
+   "teacher_id": "t034"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 4,
+   "lesson_no": 4,
+   "subject_id": "algebra",
+   "teacher_id": "t026"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 4,
+   "lesson_no": 5,
+   "subject_id": "geography",
+   "teacher_id": "t034"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 4,
    "lesson_no": 6,
    "subject_id": "geometry",
    "teacher_id": "t026"
   },
   {
-   "class_id": "c07-a",
-   "day": 5,
+   "class_id": "c07-b",
+   "day": 4,
    "lesson_no": 7,
+   "subject_id": "algebra",
+   "teacher_id": "t026"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 5,
+   "lesson_no": 1,
+   "subject_id": "informatics",
+   "teacher_id": "t036"
+  },
+  {
+   "class_id": "c07-b",
+   "day": 5,
+   "lesson_no": 2,
    "subject_id": "physics",
    "teacher_id": "t036"
   },
   {
    "class_id": "c07-b",
-   "day": 1,
-   "lesson_no": 1,
-   "subject_id": "arts",
-   "teacher_id": "t023"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 1,
-   "lesson_no": 2,
-   "subject_id": "physical_education",
-   "teacher_id": "t046"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 1,
+   "day": 5,
    "lesson_no": 3,
-   "subject_id": "informatics",
-   "teacher_id": "t036"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 1,
-   "lesson_no": 4,
-   "subject_id": "physical_education",
-   "teacher_id": "t046"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "history",
-   "teacher_id": "t040"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "geography",
-   "teacher_id": "t034"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t014"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 2,
-   "lesson_no": 4,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 2,
-   "lesson_no": 5,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t014"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 2,
-   "lesson_no": 6,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t014"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 2,
-   "lesson_no": 7,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 3,
-   "lesson_no": 1,
-   "subject_id": "physical_education",
-   "teacher_id": "t046"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 3,
-   "lesson_no": 2,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t023"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 3,
-   "lesson_no": 3,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 3,
-   "lesson_no": 4,
-   "subject_id": "geography",
-   "teacher_id": "t034"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 3,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t014"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 3,
-   "lesson_no": 6,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t014"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 3,
-   "lesson_no": 7,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t023"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 4,
-   "lesson_no": 1,
-   "subject_id": "chemistry",
-   "teacher_id": "t031"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 4,
-   "lesson_no": 2,
-   "subject_id": "history",
-   "teacher_id": "t040"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "chemistry",
-   "teacher_id": "t031"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 4,
-   "lesson_no": 4,
-   "subject_id": "algebra",
-   "teacher_id": "t026"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 4,
-   "lesson_no": 5,
-   "subject_id": "biology",
-   "teacher_id": "t031"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 4,
-   "lesson_no": 6,
-   "subject_id": "biology",
-   "teacher_id": "t031"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 4,
-   "lesson_no": 7,
    "subject_id": "algebra",
    "teacher_id": "t026"
   },
   {
    "class_id": "c07-b",
    "day": 5,
-   "lesson_no": 1,
-   "subject_id": "health",
-   "teacher_id": "t034"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 5,
-   "lesson_no": 2,
-   "subject_id": "geometry",
-   "teacher_id": "t026"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 5,
-   "lesson_no": 3,
+   "lesson_no": 4,
    "subject_id": "technology",
    "teacher_id": "t043"
   },
   {
    "class_id": "c07-b",
    "day": 5,
-   "lesson_no": 4,
+   "lesson_no": 5,
    "subject_id": "physics",
    "teacher_id": "t036"
   },
   {
    "class_id": "c07-b",
    "day": 5,
-   "lesson_no": 5,
-   "subject_id": "algebra",
-   "teacher_id": "t026"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 5,
    "lesson_no": 6,
-   "subject_id": "physics",
-   "teacher_id": "t036"
-  },
-  {
-   "class_id": "c07-b",
-   "day": 5,
-   "lesson_no": 7,
-   "subject_id": "geometry",
-   "teacher_id": "t026"
+   "subject_id": "health",
+   "teacher_id": "t034"
   },
   {
    "class_id": "c07-c",
    "day": 1,
    "lesson_no": 1,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c07-c",
+   "day": 1,
+   "lesson_no": 2,
    "subject_id": "chemistry",
    "teacher_id": "t031"
   },
   {
    "class_id": "c07-c",
    "day": 1,
-   "lesson_no": 2,
-   "subject_id": "biology",
-   "teacher_id": "t031"
-  },
-  {
-   "class_id": "c07-c",
-   "day": 1,
    "lesson_no": 3,
-   "subject_id": "biology",
-   "teacher_id": "t031"
+   "subject_id": "ukr_lit",
+   "teacher_id": "t014"
   },
   {
    "class_id": "c07-c",
    "day": 1,
    "lesson_no": 4,
-   "subject_id": "geometry",
-   "teacher_id": "t026"
+   "subject_id": "ukr_lit",
+   "teacher_id": "t014"
   },
   {
    "class_id": "c07-c",
    "day": 1,
    "lesson_no": 5,
-   "subject_id": "geometry",
-   "teacher_id": "t026"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t014"
   },
   {
    "class_id": "c07-c",
    "day": 1,
    "lesson_no": 6,
-   "subject_id": "algebra",
-   "teacher_id": "t026"
+   "subject_id": "biology",
+   "teacher_id": "t031"
   },
   {
    "class_id": "c07-c",
    "day": 1,
    "lesson_no": 7,
-   "subject_id": "algebra",
-   "teacher_id": "t026"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t014"
   },
   {
    "class_id": "c07-c",
    "day": 2,
    "lesson_no": 1,
-   "subject_id": "informatics",
-   "teacher_id": "t037"
+   "subject_id": "physical_education",
+   "teacher_id": "t047"
   },
   {
    "class_id": "c07-c",
@@ -3610,82 +3610,68 @@
    "class_id": "c07-c",
    "day": 2,
    "lesson_no": 3,
-   "subject_id": "algebra",
-   "teacher_id": "t026"
-  },
-  {
-   "class_id": "c07-c",
-   "day": 2,
-   "lesson_no": 4,
    "subject_id": "arts",
    "teacher_id": "t023"
   },
   {
    "class_id": "c07-c",
    "day": 2,
+   "lesson_no": 4,
+   "subject_id": "algebra",
+   "teacher_id": "t026"
+  },
+  {
+   "class_id": "c07-c",
+   "day": 2,
    "lesson_no": 5,
-   "subject_id": "physical_education",
-   "teacher_id": "t047"
-  },
-  {
-   "class_id": "c07-c",
-   "day": 2,
-   "lesson_no": 6,
-   "subject_id": "physics",
-   "teacher_id": "t037"
-  },
-  {
-   "class_id": "c07-c",
-   "day": 2,
-   "lesson_no": 7,
-   "subject_id": "physics",
+   "subject_id": "informatics",
    "teacher_id": "t037"
   },
   {
    "class_id": "c07-c",
    "day": 3,
    "lesson_no": 1,
+   "subject_id": "physics",
+   "teacher_id": "t037"
+  },
+  {
+   "class_id": "c07-c",
+   "day": 3,
+   "lesson_no": 2,
+   "subject_id": "health",
+   "teacher_id": "t034"
+  },
+  {
+   "class_id": "c07-c",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t023"
+  },
+  {
+   "class_id": "c07-c",
+   "day": 3,
+   "lesson_no": 4,
+   "subject_id": "physics",
+   "teacher_id": "t037"
+  },
+  {
+   "class_id": "c07-c",
+   "day": 3,
+   "lesson_no": 5,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t023"
+  },
+  {
+   "class_id": "c07-c",
+   "day": 3,
+   "lesson_no": 6,
    "subject_id": "chemistry",
    "teacher_id": "t031"
   },
   {
    "class_id": "c07-c",
    "day": 3,
-   "lesson_no": 2,
-   "subject_id": "geography",
-   "teacher_id": "t034"
-  },
-  {
-   "class_id": "c07-c",
-   "day": 3,
-   "lesson_no": 3,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t023"
-  },
-  {
-   "class_id": "c07-c",
-   "day": 3,
-   "lesson_no": 4,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t014"
-  },
-  {
-   "class_id": "c07-c",
-   "day": 3,
-   "lesson_no": 5,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
-  },
-  {
-   "class_id": "c07-c",
-   "day": 3,
-   "lesson_no": 6,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t023"
-  },
-  {
-   "class_id": "c07-c",
-   "day": 3,
    "lesson_no": 7,
    "subject_id": "foreign_lang",
    "teacher_id": "t020"
@@ -3694,8 +3680,8 @@
    "class_id": "c07-c",
    "day": 4,
    "lesson_no": 1,
-   "subject_id": "technology",
-   "teacher_id": "t043"
+   "subject_id": "geography",
+   "teacher_id": "t034"
   },
   {
    "class_id": "c07-c",
@@ -3708,13 +3694,34 @@
    "class_id": "c07-c",
    "day": 4,
    "lesson_no": 3,
-   "subject_id": "health",
-   "teacher_id": "t034"
+   "subject_id": "geometry",
+   "teacher_id": "t026"
   },
   {
    "class_id": "c07-c",
    "day": 4,
    "lesson_no": 4,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c07-c",
+   "day": 4,
+   "lesson_no": 5,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c07-c",
+   "day": 4,
+   "lesson_no": 6,
+   "subject_id": "biology",
+   "teacher_id": "t031"
+  },
+  {
+   "class_id": "c07-c",
+   "day": 4,
+   "lesson_no": 7,
    "subject_id": "geography",
    "teacher_id": "t034"
   },
@@ -3722,36 +3729,36 @@
    "class_id": "c07-c",
    "day": 5,
    "lesson_no": 1,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t014"
+   "subject_id": "technology",
+   "teacher_id": "t043"
   },
   {
    "class_id": "c07-c",
    "day": 5,
    "lesson_no": 2,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t014"
+   "subject_id": "algebra",
+   "teacher_id": "t026"
   },
   {
    "class_id": "c07-c",
    "day": 5,
    "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t014"
-  },
-  {
-   "class_id": "c07-c",
-   "day": 5,
-   "lesson_no": 4,
    "subject_id": "foreign_lang",
    "teacher_id": "t020"
   },
   {
    "class_id": "c07-c",
    "day": 5,
+   "lesson_no": 4,
+   "subject_id": "geometry",
+   "teacher_id": "t026"
+  },
+  {
+   "class_id": "c07-c",
+   "day": 5,
    "lesson_no": 5,
-   "subject_id": "history",
-   "teacher_id": "t040"
+   "subject_id": "algebra",
+   "teacher_id": "t026"
   },
   {
    "class_id": "c07-c",
@@ -3761,22 +3768,29 @@
    "teacher_id": "t014"
   },
   {
-   "class_id": "c07-c",
-   "day": 5,
-   "lesson_no": 7,
-   "subject_id": "history",
-   "teacher_id": "t040"
+   "class_id": "c08-a",
+   "day": 1,
+   "lesson_no": 1,
+   "subject_id": "physical_education",
+   "teacher_id": "t047"
   },
   {
    "class_id": "c08-a",
    "day": 1,
-   "lesson_no": 3,
+   "lesson_no": 2,
    "subject_id": "arts",
    "teacher_id": "t023"
   },
   {
    "class_id": "c08-a",
    "day": 1,
+   "lesson_no": 3,
+   "subject_id": "physical_education",
+   "teacher_id": "t047"
+  },
+  {
+   "class_id": "c08-a",
+   "day": 1,
    "lesson_no": 4,
    "subject_id": "technology",
    "teacher_id": "t043"
@@ -3790,80 +3804,66 @@
   },
   {
    "class_id": "c08-a",
-   "day": 1,
-   "lesson_no": 6,
-   "subject_id": "physical_education",
-   "teacher_id": "t047"
-  },
-  {
-   "class_id": "c08-a",
-   "day": 1,
-   "lesson_no": 7,
-   "subject_id": "physical_education",
-   "teacher_id": "t047"
+   "day": 2,
+   "lesson_no": 1,
+   "subject_id": "history",
+   "teacher_id": "t040"
   },
   {
    "class_id": "c08-a",
    "day": 2,
-   "lesson_no": 1,
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t015"
+  },
+  {
+   "class_id": "c08-a",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t015"
+  },
+  {
+   "class_id": "c08-a",
+   "day": 2,
+   "lesson_no": 4,
    "subject_id": "foreign_lang",
    "teacher_id": "t020"
   },
   {
    "class_id": "c08-a",
    "day": 2,
-   "lesson_no": 2,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t015"
-  },
-  {
-   "class_id": "c08-a",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t015"
-  },
-  {
-   "class_id": "c08-a",
-   "day": 2,
-   "lesson_no": 4,
-   "subject_id": "algebra",
-   "teacher_id": "t027"
-  },
-  {
-   "class_id": "c08-a",
-   "day": 2,
    "lesson_no": 5,
-   "subject_id": "ukr_lang",
+   "subject_id": "ukr_lit",
    "teacher_id": "t015"
   },
   {
    "class_id": "c08-a",
    "day": 2,
    "lesson_no": 6,
-   "subject_id": "ukr_lang",
+   "subject_id": "ukr_lit",
    "teacher_id": "t015"
   },
   {
    "class_id": "c08-a",
    "day": 2,
    "lesson_no": 7,
-   "subject_id": "geography",
-   "teacher_id": "t034"
+   "subject_id": "algebra",
+   "teacher_id": "t027"
   },
   {
    "class_id": "c08-a",
    "day": 3,
    "lesson_no": 1,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t015"
+   "subject_id": "geometry",
+   "teacher_id": "t027"
   },
   {
    "class_id": "c08-a",
    "day": 3,
    "lesson_no": 2,
-   "subject_id": "biology",
-   "teacher_id": "t031"
+   "subject_id": "algebra",
+   "teacher_id": "t027"
   },
   {
    "class_id": "c08-a",
@@ -3883,71 +3883,71 @@
    "class_id": "c08-a",
    "day": 3,
    "lesson_no": 5,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t015"
+  },
+  {
+   "class_id": "c08-a",
+   "day": 3,
+   "lesson_no": 6,
    "subject_id": "foreign_lit",
    "teacher_id": "t023"
   },
   {
    "class_id": "c08-a",
    "day": 3,
-   "lesson_no": 6,
-   "subject_id": "biology",
-   "teacher_id": "t031"
-  },
-  {
-   "class_id": "c08-a",
-   "day": 3,
    "lesson_no": 7,
-   "subject_id": "geography",
-   "teacher_id": "t034"
-  },
-  {
-   "class_id": "c08-a",
-   "day": 4,
-   "lesson_no": 1,
    "subject_id": "informatics",
    "teacher_id": "t037"
   },
   {
    "class_id": "c08-a",
    "day": 4,
+   "lesson_no": 1,
+   "subject_id": "chemistry",
+   "teacher_id": "t031"
+  },
+  {
+   "class_id": "c08-a",
+   "day": 4,
    "lesson_no": 2,
-   "subject_id": "geometry",
-   "teacher_id": "t027"
+   "subject_id": "biology",
+   "teacher_id": "t031"
   },
   {
    "class_id": "c08-a",
    "day": 4,
    "lesson_no": 3,
-   "subject_id": "history",
-   "teacher_id": "t040"
+   "subject_id": "physics",
+   "teacher_id": "t037"
   },
   {
    "class_id": "c08-a",
    "day": 4,
    "lesson_no": 4,
-   "subject_id": "chemistry",
+   "subject_id": "biology",
    "teacher_id": "t031"
   },
   {
    "class_id": "c08-a",
    "day": 4,
    "lesson_no": 5,
-   "subject_id": "geometry",
-   "teacher_id": "t027"
+   "subject_id": "chemistry",
+   "teacher_id": "t031"
   },
   {
    "class_id": "c08-a",
    "day": 4,
    "lesson_no": 6,
-   "subject_id": "algebra",
-   "teacher_id": "t027"
+   "subject_id": "physics",
+   "teacher_id": "t037"
   },
   {
    "class_id": "c08-a",
    "day": 4,
    "lesson_no": 7,
-   "subject_id": "chemistry",
-   "teacher_id": "t031"
+   "subject_id": "geometry",
+   "teacher_id": "t027"
   },
   {
    "class_id": "c08-a",
@@ -3981,22 +3981,22 @@
    "class_id": "c08-a",
    "day": 5,
    "lesson_no": 5,
+   "subject_id": "geography",
+   "teacher_id": "t034"
+  },
+  {
+   "class_id": "c08-a",
+   "day": 5,
+   "lesson_no": 6,
    "subject_id": "foreign_lang",
    "teacher_id": "t020"
   },
   {
    "class_id": "c08-a",
    "day": 5,
-   "lesson_no": 6,
-   "subject_id": "physics",
-   "teacher_id": "t037"
-  },
-  {
-   "class_id": "c08-a",
-   "day": 5,
    "lesson_no": 7,
-   "subject_id": "physics",
-   "teacher_id": "t037"
+   "subject_id": "geography",
+   "teacher_id": "t034"
   },
   {
    "class_id": "c08-b",
@@ -4009,124 +4009,124 @@
    "class_id": "c08-b",
    "day": 1,
    "lesson_no": 2,
-   "subject_id": "physical_education",
-   "teacher_id": "t047"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 1,
-   "lesson_no": 5,
-   "subject_id": "physical_education",
-   "teacher_id": "t047"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 1,
-   "lesson_no": 6,
    "subject_id": "technology",
    "teacher_id": "t043"
   },
   {
    "class_id": "c08-b",
    "day": 1,
-   "lesson_no": 7,
+   "lesson_no": 3,
    "subject_id": "arts",
    "teacher_id": "t023"
   },
   {
    "class_id": "c08-b",
+   "day": 1,
+   "lesson_no": 4,
+   "subject_id": "physical_education",
+   "teacher_id": "t047"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 1,
+   "lesson_no": 5,
+   "subject_id": "physical_education",
+   "teacher_id": "t047"
+  },
+  {
+   "class_id": "c08-b",
    "day": 2,
    "lesson_no": 1,
+   "subject_id": "geography",
+   "teacher_id": "t034"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 2,
+   "lesson_no": 2,
    "subject_id": "geometry",
    "teacher_id": "t027"
   },
   {
    "class_id": "c08-b",
    "day": 2,
-   "lesson_no": 2,
-   "subject_id": "algebra",
-   "teacher_id": "t027"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 2,
    "lesson_no": 3,
-   "subject_id": "algebra",
+   "subject_id": "geometry",
    "teacher_id": "t027"
   },
   {
    "class_id": "c08-b",
    "day": 2,
    "lesson_no": 4,
-   "subject_id": "geography",
-   "teacher_id": "t034"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t015"
   },
   {
    "class_id": "c08-b",
    "day": 2,
    "lesson_no": 5,
-   "subject_id": "geography",
-   "teacher_id": "t034"
+   "subject_id": "algebra",
+   "teacher_id": "t027"
   },
   {
    "class_id": "c08-b",
    "day": 2,
    "lesson_no": 6,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
+   "subject_id": "algebra",
+   "teacher_id": "t027"
   },
   {
    "class_id": "c08-b",
    "day": 2,
    "lesson_no": 7,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t015"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 3,
-   "lesson_no": 1,
-   "subject_id": "history",
-   "teacher_id": "t040"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 3,
-   "lesson_no": 2,
-   "subject_id": "history",
-   "teacher_id": "t040"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 3,
-   "lesson_no": 3,
-   "subject_id": "chemistry",
-   "teacher_id": "t031"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 3,
-   "lesson_no": 4,
-   "subject_id": "chemistry",
-   "teacher_id": "t031"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 3,
-   "lesson_no": 5,
-   "subject_id": "biology",
-   "teacher_id": "t031"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 3,
-   "lesson_no": 6,
    "subject_id": "ukr_lang",
    "teacher_id": "t015"
   },
   {
    "class_id": "c08-b",
    "day": 3,
+   "lesson_no": 1,
+   "subject_id": "geography",
+   "teacher_id": "t034"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 3,
+   "lesson_no": 2,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t015"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "chemistry",
+   "teacher_id": "t031"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 3,
+   "lesson_no": 4,
+   "subject_id": "biology",
+   "teacher_id": "t031"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 3,
+   "lesson_no": 5,
+   "subject_id": "chemistry",
+   "teacher_id": "t031"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 3,
+   "lesson_no": 6,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 3,
    "lesson_no": 7,
    "subject_id": "biology",
    "teacher_id": "t031"
@@ -4135,302 +4135,316 @@
    "class_id": "c08-b",
    "day": 4,
    "lesson_no": 1,
-   "subject_id": "algebra",
-   "teacher_id": "t027"
+   "subject_id": "ukr_lit",
+   "teacher_id": "t015"
   },
   {
    "class_id": "c08-b",
    "day": 4,
    "lesson_no": 2,
+   "subject_id": "physics",
+   "teacher_id": "t037"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 4,
+   "lesson_no": 3,
    "subject_id": "foreign_lit",
    "teacher_id": "t023"
   },
   {
    "class_id": "c08-b",
    "day": 4,
+   "lesson_no": 4,
+   "subject_id": "algebra",
+   "teacher_id": "t027"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 4,
+   "lesson_no": 5,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t023"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 4,
+   "lesson_no": 6,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t015"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 4,
+   "lesson_no": 7,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 5,
+   "lesson_no": 1,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 5,
+   "lesson_no": 2,
+   "subject_id": "physical_education",
+   "teacher_id": "t047"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 5,
    "lesson_no": 3,
+   "subject_id": "history",
+   "teacher_id": "t040"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 5,
+   "lesson_no": 4,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 5,
+   "lesson_no": 5,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c08-b",
+   "day": 5,
+   "lesson_no": 6,
    "subject_id": "informatics",
    "teacher_id": "t037"
   },
   {
    "class_id": "c08-b",
-   "day": 4,
-   "lesson_no": 4,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t023"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 4,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t015"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 4,
-   "lesson_no": 6,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t015"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 4,
+   "day": 5,
    "lesson_no": 7,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t015"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 5,
-   "lesson_no": 1,
-   "subject_id": "history",
-   "teacher_id": "t040"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 5,
-   "lesson_no": 2,
-   "subject_id": "physical_education",
-   "teacher_id": "t047"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 5,
-   "lesson_no": 3,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 5,
-   "lesson_no": 4,
    "subject_id": "physics",
    "teacher_id": "t037"
   },
   {
-   "class_id": "c08-b",
-   "day": 5,
-   "lesson_no": 5,
-   "subject_id": "physics",
-   "teacher_id": "t037"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 5,
-   "lesson_no": 6,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
-  },
-  {
-   "class_id": "c08-b",
-   "day": 5,
-   "lesson_no": 7,
-   "subject_id": "geometry",
-   "teacher_id": "t027"
-  },
-  {
    "class_id": "c09-a",
    "day": 1,
    "lesson_no": 1,
-   "subject_id": "physical_education",
-   "teacher_id": "t047"
-  },
-  {
-   "class_id": "c09-a",
-   "day": 1,
-   "lesson_no": 2,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t015"
-  },
-  {
-   "class_id": "c09-a",
-   "day": 1,
-   "lesson_no": 3,
-   "subject_id": "physical_education",
-   "teacher_id": "t047"
-  },
-  {
-   "class_id": "c09-a",
-   "day": 1,
-   "lesson_no": 4,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
-  },
-  {
-   "class_id": "c09-a",
-   "day": 1,
-   "lesson_no": 5,
-   "subject_id": "arts",
-   "teacher_id": "t023"
-  },
-  {
-   "class_id": "c09-a",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "biology",
-   "teacher_id": "t031"
-  },
-  {
-   "class_id": "c09-a",
-   "day": 2,
-   "lesson_no": 2,
    "subject_id": "technology",
    "teacher_id": "t043"
   },
   {
    "class_id": "c09-a",
-   "day": 2,
+   "day": 1,
+   "lesson_no": 2,
+   "subject_id": "physical_education",
+   "teacher_id": "t047"
+  },
+  {
+   "class_id": "c09-a",
+   "day": 1,
    "lesson_no": 3,
-   "subject_id": "health",
-   "teacher_id": "t035"
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
   },
   {
    "class_id": "c09-a",
-   "day": 2,
+   "day": 1,
    "lesson_no": 4,
-   "subject_id": "informatics",
-   "teacher_id": "t037"
+   "subject_id": "ukr_lit",
+   "teacher_id": "t015"
   },
   {
    "class_id": "c09-a",
-   "day": 2,
+   "day": 1,
    "lesson_no": 5,
-   "subject_id": "chemistry",
-   "teacher_id": "t031"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t015"
   },
   {
    "class_id": "c09-a",
-   "day": 2,
+   "day": 1,
    "lesson_no": 6,
-   "subject_id": "chemistry",
-   "teacher_id": "t031"
+   "subject_id": "arts",
+   "teacher_id": "t023"
   },
   {
    "class_id": "c09-a",
-   "day": 2,
+   "day": 1,
    "lesson_no": 7,
    "subject_id": "physical_education",
    "teacher_id": "t047"
   },
   {
    "class_id": "c09-a",
-   "day": 3,
+   "day": 2,
    "lesson_no": 1,
-   "subject_id": "geography",
-   "teacher_id": "t035"
+   "subject_id": "informatics",
+   "teacher_id": "t037"
   },
   {
    "class_id": "c09-a",
-   "day": 3,
+   "day": 2,
    "lesson_no": 2,
    "subject_id": "geography",
    "teacher_id": "t035"
   },
   {
    "class_id": "c09-a",
-   "day": 3,
+   "day": 2,
    "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t015"
+   "subject_id": "physics",
+   "teacher_id": "t037"
   },
   {
    "class_id": "c09-a",
-   "day": 3,
+   "day": 2,
    "lesson_no": 4,
-   "subject_id": "algebra",
-   "teacher_id": "t027"
+   "subject_id": "physics",
+   "teacher_id": "t037"
   },
   {
    "class_id": "c09-a",
-   "day": 3,
+   "day": 2,
    "lesson_no": 5,
-   "subject_id": "history",
-   "teacher_id": "t041"
-  },
-  {
-   "class_id": "c09-a",
-   "day": 3,
-   "lesson_no": 6,
-   "subject_id": "history",
-   "teacher_id": "t041"
-  },
-  {
-   "class_id": "c09-a",
-   "day": 3,
-   "lesson_no": 7,
-   "subject_id": "algebra",
-   "teacher_id": "t027"
-  },
-  {
-   "class_id": "c09-a",
-   "day": 4,
-   "lesson_no": 1,
-   "subject_id": "history",
-   "teacher_id": "t041"
-  },
-  {
-   "class_id": "c09-a",
-   "day": 4,
-   "lesson_no": 2,
    "subject_id": "biology",
    "teacher_id": "t031"
   },
   {
    "class_id": "c09-a",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t015"
+   "day": 2,
+   "lesson_no": 6,
+   "subject_id": "biology",
+   "teacher_id": "t031"
   },
   {
    "class_id": "c09-a",
-   "day": 4,
+   "day": 2,
+   "lesson_no": 7,
+   "subject_id": "physical_education",
+   "teacher_id": "t047"
+  },
+  {
+   "class_id": "c09-a",
+   "day": 3,
+   "lesson_no": 1,
+   "subject_id": "chemistry",
+   "teacher_id": "t031"
+  },
+  {
+   "class_id": "c09-a",
+   "day": 3,
+   "lesson_no": 2,
+   "subject_id": "chemistry",
+   "teacher_id": "t031"
+  },
+  {
+   "class_id": "c09-a",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "history",
+   "teacher_id": "t041"
+  },
+  {
+   "class_id": "c09-a",
+   "day": 3,
    "lesson_no": 4,
    "subject_id": "algebra",
    "teacher_id": "t027"
   },
   {
    "class_id": "c09-a",
-   "day": 4,
+   "day": 3,
    "lesson_no": 5,
+   "subject_id": "history",
+   "teacher_id": "t041"
+  },
+  {
+   "class_id": "c09-a",
+   "day": 3,
+   "lesson_no": 6,
+   "subject_id": "geography",
+   "teacher_id": "t035"
+  },
+  {
+   "class_id": "c09-a",
+   "day": 3,
+   "lesson_no": 7,
+   "subject_id": "algebra",
+   "teacher_id": "t027"
+  },
+  {
+   "class_id": "c09-a",
+   "day": 4,
+   "lesson_no": 1,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c09-a",
+   "day": 4,
+   "lesson_no": 2,
    "subject_id": "foreign_lit",
    "teacher_id": "t023"
+  },
+  {
+   "class_id": "c09-a",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c09-a",
+   "day": 4,
+   "lesson_no": 4,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t023"
+  },
+  {
+   "class_id": "c09-a",
+   "day": 4,
+   "lesson_no": 5,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t015"
   },
   {
    "class_id": "c09-a",
    "day": 4,
    "lesson_no": 6,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t023"
+   "subject_id": "history",
+   "teacher_id": "t041"
   },
   {
    "class_id": "c09-a",
    "day": 4,
    "lesson_no": 7,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t015"
   },
   {
    "class_id": "c09-a",
    "day": 5,
    "lesson_no": 1,
-   "subject_id": "physics",
-   "teacher_id": "t037"
+   "subject_id": "health",
+   "teacher_id": "t035"
   },
   {
    "class_id": "c09-a",
    "day": 5,
    "lesson_no": 2,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
+   "subject_id": "ukr_lit",
+   "teacher_id": "t015"
   },
   {
    "class_id": "c09-a",
    "day": 5,
    "lesson_no": 3,
-   "subject_id": "physics",
-   "teacher_id": "t037"
+   "subject_id": "algebra",
+   "teacher_id": "t027"
   },
   {
    "class_id": "c09-a",
@@ -4447,137 +4461,137 @@
    "teacher_id": "t027"
   },
   {
-   "class_id": "c09-a",
-   "day": 5,
-   "lesson_no": 6,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t015"
+   "class_id": "c09-b",
+   "day": 1,
+   "lesson_no": 1,
+   "subject_id": "history",
+   "teacher_id": "t041"
   },
   {
-   "class_id": "c09-a",
-   "day": 5,
-   "lesson_no": 7,
+   "class_id": "c09-b",
+   "day": 1,
+   "lesson_no": 2,
+   "subject_id": "history",
+   "teacher_id": "t041"
+  },
+  {
+   "class_id": "c09-b",
+   "day": 1,
+   "lesson_no": 3,
    "subject_id": "ukr_lit",
    "teacher_id": "t015"
   },
   {
    "class_id": "c09-b",
    "day": 1,
-   "lesson_no": 1,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 1,
-   "lesson_no": 2,
+   "lesson_no": 4,
    "subject_id": "arts",
    "teacher_id": "t023"
   },
   {
    "class_id": "c09-b",
    "day": 1,
-   "lesson_no": 3,
-   "subject_id": "history",
-   "teacher_id": "t041"
+   "lesson_no": 5,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
   },
   {
    "class_id": "c09-b",
    "day": 1,
-   "lesson_no": 4,
-   "subject_id": "physical_education",
-   "teacher_id": "t047"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 1,
-   "lesson_no": 5,
-   "subject_id": "technology",
-   "teacher_id": "t043"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "history",
-   "teacher_id": "t041"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "health",
-   "teacher_id": "t035"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "informatics",
-   "teacher_id": "t037"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 2,
-   "lesson_no": 4,
-   "subject_id": "physical_education",
-   "teacher_id": "t047"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 2,
-   "lesson_no": 5,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t023"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 2,
    "lesson_no": 6,
    "subject_id": "physical_education",
    "teacher_id": "t047"
   },
   {
    "class_id": "c09-b",
-   "day": 2,
+   "day": 1,
    "lesson_no": 7,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c09-b",
+   "day": 2,
+   "lesson_no": 1,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t023"
+  },
+  {
+   "class_id": "c09-b",
+   "day": 2,
+   "lesson_no": 2,
+   "subject_id": "informatics",
+   "teacher_id": "t037"
+  },
+  {
+   "class_id": "c09-b",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "physical_education",
+   "teacher_id": "t047"
+  },
+  {
+   "class_id": "c09-b",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "technology",
+   "teacher_id": "t043"
+  },
+  {
+   "class_id": "c09-b",
+   "day": 2,
+   "lesson_no": 5,
    "subject_id": "biology",
    "teacher_id": "t032"
   },
   {
    "class_id": "c09-b",
+   "day": 2,
+   "lesson_no": 6,
+   "subject_id": "physical_education",
+   "teacher_id": "t047"
+  },
+  {
+   "class_id": "c09-b",
+   "day": 2,
+   "lesson_no": 7,
+   "subject_id": "health",
+   "teacher_id": "t035"
+  },
+  {
+   "class_id": "c09-b",
    "day": 3,
    "lesson_no": 1,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t015"
+  },
+  {
+   "class_id": "c09-b",
+   "day": 3,
+   "lesson_no": 2,
+   "subject_id": "physics",
+   "teacher_id": "t037"
+  },
+  {
+   "class_id": "c09-b",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "geometry",
+   "teacher_id": "t028"
+  },
+  {
+   "class_id": "c09-b",
+   "day": 3,
+   "lesson_no": 4,
    "subject_id": "algebra",
    "teacher_id": "t028"
   },
   {
    "class_id": "c09-b",
    "day": 3,
-   "lesson_no": 2,
-   "subject_id": "geometry",
-   "teacher_id": "t028"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 3,
-   "lesson_no": 3,
+   "lesson_no": 5,
    "subject_id": "physics",
    "teacher_id": "t037"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 3,
-   "lesson_no": 4,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 3,
-   "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t015"
   },
   {
    "class_id": "c09-b",
@@ -4590,63 +4604,63 @@
    "class_id": "c09-b",
    "day": 3,
    "lesson_no": 7,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t015"
+   "subject_id": "history",
+   "teacher_id": "t041"
   },
   {
    "class_id": "c09-b",
    "day": 4,
    "lesson_no": 1,
-   "subject_id": "biology",
-   "teacher_id": "t032"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 4,
-   "lesson_no": 2,
-   "subject_id": "physics",
-   "teacher_id": "t037"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "geography",
-   "teacher_id": "t035"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 4,
-   "lesson_no": 4,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t015"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 4,
-   "lesson_no": 5,
    "subject_id": "chemistry",
    "teacher_id": "t032"
   },
   {
    "class_id": "c09-b",
    "day": 4,
-   "lesson_no": 6,
-   "subject_id": "chemistry",
+   "lesson_no": 2,
+   "subject_id": "biology",
    "teacher_id": "t032"
   },
   {
    "class_id": "c09-b",
    "day": 4,
-   "lesson_no": 7,
+   "lesson_no": 3,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t015"
+  },
+  {
+   "class_id": "c09-b",
+   "day": 4,
+   "lesson_no": 4,
+   "subject_id": "geography",
+   "teacher_id": "t035"
+  },
+  {
+   "class_id": "c09-b",
+   "day": 4,
+   "lesson_no": 5,
+   "subject_id": "geography",
+   "teacher_id": "t035"
+  },
+  {
+   "class_id": "c09-b",
+   "day": 4,
+   "lesson_no": 6,
    "subject_id": "foreign_lit",
    "teacher_id": "t023"
   },
   {
    "class_id": "c09-b",
+   "day": 4,
+   "lesson_no": 7,
+   "subject_id": "chemistry",
+   "teacher_id": "t032"
+  },
+  {
+   "class_id": "c09-b",
    "day": 5,
    "lesson_no": 1,
-   "subject_id": "ukr_lit",
+   "subject_id": "ukr_lang",
    "teacher_id": "t015"
   },
   {
@@ -4676,167 +4690,153 @@
    "lesson_no": 5,
    "subject_id": "ukr_lang",
    "teacher_id": "t015"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 5,
-   "lesson_no": 6,
-   "subject_id": "geography",
-   "teacher_id": "t035"
-  },
-  {
-   "class_id": "c09-b",
-   "day": 5,
-   "lesson_no": 7,
-   "subject_id": "history",
-   "teacher_id": "t041"
   },
   {
    "class_id": "c09-c",
    "day": 1,
    "lesson_no": 1,
+   "subject_id": "algebra",
+   "teacher_id": "t028"
+  },
+  {
+   "class_id": "c09-c",
+   "day": 1,
+   "lesson_no": 2,
+   "subject_id": "biology",
+   "teacher_id": "t032"
+  },
+  {
+   "class_id": "c09-c",
+   "day": 1,
+   "lesson_no": 3,
+   "subject_id": "geography",
+   "teacher_id": "t035"
+  },
+  {
+   "class_id": "c09-c",
+   "day": 1,
+   "lesson_no": 4,
+   "subject_id": "geometry",
+   "teacher_id": "t028"
+  },
+  {
+   "class_id": "c09-c",
+   "day": 1,
+   "lesson_no": 5,
+   "subject_id": "geometry",
+   "teacher_id": "t028"
+  },
+  {
+   "class_id": "c09-c",
+   "day": 1,
+   "lesson_no": 6,
    "subject_id": "ukr_lang",
    "teacher_id": "t016"
   },
   {
    "class_id": "c09-c",
    "day": 1,
-   "lesson_no": 2,
-   "subject_id": "geography",
-   "teacher_id": "t035"
-  },
-  {
-   "class_id": "c09-c",
-   "day": 1,
-   "lesson_no": 3,
-   "subject_id": "geography",
-   "teacher_id": "t035"
-  },
-  {
-   "class_id": "c09-c",
-   "day": 1,
-   "lesson_no": 4,
-   "subject_id": "geometry",
-   "teacher_id": "t028"
-  },
-  {
-   "class_id": "c09-c",
-   "day": 1,
-   "lesson_no": 5,
-   "subject_id": "algebra",
-   "teacher_id": "t028"
-  },
-  {
-   "class_id": "c09-c",
-   "day": 1,
-   "lesson_no": 6,
-   "subject_id": "biology",
-   "teacher_id": "t032"
-  },
-  {
-   "class_id": "c09-c",
-   "day": 1,
    "lesson_no": 7,
-   "subject_id": "biology",
-   "teacher_id": "t032"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t016"
   },
   {
    "class_id": "c09-c",
    "day": 2,
    "lesson_no": 1,
-   "subject_id": "physical_education",
-   "teacher_id": "t047"
-  },
-  {
-   "class_id": "c09-c",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "informatics",
-   "teacher_id": "t037"
-  },
-  {
-   "class_id": "c09-c",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "physical_education",
-   "teacher_id": "t047"
-  },
-  {
-   "class_id": "c09-c",
-   "day": 2,
-   "lesson_no": 4,
    "subject_id": "health",
    "teacher_id": "t035"
   },
   {
    "class_id": "c09-c",
    "day": 2,
+   "lesson_no": 2,
+   "subject_id": "biology",
+   "teacher_id": "t032"
+  },
+  {
+   "class_id": "c09-c",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "chemistry",
+   "teacher_id": "t032"
+  },
+  {
+   "class_id": "c09-c",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "physical_education",
+   "teacher_id": "t047"
+  },
+  {
+   "class_id": "c09-c",
+   "day": 2,
    "lesson_no": 5,
-   "subject_id": "technology",
-   "teacher_id": "t043"
+   "subject_id": "physical_education",
+   "teacher_id": "t047"
   },
   {
    "class_id": "c09-c",
    "day": 3,
    "lesson_no": 1,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t016"
   },
   {
    "class_id": "c09-c",
    "day": 3,
    "lesson_no": 2,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t020"
+   "subject_id": "ukr_lit",
+   "teacher_id": "t016"
   },
   {
    "class_id": "c09-c",
    "day": 3,
    "lesson_no": 3,
-   "subject_id": "algebra",
-   "teacher_id": "t028"
-  },
-  {
-   "class_id": "c09-c",
-   "day": 3,
-   "lesson_no": 4,
-   "subject_id": "history",
-   "teacher_id": "t041"
-  },
-  {
-   "class_id": "c09-c",
-   "day": 3,
-   "lesson_no": 5,
    "subject_id": "foreign_lit",
    "teacher_id": "t024"
   },
   {
    "class_id": "c09-c",
    "day": 3,
-   "lesson_no": 6,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t016"
-  },
-  {
-   "class_id": "c09-c",
-   "day": 3,
-   "lesson_no": 7,
+   "lesson_no": 4,
    "subject_id": "foreign_lit",
    "teacher_id": "t024"
   },
   {
    "class_id": "c09-c",
+   "day": 3,
+   "lesson_no": 5,
+   "subject_id": "algebra",
+   "teacher_id": "t028"
+  },
+  {
+   "class_id": "c09-c",
+   "day": 3,
+   "lesson_no": 6,
+   "subject_id": "history",
+   "teacher_id": "t041"
+  },
+  {
+   "class_id": "c09-c",
+   "day": 3,
+   "lesson_no": 7,
+   "subject_id": "geography",
+   "teacher_id": "t035"
+  },
+  {
+   "class_id": "c09-c",
    "day": 4,
    "lesson_no": 1,
-   "subject_id": "ukr_lang",
+   "subject_id": "ukr_lit",
    "teacher_id": "t016"
   },
   {
    "class_id": "c09-c",
    "day": 4,
    "lesson_no": 2,
-   "subject_id": "geometry",
-   "teacher_id": "t028"
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
   },
   {
    "class_id": "c09-c",
@@ -4856,22 +4856,22 @@
    "class_id": "c09-c",
    "day": 4,
    "lesson_no": 5,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t020"
+  },
+  {
+   "class_id": "c09-c",
+   "day": 4,
+   "lesson_no": 6,
    "subject_id": "arts",
    "teacher_id": "t024"
   },
   {
    "class_id": "c09-c",
    "day": 4,
-   "lesson_no": 6,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t016"
-  },
-  {
-   "class_id": "c09-c",
-   "day": 4,
    "lesson_no": 7,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t016"
+   "subject_id": "physics",
+   "teacher_id": "t037"
   },
   {
    "class_id": "c09-c",
@@ -4884,29 +4884,29 @@
    "class_id": "c09-c",
    "day": 5,
    "lesson_no": 2,
-   "subject_id": "physics",
-   "teacher_id": "t037"
+   "subject_id": "chemistry",
+   "teacher_id": "t032"
   },
   {
    "class_id": "c09-c",
    "day": 5,
    "lesson_no": 3,
-   "subject_id": "chemistry",
-   "teacher_id": "t032"
+   "subject_id": "technology",
+   "teacher_id": "t043"
   },
   {
    "class_id": "c09-c",
    "day": 5,
    "lesson_no": 4,
-   "subject_id": "chemistry",
-   "teacher_id": "t032"
+   "subject_id": "history",
+   "teacher_id": "t041"
   },
   {
    "class_id": "c09-c",
    "day": 5,
    "lesson_no": 5,
-   "subject_id": "history",
-   "teacher_id": "t041"
+   "subject_id": "informatics",
+   "teacher_id": "t037"
   },
   {
    "class_id": "c09-c",
@@ -4928,6 +4928,13 @@
    "lesson_no": 1,
    "subject_id": "informatics",
    "teacher_id": "t038"
+  },
+  {
+   "class_id": "c10-a",
+   "day": 1,
+   "lesson_no": 2,
+   "subject_id": "physical_education",
+   "teacher_id": "t048"
   },
   {
    "class_id": "c10-a",
@@ -4940,8 +4947,8 @@
    "class_id": "c10-a",
    "day": 1,
    "lesson_no": 4,
-   "subject_id": "physical_education",
-   "teacher_id": "t048"
+   "subject_id": "informatics",
+   "teacher_id": "t038"
   },
   {
    "class_id": "c10-a",
@@ -4952,206 +4959,199 @@
   },
   {
    "class_id": "c10-a",
-   "day": 1,
-   "lesson_no": 7,
-   "subject_id": "informatics",
-   "teacher_id": "t038"
-  },
-  {
-   "class_id": "c10-a",
    "day": 2,
    "lesson_no": 1,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t016"
+   "subject_id": "foreign_lit",
+   "teacher_id": "t024"
   },
   {
    "class_id": "c10-a",
    "day": 2,
    "lesson_no": 2,
-   "subject_id": "algebra",
-   "teacher_id": "t028"
+   "subject_id": "foreign_lang",
+   "teacher_id": "t021"
   },
   {
    "class_id": "c10-a",
    "day": 2,
    "lesson_no": 3,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t024"
+   "subject_id": "history",
+   "teacher_id": "t041"
   },
   {
    "class_id": "c10-a",
    "day": 2,
    "lesson_no": 4,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t024"
+   "subject_id": "history",
+   "teacher_id": "t041"
   },
   {
    "class_id": "c10-a",
    "day": 2,
    "lesson_no": 5,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t021"
-  },
-  {
-   "class_id": "c10-a",
-   "day": 2,
-   "lesson_no": 6,
    "subject_id": "algebra",
    "teacher_id": "t028"
   },
   {
    "class_id": "c10-a",
    "day": 2,
-   "lesson_no": 7,
+   "lesson_no": 6,
    "subject_id": "foreign_lang",
    "teacher_id": "t021"
   },
   {
    "class_id": "c10-a",
+   "day": 2,
+   "lesson_no": 7,
+   "subject_id": "algebra",
+   "teacher_id": "t028"
+  },
+  {
+   "class_id": "c10-a",
    "day": 3,
    "lesson_no": 1,
+   "subject_id": "geometry",
+   "teacher_id": "t028"
+  },
+  {
+   "class_id": "c10-a",
+   "day": 3,
+   "lesson_no": 2,
    "subject_id": "physics",
    "teacher_id": "t038"
   },
   {
    "class_id": "c10-a",
    "day": 3,
+   "lesson_no": 3,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t016"
+  },
+  {
+   "class_id": "c10-a",
+   "day": 3,
+   "lesson_no": 4,
+   "subject_id": "geography",
+   "teacher_id": "t035"
+  },
+  {
+   "class_id": "c10-a",
+   "day": 3,
+   "lesson_no": 5,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t024"
+  },
+  {
+   "class_id": "c10-a",
+   "day": 3,
+   "lesson_no": 6,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t016"
+  },
+  {
+   "class_id": "c10-a",
+   "day": 3,
+   "lesson_no": 7,
+   "subject_id": "physics",
+   "teacher_id": "t038"
+  },
+  {
+   "class_id": "c10-a",
+   "day": 4,
+   "lesson_no": 1,
+   "subject_id": "geometry",
+   "teacher_id": "t028"
+  },
+  {
+   "class_id": "c10-a",
+   "day": 4,
+   "lesson_no": 2,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t021"
+  },
+  {
+   "class_id": "c10-a",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "physics",
+   "teacher_id": "t038"
+  },
+  {
+   "class_id": "c10-a",
+   "day": 4,
+   "lesson_no": 4,
+   "subject_id": "chemistry",
+   "teacher_id": "t032"
+  },
+  {
+   "class_id": "c10-a",
+   "day": 4,
+   "lesson_no": 5,
+   "subject_id": "algebra",
+   "teacher_id": "t028"
+  },
+  {
+   "class_id": "c10-a",
+   "day": 4,
+   "lesson_no": 6,
+   "subject_id": "chemistry",
+   "teacher_id": "t032"
+  },
+  {
+   "class_id": "c10-a",
+   "day": 4,
+   "lesson_no": 7,
+   "subject_id": "physical_education",
+   "teacher_id": "t048"
+  },
+  {
+   "class_id": "c10-a",
+   "day": 5,
+   "lesson_no": 1,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t016"
+  },
+  {
+   "class_id": "c10-a",
+   "day": 5,
    "lesson_no": 2,
    "subject_id": "civics",
    "teacher_id": "t041"
   },
   {
    "class_id": "c10-a",
-   "day": 3,
-   "lesson_no": 3,
-   "subject_id": "history",
-   "teacher_id": "t041"
-  },
-  {
-   "class_id": "c10-a",
-   "day": 3,
-   "lesson_no": 4,
-   "subject_id": "physics",
-   "teacher_id": "t038"
-  },
-  {
-   "class_id": "c10-a",
-   "day": 3,
-   "lesson_no": 5,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t016"
-  },
-  {
-   "class_id": "c10-a",
-   "day": 3,
-   "lesson_no": 6,
-   "subject_id": "geometry",
-   "teacher_id": "t028"
-  },
-  {
-   "class_id": "c10-a",
-   "day": 3,
-   "lesson_no": 7,
-   "subject_id": "geography",
-   "teacher_id": "t035"
-  },
-  {
-   "class_id": "c10-a",
-   "day": 4,
-   "lesson_no": 1,
-   "subject_id": "physics",
-   "teacher_id": "t038"
-  },
-  {
-   "class_id": "c10-a",
-   "day": 4,
-   "lesson_no": 2,
-   "subject_id": "physical_education",
-   "teacher_id": "t048"
-  },
-  {
-   "class_id": "c10-a",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t016"
-  },
-  {
-   "class_id": "c10-a",
-   "day": 4,
-   "lesson_no": 4,
-   "subject_id": "chemistry",
-   "teacher_id": "t032"
-  },
-  {
-   "class_id": "c10-a",
-   "day": 4,
-   "lesson_no": 5,
-   "subject_id": "geometry",
-   "teacher_id": "t028"
-  },
-  {
-   "class_id": "c10-a",
-   "day": 4,
-   "lesson_no": 6,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t021"
-  },
-  {
-   "class_id": "c10-a",
-   "day": 4,
-   "lesson_no": 7,
-   "subject_id": "algebra",
-   "teacher_id": "t028"
-  },
-  {
-   "class_id": "c10-a",
    "day": 5,
-   "lesson_no": 1,
+   "lesson_no": 3,
    "subject_id": "biology",
    "teacher_id": "t032"
   },
   {
    "class_id": "c10-a",
    "day": 5,
-   "lesson_no": 2,
-   "subject_id": "chemistry",
-   "teacher_id": "t032"
-  },
-  {
-   "class_id": "c10-a",
-   "day": 5,
-   "lesson_no": 3,
-   "subject_id": "history",
-   "teacher_id": "t041"
-  },
-  {
-   "class_id": "c10-a",
-   "day": 5,
    "lesson_no": 4,
-   "subject_id": "history",
-   "teacher_id": "t041"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t016"
   },
   {
    "class_id": "c10-a",
    "day": 5,
    "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t016"
+   "subject_id": "history",
+   "teacher_id": "t041"
   },
   {
    "class_id": "c10-a",
    "day": 5,
    "lesson_no": 6,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t016"
+   "subject_id": "biology",
+   "teacher_id": "t032"
   },
   {
    "class_id": "c10-a",
    "day": 5,
    "lesson_no": 7,
-   "subject_id": "biology",
-   "teacher_id": "t032"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t016"
   },
   {
    "class_id": "c10-b",
@@ -5164,126 +5164,126 @@
    "class_id": "c10-b",
    "day": 1,
    "lesson_no": 2,
-   "subject_id": "physical_education",
-   "teacher_id": "t048"
-  },
-  {
-   "class_id": "c10-b",
-   "day": 1,
-   "lesson_no": 4,
    "subject_id": "informatics",
    "teacher_id": "t038"
   },
   {
    "class_id": "c10-b",
    "day": 1,
-   "lesson_no": 5,
-   "subject_id": "informatics",
-   "teacher_id": "t038"
-  },
-  {
-   "class_id": "c10-b",
-   "day": 1,
-   "lesson_no": 6,
-   "subject_id": "physical_education",
-   "teacher_id": "t048"
-  },
-  {
-   "class_id": "c10-b",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "physics",
-   "teacher_id": "t038"
-  },
-  {
-   "class_id": "c10-b",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t024"
-  },
-  {
-   "class_id": "c10-b",
-   "day": 2,
    "lesson_no": 3,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t021"
+   "subject_id": "informatics",
+   "teacher_id": "t038"
   },
   {
    "class_id": "c10-b",
-   "day": 2,
+   "day": 1,
    "lesson_no": 4,
-   "subject_id": "algebra",
-   "teacher_id": "t028"
+   "subject_id": "physical_education",
+   "teacher_id": "t048"
   },
   {
    "class_id": "c10-b",
-   "day": 2,
+   "day": 1,
    "lesson_no": 5,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t016"
+   "subject_id": "physical_education",
+   "teacher_id": "t048"
   },
   {
    "class_id": "c10-b",
    "day": 2,
-   "lesson_no": 6,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t021"
-  },
-  {
-   "class_id": "c10-b",
-   "day": 2,
-   "lesson_no": 7,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t016"
-  },
-  {
-   "class_id": "c10-b",
-   "day": 3,
    "lesson_no": 1,
    "subject_id": "civics",
    "teacher_id": "t041"
   },
   {
    "class_id": "c10-b",
-   "day": 3,
+   "day": 2,
    "lesson_no": 2,
-   "subject_id": "physics",
-   "teacher_id": "t038"
+   "subject_id": "history",
+   "teacher_id": "t041"
   },
   {
    "class_id": "c10-b",
-   "day": 3,
+   "day": 2,
    "lesson_no": 3,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t021"
+  },
+  {
+   "class_id": "c10-b",
+   "day": 2,
+   "lesson_no": 4,
    "subject_id": "physics",
    "teacher_id": "t038"
   },
   {
    "class_id": "c10-b",
-   "day": 3,
-   "lesson_no": 4,
-   "subject_id": "geometry",
-   "teacher_id": "t028"
+   "day": 2,
+   "lesson_no": 5,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t024"
   },
   {
    "class_id": "c10-b",
-   "day": 3,
-   "lesson_no": 5,
+   "day": 2,
+   "lesson_no": 6,
    "subject_id": "algebra",
    "teacher_id": "t028"
   },
   {
    "class_id": "c10-b",
+   "day": 2,
+   "lesson_no": 7,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t021"
+  },
+  {
+   "class_id": "c10-b",
    "day": 3,
-   "lesson_no": 6,
+   "lesson_no": 1,
    "subject_id": "foreign_lit",
    "teacher_id": "t024"
   },
   {
    "class_id": "c10-b",
    "day": 3,
-   "lesson_no": 7,
+   "lesson_no": 2,
+   "subject_id": "geometry",
+   "teacher_id": "t028"
+  },
+  {
+   "class_id": "c10-b",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "geography",
+   "teacher_id": "t035"
+  },
+  {
+   "class_id": "c10-b",
+   "day": 3,
+   "lesson_no": 4,
+   "subject_id": "physics",
+   "teacher_id": "t038"
+  },
+  {
+   "class_id": "c10-b",
+   "day": 3,
+   "lesson_no": 5,
+   "subject_id": "physics",
+   "teacher_id": "t038"
+  },
+  {
+   "class_id": "c10-b",
+   "day": 3,
+   "lesson_no": 6,
    "subject_id": "algebra",
+   "teacher_id": "t028"
+  },
+  {
+   "class_id": "c10-b",
+   "day": 3,
+   "lesson_no": 7,
+   "subject_id": "geometry",
    "teacher_id": "t028"
   },
   {
@@ -5318,22 +5318,22 @@
    "class_id": "c10-b",
    "day": 4,
    "lesson_no": 5,
-   "subject_id": "ukr_lit",
+   "subject_id": "ukr_lang",
    "teacher_id": "t016"
   },
   {
    "class_id": "c10-b",
    "day": 4,
    "lesson_no": 6,
-   "subject_id": "geometry",
+   "subject_id": "algebra",
    "teacher_id": "t028"
   },
   {
    "class_id": "c10-b",
    "day": 4,
    "lesson_no": 7,
-   "subject_id": "chemistry",
-   "teacher_id": "t032"
+   "subject_id": "ukr_lit",
+   "teacher_id": "t016"
   },
   {
    "class_id": "c10-b",
@@ -5346,22 +5346,22 @@
    "class_id": "c10-b",
    "day": 5,
    "lesson_no": 2,
-   "subject_id": "history",
-   "teacher_id": "t041"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t016"
   },
   {
    "class_id": "c10-b",
    "day": 5,
    "lesson_no": 3,
-   "subject_id": "geography",
-   "teacher_id": "t035"
+   "subject_id": "ukr_lit",
+   "teacher_id": "t016"
   },
   {
    "class_id": "c10-b",
    "day": 5,
    "lesson_no": 4,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t016"
+   "subject_id": "chemistry",
+   "teacher_id": "t032"
   },
   {
    "class_id": "c10-b",
@@ -5374,15 +5374,15 @@
    "class_id": "c10-b",
    "day": 5,
    "lesson_no": 6,
-   "subject_id": "biology",
-   "teacher_id": "t032"
+   "subject_id": "ukr_lit",
+   "teacher_id": "t016"
   },
   {
    "class_id": "c10-b",
    "day": 5,
    "lesson_no": 7,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t016"
+   "subject_id": "biology",
+   "teacher_id": "t032"
   },
   {
    "class_id": "c10-c",
@@ -5395,29 +5395,43 @@
    "class_id": "c10-c",
    "day": 1,
    "lesson_no": 2,
-   "subject_id": "informatics",
-   "teacher_id": "t038"
-  },
-  {
-   "class_id": "c10-c",
-   "day": 1,
-   "lesson_no": 3,
-   "subject_id": "informatics",
-   "teacher_id": "t038"
-  },
-  {
-   "class_id": "c10-c",
-   "day": 1,
-   "lesson_no": 4,
    "subject_id": "arts",
    "teacher_id": "t024"
   },
   {
    "class_id": "c10-c",
    "day": 1,
+   "lesson_no": 3,
+   "subject_id": "geometry",
+   "teacher_id": "t029"
+  },
+  {
+   "class_id": "c10-c",
+   "day": 1,
+   "lesson_no": 4,
+   "subject_id": "geometry",
+   "teacher_id": "t029"
+  },
+  {
+   "class_id": "c10-c",
+   "day": 1,
    "lesson_no": 5,
+   "subject_id": "informatics",
+   "teacher_id": "t038"
+  },
+  {
+   "class_id": "c10-c",
+   "day": 1,
+   "lesson_no": 6,
    "subject_id": "physical_education",
    "teacher_id": "t048"
+  },
+  {
+   "class_id": "c10-c",
+   "day": 1,
+   "lesson_no": 7,
+   "subject_id": "informatics",
+   "teacher_id": "t038"
   },
   {
    "class_id": "c10-c",
@@ -5430,8 +5444,8 @@
    "class_id": "c10-c",
    "day": 2,
    "lesson_no": 2,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t021"
+   "subject_id": "physics",
+   "teacher_id": "t038"
   },
   {
    "class_id": "c10-c",
@@ -5451,8 +5465,8 @@
    "class_id": "c10-c",
    "day": 2,
    "lesson_no": 5,
-   "subject_id": "physics",
-   "teacher_id": "t038"
+   "subject_id": "foreign_lang",
+   "teacher_id": "t021"
   },
   {
    "class_id": "c10-c",
@@ -5472,15 +5486,15 @@
    "class_id": "c10-c",
    "day": 3,
    "lesson_no": 1,
-   "subject_id": "chemistry",
-   "teacher_id": "t032"
+   "subject_id": "history",
+   "teacher_id": "t042"
   },
   {
    "class_id": "c10-c",
    "day": 3,
    "lesson_no": 2,
-   "subject_id": "biology",
-   "teacher_id": "t032"
+   "subject_id": "algebra",
+   "teacher_id": "t029"
   },
   {
    "class_id": "c10-c",
@@ -5493,27 +5507,20 @@
    "class_id": "c10-c",
    "day": 3,
    "lesson_no": 4,
-   "subject_id": "history",
-   "teacher_id": "t042"
+   "subject_id": "chemistry",
+   "teacher_id": "t032"
   },
   {
    "class_id": "c10-c",
    "day": 3,
    "lesson_no": 5,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t017"
+   "subject_id": "chemistry",
+   "teacher_id": "t032"
   },
   {
    "class_id": "c10-c",
    "day": 3,
    "lesson_no": 6,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t017"
-  },
-  {
-   "class_id": "c10-c",
-   "day": 3,
-   "lesson_no": 7,
    "subject_id": "algebra",
    "teacher_id": "t029"
   },
@@ -5521,134 +5528,127 @@
    "class_id": "c10-c",
    "day": 4,
    "lesson_no": 1,
-   "subject_id": "geography",
-   "teacher_id": "t035"
+   "subject_id": "ukr_lit",
+   "teacher_id": "t017"
   },
   {
    "class_id": "c10-c",
    "day": 4,
    "lesson_no": 2,
-   "subject_id": "chemistry",
-   "teacher_id": "t032"
-  },
-  {
-   "class_id": "c10-c",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "history",
-   "teacher_id": "t042"
-  },
-  {
-   "class_id": "c10-c",
-   "day": 4,
-   "lesson_no": 4,
-   "subject_id": "history",
-   "teacher_id": "t042"
-  },
-  {
-   "class_id": "c10-c",
-   "day": 4,
-   "lesson_no": 5,
    "subject_id": "ukr_lang",
    "teacher_id": "t017"
   },
   {
    "class_id": "c10-c",
    "day": 4,
-   "lesson_no": 6,
+   "lesson_no": 3,
    "subject_id": "ukr_lit",
    "teacher_id": "t017"
   },
   {
    "class_id": "c10-c",
    "day": 4,
-   "lesson_no": 7,
+   "lesson_no": 4,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t017"
+  },
+  {
+   "class_id": "c10-c",
+   "day": 4,
+   "lesson_no": 5,
+   "subject_id": "biology",
+   "teacher_id": "t032"
+  },
+  {
+   "class_id": "c10-c",
+   "day": 4,
+   "lesson_no": 6,
    "subject_id": "foreign_lang",
    "teacher_id": "t021"
   },
   {
    "class_id": "c10-c",
+   "day": 4,
+   "lesson_no": 7,
+   "subject_id": "geography",
+   "teacher_id": "t035"
+  },
+  {
+   "class_id": "c10-c",
    "day": 5,
    "lesson_no": 1,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t017"
+   "subject_id": "algebra",
+   "teacher_id": "t029"
   },
   {
    "class_id": "c10-c",
    "day": 5,
    "lesson_no": 2,
-   "subject_id": "geometry",
-   "teacher_id": "t029"
-  },
-  {
-   "class_id": "c10-c",
-   "day": 5,
-   "lesson_no": 3,
-   "subject_id": "geometry",
-   "teacher_id": "t029"
-  },
-  {
-   "class_id": "c10-c",
-   "day": 5,
-   "lesson_no": 4,
    "subject_id": "physical_education",
    "teacher_id": "t048"
   },
   {
    "class_id": "c10-c",
    "day": 5,
-   "lesson_no": 5,
+   "lesson_no": 3,
+   "subject_id": "history",
+   "teacher_id": "t042"
+  },
+  {
+   "class_id": "c10-c",
+   "day": 5,
+   "lesson_no": 4,
    "subject_id": "physics",
    "teacher_id": "t038"
   },
   {
    "class_id": "c10-c",
    "day": 5,
-   "lesson_no": 6,
-   "subject_id": "algebra",
-   "teacher_id": "t029"
+   "lesson_no": 5,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t017"
   },
   {
    "class_id": "c10-c",
    "day": 5,
-   "lesson_no": 7,
-   "subject_id": "algebra",
-   "teacher_id": "t029"
+   "lesson_no": 6,
+   "subject_id": "history",
+   "teacher_id": "t042"
   },
   {
    "class_id": "c11-a",
    "day": 1,
    "lesson_no": 1,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t017"
+   "subject_id": "biology",
+   "teacher_id": "t032"
   },
   {
    "class_id": "c11-a",
    "day": 1,
    "lesson_no": 2,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t017"
-  },
-  {
-   "class_id": "c11-a",
-   "day": 1,
-   "lesson_no": 3,
    "subject_id": "civics",
    "teacher_id": "t042"
   },
   {
    "class_id": "c11-a",
    "day": 1,
+   "lesson_no": 3,
+   "subject_id": "history",
+   "teacher_id": "t042"
+  },
+  {
+   "class_id": "c11-a",
+   "day": 1,
    "lesson_no": 4,
-   "subject_id": "biology",
-   "teacher_id": "t032"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t017"
   },
   {
    "class_id": "c11-a",
    "day": 1,
    "lesson_no": 5,
-   "subject_id": "biology",
-   "teacher_id": "t032"
+   "subject_id": "ukr_lang",
+   "teacher_id": "t017"
   },
   {
    "class_id": "c11-a",
@@ -5668,124 +5668,124 @@
    "class_id": "c11-a",
    "day": 2,
    "lesson_no": 1,
+   "subject_id": "geometry",
+   "teacher_id": "t029"
+  },
+  {
+   "class_id": "c11-a",
+   "day": 2,
+   "lesson_no": 2,
+   "subject_id": "algebra",
+   "teacher_id": "t029"
+  },
+  {
+   "class_id": "c11-a",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "physical_education",
+   "teacher_id": "t048"
+  },
+  {
+   "class_id": "c11-a",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "physical_education",
+   "teacher_id": "t048"
+  },
+  {
+   "class_id": "c11-a",
+   "day": 2,
+   "lesson_no": 5,
    "subject_id": "geography",
    "teacher_id": "t035"
   },
   {
    "class_id": "c11-a",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "geometry",
-   "teacher_id": "t029"
-  },
-  {
-   "class_id": "c11-a",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "physical_education",
-   "teacher_id": "t048"
-  },
-  {
-   "class_id": "c11-a",
-   "day": 2,
-   "lesson_no": 4,
-   "subject_id": "algebra",
-   "teacher_id": "t029"
-  },
-  {
-   "class_id": "c11-a",
-   "day": 2,
-   "lesson_no": 5,
+   "day": 3,
+   "lesson_no": 1,
    "subject_id": "chemistry",
    "teacher_id": "t032"
   },
   {
    "class_id": "c11-a",
-   "day": 2,
+   "day": 3,
+   "lesson_no": 2,
+   "subject_id": "chemistry",
+   "teacher_id": "t032"
+  },
+  {
+   "class_id": "c11-a",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "algebra",
+   "teacher_id": "t029"
+  },
+  {
+   "class_id": "c11-a",
+   "day": 3,
+   "lesson_no": 4,
+   "subject_id": "history",
+   "teacher_id": "t042"
+  },
+  {
+   "class_id": "c11-a",
+   "day": 3,
+   "lesson_no": 5,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t021"
+  },
+  {
+   "class_id": "c11-a",
+   "day": 3,
    "lesson_no": 6,
-   "subject_id": "chemistry",
+   "subject_id": "biology",
    "teacher_id": "t032"
   },
   {
    "class_id": "c11-a",
-   "day": 2,
+   "day": 3,
    "lesson_no": 7,
-   "subject_id": "physical_education",
-   "teacher_id": "t048"
-  },
-  {
-   "class_id": "c11-a",
-   "day": 3,
-   "lesson_no": 1,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t021"
-  },
-  {
-   "class_id": "c11-a",
-   "day": 3,
-   "lesson_no": 2,
-   "subject_id": "history",
-   "teacher_id": "t042"
-  },
-  {
-   "class_id": "c11-a",
-   "day": 3,
-   "lesson_no": 3,
-   "subject_id": "history",
-   "teacher_id": "t042"
-  },
-  {
-   "class_id": "c11-a",
-   "day": 3,
-   "lesson_no": 4,
    "subject_id": "algebra",
    "teacher_id": "t029"
   },
   {
    "class_id": "c11-a",
-   "day": 3,
+   "day": 4,
+   "lesson_no": 1,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t024"
+  },
+  {
+   "class_id": "c11-a",
+   "day": 4,
+   "lesson_no": 2,
+   "subject_id": "physics",
+   "teacher_id": "t038"
+  },
+  {
+   "class_id": "c11-a",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t021"
+  },
+  {
+   "class_id": "c11-a",
+   "day": 4,
+   "lesson_no": 4,
+   "subject_id": "history",
+   "teacher_id": "t042"
+  },
+  {
+   "class_id": "c11-a",
+   "day": 4,
    "lesson_no": 5,
-   "subject_id": "algebra",
-   "teacher_id": "t029"
-  },
-  {
-   "class_id": "c11-a",
-   "day": 4,
-   "lesson_no": 1,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t021"
-  },
-  {
-   "class_id": "c11-a",
-   "day": 4,
-   "lesson_no": 2,
-   "subject_id": "geometry",
-   "teacher_id": "t029"
-  },
-  {
-   "class_id": "c11-a",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t021"
-  },
-  {
-   "class_id": "c11-a",
-   "day": 4,
-   "lesson_no": 4,
    "subject_id": "ukr_lit",
    "teacher_id": "t017"
   },
   {
    "class_id": "c11-a",
    "day": 4,
-   "lesson_no": 5,
-   "subject_id": "physics",
-   "teacher_id": "t038"
-  },
-  {
-   "class_id": "c11-a",
-   "day": 4,
    "lesson_no": 6,
    "subject_id": "physics",
    "teacher_id": "t038"
@@ -5794,15 +5794,15 @@
    "class_id": "c11-a",
    "day": 4,
    "lesson_no": 7,
-   "subject_id": "history",
-   "teacher_id": "t042"
+   "subject_id": "foreign_lang",
+   "teacher_id": "t021"
   },
   {
    "class_id": "c11-a",
    "day": 5,
    "lesson_no": 1,
-   "subject_id": "informatics",
-   "teacher_id": "t038"
+   "subject_id": "physical_education",
+   "teacher_id": "t048"
   },
   {
    "class_id": "c11-a",
@@ -5815,26 +5815,26 @@
    "class_id": "c11-a",
    "day": 5,
    "lesson_no": 3,
-   "subject_id": "physical_education",
-   "teacher_id": "t048"
-  },
-  {
-   "class_id": "c11-a",
-   "day": 5,
-   "lesson_no": 4,
-   "subject_id": "physics",
+   "subject_id": "informatics",
    "teacher_id": "t038"
   },
   {
    "class_id": "c11-a",
    "day": 5,
-   "lesson_no": 5,
+   "lesson_no": 4,
    "subject_id": "arts",
    "teacher_id": "t024"
   },
   {
    "class_id": "c11-a",
    "day": 5,
+   "lesson_no": 5,
+   "subject_id": "physics",
+   "teacher_id": "t038"
+  },
+  {
+   "class_id": "c11-a",
+   "day": 5,
    "lesson_no": 6,
    "subject_id": "foreign_lit",
    "teacher_id": "t024"
@@ -5843,15 +5843,15 @@
    "class_id": "c11-a",
    "day": 5,
    "lesson_no": 7,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t024"
+   "subject_id": "geometry",
+   "teacher_id": "t029"
   },
   {
    "class_id": "c11-b",
    "day": 1,
    "lesson_no": 1,
-   "subject_id": "geography",
-   "teacher_id": "t035"
+   "subject_id": "physics",
+   "teacher_id": "t039"
   },
   {
    "class_id": "c11-b",
@@ -5864,200 +5864,200 @@
    "class_id": "c11-b",
    "day": 1,
    "lesson_no": 3,
-   "subject_id": "physics",
-   "teacher_id": "t039"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 1,
-   "lesson_no": 4,
    "subject_id": "chemistry",
    "teacher_id": "t033"
   },
   {
    "class_id": "c11-b",
    "day": 1,
-   "lesson_no": 5,
-   "subject_id": "biology",
-   "teacher_id": "t033"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 1,
-   "lesson_no": 6,
-   "subject_id": "history",
-   "teacher_id": "t042"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 1,
-   "lesson_no": 7,
-   "subject_id": "history",
-   "teacher_id": "t042"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 2,
-   "lesson_no": 1,
-   "subject_id": "physical_education",
-   "teacher_id": "t048"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 2,
-   "lesson_no": 2,
-   "subject_id": "informatics",
-   "teacher_id": "t039"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 2,
-   "lesson_no": 3,
-   "subject_id": "algebra",
-   "teacher_id": "t029"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 2,
-   "lesson_no": 4,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t017"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 2,
-   "lesson_no": 5,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t017"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 2,
-   "lesson_no": 6,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t017"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 3,
-   "lesson_no": 1,
-   "subject_id": "ukr_lang",
-   "teacher_id": "t017"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 3,
-   "lesson_no": 2,
-   "subject_id": "physics",
-   "teacher_id": "t039"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 3,
-   "lesson_no": 3,
-   "subject_id": "physics",
-   "teacher_id": "t039"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 3,
-   "lesson_no": 4,
-   "subject_id": "ukr_lit",
-   "teacher_id": "t017"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 3,
-   "lesson_no": 5,
-   "subject_id": "history",
-   "teacher_id": "t042"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 3,
-   "lesson_no": 6,
-   "subject_id": "geometry",
-   "teacher_id": "t029"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 4,
-   "lesson_no": 1,
-   "subject_id": "civics",
-   "teacher_id": "t042"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 4,
-   "lesson_no": 2,
-   "subject_id": "biology",
-   "teacher_id": "t033"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 4,
-   "lesson_no": 3,
-   "subject_id": "geometry",
-   "teacher_id": "t029"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 4,
-   "lesson_no": 4,
-   "subject_id": "algebra",
-   "teacher_id": "t029"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 4,
-   "lesson_no": 5,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t021"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 4,
-   "lesson_no": 6,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t024"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 4,
-   "lesson_no": 7,
-   "subject_id": "foreign_lit",
-   "teacher_id": "t024"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 5,
-   "lesson_no": 1,
-   "subject_id": "physical_education",
-   "teacher_id": "t048"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 5,
-   "lesson_no": 2,
-   "subject_id": "physical_education",
-   "teacher_id": "t048"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 5,
-   "lesson_no": 3,
-   "subject_id": "informatics",
-   "teacher_id": "t039"
-  },
-  {
-   "class_id": "c11-b",
-   "day": 5,
    "lesson_no": 4,
    "subject_id": "arts",
    "teacher_id": "t024"
   },
   {
    "class_id": "c11-b",
+   "day": 1,
+   "lesson_no": 5,
+   "subject_id": "biology",
+   "teacher_id": "t033"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 2,
+   "lesson_no": 1,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t017"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 2,
+   "lesson_no": 2,
+   "subject_id": "ukr_lit",
+   "teacher_id": "t017"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 2,
+   "lesson_no": 3,
+   "subject_id": "algebra",
+   "teacher_id": "t029"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 2,
+   "lesson_no": 4,
+   "subject_id": "algebra",
+   "teacher_id": "t029"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 2,
+   "lesson_no": 5,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t017"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 2,
+   "lesson_no": 6,
+   "subject_id": "physical_education",
+   "teacher_id": "t048"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 2,
+   "lesson_no": 7,
+   "subject_id": "physical_education",
+   "teacher_id": "t048"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 3,
+   "lesson_no": 1,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t021"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 3,
+   "lesson_no": 2,
+   "subject_id": "history",
+   "teacher_id": "t042"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 3,
+   "lesson_no": 3,
+   "subject_id": "ukr_lang",
+   "teacher_id": "t017"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 3,
+   "lesson_no": 4,
+   "subject_id": "physics",
+   "teacher_id": "t039"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 3,
+   "lesson_no": 5,
+   "subject_id": "geometry",
+   "teacher_id": "t029"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 3,
+   "lesson_no": 6,
+   "subject_id": "physics",
+   "teacher_id": "t039"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 3,
+   "lesson_no": 7,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t021"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 4,
+   "lesson_no": 1,
+   "subject_id": "geography",
+   "teacher_id": "t035"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 4,
+   "lesson_no": 2,
+   "subject_id": "geometry",
+   "teacher_id": "t029"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 4,
+   "lesson_no": 3,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t024"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 4,
+   "lesson_no": 4,
+   "subject_id": "biology",
+   "teacher_id": "t033"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 4,
+   "lesson_no": 5,
+   "subject_id": "foreign_lang",
+   "teacher_id": "t021"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 4,
+   "lesson_no": 6,
+   "subject_id": "civics",
+   "teacher_id": "t042"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 4,
+   "lesson_no": 7,
+   "subject_id": "foreign_lit",
+   "teacher_id": "t024"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 5,
+   "lesson_no": 1,
+   "subject_id": "history",
+   "teacher_id": "t042"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 5,
+   "lesson_no": 2,
+   "subject_id": "history",
+   "teacher_id": "t042"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 5,
+   "lesson_no": 3,
+   "subject_id": "informatics",
+   "teacher_id": "t039"
+  },
+  {
+   "class_id": "c11-b",
+   "day": 5,
+   "lesson_no": 4,
+   "subject_id": "informatics",
+   "teacher_id": "t039"
+  },
+  {
+   "class_id": "c11-b",
    "day": 5,
    "lesson_no": 5,
    "subject_id": "algebra",
@@ -6067,42 +6067,42 @@
    "class_id": "c11-b",
    "day": 5,
    "lesson_no": 6,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t021"
+   "subject_id": "physical_education",
+   "teacher_id": "t048"
   },
   {
    "class_id": "c11-b",
    "day": 5,
    "lesson_no": 7,
-   "subject_id": "foreign_lang",
-   "teacher_id": "t021"
+   "subject_id": "ukr_lit",
+   "teacher_id": "t017"
   }
  ],
  "day_formats": [
   {
    "class_id": "c01-a",
    "day": 1,
-   "in_person": true
-  },
-  {
-   "class_id": "c01-a",
-   "day": 2,
-   "in_person": true
-  },
-  {
-   "class_id": "c01-a",
-   "day": 3,
    "in_person": false
   },
   {
    "class_id": "c01-a",
+   "day": 2,
+   "in_person": true
+  },
+  {
+   "class_id": "c01-a",
+   "day": 3,
+   "in_person": false
+  },
+  {
+   "class_id": "c01-a",
    "day": 4,
    "in_person": false
   },
   {
    "class_id": "c01-a",
    "day": 5,
-   "in_person": false
+   "in_person": true
   },
   {
    "class_id": "c01-b",
@@ -6127,7 +6127,7 @@
   {
    "class_id": "c01-b",
    "day": 5,
-   "in_person": false
+   "in_person": true
   },
   {
    "class_id": "c01-c",
@@ -6182,7 +6182,7 @@
   {
    "class_id": "c02-b",
    "day": 1,
-   "in_person": false
+   "in_person": true
   },
   {
    "class_id": "c02-b",
@@ -6202,12 +6202,12 @@
   {
    "class_id": "c02-b",
    "day": 5,
-   "in_person": true
+   "in_person": false
   },
   {
    "class_id": "c02-c",
    "day": 1,
-   "in_person": true
+   "in_person": false
   },
   {
    "class_id": "c02-c",
@@ -6282,7 +6282,7 @@
   {
    "class_id": "c03-c",
    "day": 1,
-   "in_person": false
+   "in_person": true
   },
   {
    "class_id": "c03-c",
@@ -6302,7 +6302,7 @@
   {
    "class_id": "c03-c",
    "day": 5,
-   "in_person": true
+   "in_person": false
   },
   {
    "class_id": "c04-a",
@@ -6522,17 +6522,17 @@
   {
    "class_id": "c07-a",
    "day": 4,
-   "in_person": true
+   "in_person": false
   },
   {
    "class_id": "c07-a",
    "day": 5,
-   "in_person": false
+   "in_person": true
   },
   {
    "class_id": "c07-b",
    "day": 1,
-   "in_person": false
+   "in_person": true
   },
   {
    "class_id": "c07-b",
@@ -6552,7 +6552,7 @@
   {
    "class_id": "c07-b",
    "day": 5,
-   "in_person": false
+   "in_person": true
   },
   {
    "class_id": "c07-c",
@@ -6572,7 +6572,7 @@
   {
    "class_id": "c07-c",
    "day": 4,
-   "in_person": false
+   "in_person": true
   },
   {
    "class_id": "c07-c",
@@ -6652,7 +6652,7 @@
   {
    "class_id": "c09-a",
    "day": 5,
-   "in_person": true
+   "in_person": false
   },
   {
    "class_id": "c09-b",
@@ -6677,7 +6677,7 @@
   {
    "class_id": "c09-b",
    "day": 5,
-   "in_person": true
+   "in_person": false
   },
   {
    "class_id": "c09-c",
@@ -6807,7 +6807,7 @@
   {
    "class_id": "c11-b",
    "day": 1,
-   "in_person": true
+   "in_person": false
   },
   {
    "class_id": "c11-b",
@@ -6832,22 +6832,27 @@
  ],
  "conflicts": [],
  "stats": {
-  "objective": 640990,
+  "objective": 619925,
   "best_bound": 697379.0,
-  "primary": 13934,
-  "secondary": 26,
-  "wall_time_s": 652.9566005679662,
-  "first_solution_s": 94.08076848095516,
-  "last_improvement_s": 643.9880218170001,
+  "primary": 13476,
+  "secondary": 29,
+  "wall_time_s": 253.40265950700268,
+  "first_solution_s": 32.013378559960984,
+  "last_improvement_s": 238.7837341889972,
   "phase_a_status": "FEASIBLE",
   "quality_relaxed": false,
   "stop_reason": "time_limit",
   "num_workers": 2,
-  "random_seed": 0
+  "random_seed": 0,
+  "coverage_verdict": "not_needed",
+  "coverage_status": null,
+  "zero_day_before": 0,
+  "zero_day_after": null,
+  "phase_b_retry_days": 0
  },
  "provenance": {
-  "solver_version": "0.1.0",
-  "model_version": "a+b/2026-11-04",
+  "solver_version": "0.3.0",
+  "model_version": "a+a2+b/2026-11-15",
   "ortools_version": "9.15.6755",
   "input_sha256": "b3b4d07e42b9c6efc95ff13ce820f4ba3bb6e361750da195628bc94713349750",
   "params": {
