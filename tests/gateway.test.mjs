@@ -30,6 +30,23 @@ describe('маршрути', () => {
   });
 });
 
+describe('/internal через шлюз — 404 (platform #17)', () => {
+  // Внутрішні маршрути сервісів (/internal/v1/…) шлюз не пропускає взагалі: ні в сервіс,
+  // ні в застосунок web, який інакше віддав би index.html з кодом 200.
+  for (const path of ['/internal', '/internal/', '/internal/v1/schools/x/snapshot', '/INTERNAL/v1/x', '//internal/v1/x']) {
+    test(`${path} → 404, не web`, async () => {
+      const res = await rawGet(env.gateway, path);
+      assert.equal(res.status, 404);
+      assert.doesNotMatch(res.body, /^Name: web$/m);
+    });
+  }
+  test('/internals (інший шлях) іде в web як звичайно', async () => {
+    const res = await rawGet(env.gateway, '/internals');
+    assert.equal(res.status, 200);
+    assert.match(res.body, /^Name: web$/m);
+  });
+});
+
 describe('адмінка Keycloak закрита ззовні', () => {
   // Кожен рядок — спроба обходу, яку колись довелося закривати. Новий обхід — новий рядок.
   const blocked = [

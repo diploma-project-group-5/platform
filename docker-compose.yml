@@ -3,10 +3,23 @@
 
 name: lad
 
+# Ротація логів Docker для всіх контейнерів: до 3 файлів по 10 МБ. Без неї логи на ВМ ростуть
+# необмежено й з часом забирають диск (звіт 15.11, platform #19).
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: 10m
+    max-file: "3"
+
 services:
   postgres:
     image: postgres:16.15
     container_name: lad-postgres
+    mem_limit: 512m
+    logging: *logging
+    # shared_buffers — чверть ліміту пам'яті; max_connections — із запасом під пули трьох сервісів
+    # (app, relay, maint) і Keycloak.
+    command: ["postgres", "-c", "shared_buffers=128MB", "-c", "max_connections=100"]
     restart: unless-stopped
     environment:
       POSTGRES_USER: ${POSTGRES_SUPERUSER:-postgres}
@@ -31,6 +44,8 @@ services:
   db-init:
     image: postgres:16.15
     container_name: lad-db-init
+    mem_limit: 128m
+    logging: *logging
     restart: "no"
     entrypoint: ["bash", "/db-init/init.sh"]
     environment:
@@ -60,6 +75,8 @@ services:
   keycloak:
     image: quay.io/keycloak/keycloak:26.8.1
     container_name: lad-keycloak
+    mem_limit: 1g
+    logging: *logging
     restart: unless-stopped
     # --import-realm імпортує keycloak/realm/lad-realm.json лише якщо realm lad ще немає.
     # Змінили файл realm — make kc-reset.
@@ -77,6 +94,9 @@ services:
       # Адмін-консоль — лише напряму на 127.0.0.1 (на ВМ через SSH-тунель); шлюз її не пропускає.
       KC_HOSTNAME_ADMIN: http://localhost:${KC_ADMIN_PORT:-8180}/idp
       KC_HEALTH_ENABLED: "true"
+      # Heap — 60 % від mem_limit (1 ГБ): решта — метапростір і нативна пам'ять JVM.
+      # Без явного значення Keycloak бере 70 % і впирається в ліміт контейнера.
+      JAVA_OPTS_KC_HEAP: "-XX:MaxRAMPercentage=60 -XX:InitialRAMPercentage=30"
       # Адмін realm master для консолі.
       KC_BOOTSTRAP_ADMIN_USERNAME: admin
       KC_BOOTSTRAP_ADMIN_PASSWORD: ${KC_ADMIN_PASSWORD:?задайте KC_ADMIN_PASSWORD у .env}
@@ -108,6 +128,8 @@ services:
   kafka:
     image: apache/kafka:4.3.2
     container_name: lad-kafka
+    mem_limit: 1g
+    logging: *logging
     restart: unless-stopped
     environment:
       # Один вузол у режимі KRaft: брокер і контролер в одному процесі, без ZooKeeper.
@@ -131,7 +153,8 @@ services:
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
-      KAFKA_HEAP_OPTS: "-Xms256m -Xmx768m"
+      # Heap 512 МБ при mem_limit 1 ГБ: решта — page cache і нативна пам'ять брокера.
+      KAFKA_HEAP_OPTS: "-Xms256m -Xmx512m"
     ports:
       - "127.0.0.1:${KAFKA_EXTERNAL_PORT:-29092}:29092"
     volumes:
@@ -149,6 +172,8 @@ services:
   kafka-init:
     image: apache/kafka:4.3.2
     container_name: lad-kafka-init
+    mem_limit: 512m
+    logging: *logging
     restart: "no"
     entrypoint: ["bash", "/kafka-init/init.sh"]
     environment:
@@ -168,6 +193,7 @@ services:
     image: ${SOLVER_IMAGE:-lad-solver:local}
     build: ${SOLVER_SRC:-../solver}
     container_name: lad-solver
+    logging: *logging
     command: ["worker"]
     init: true                    # SIGTERM доходить до воркера; зомбі-процеси прибираються
     restart: unless-stopped       # exit 1 (фатальна помилка Kafka, сторож) -> перезапуск
@@ -184,6 +210,9 @@ services:
       SOLVER_BUILD_TOPIC: solve.build.requested
       SOLVER_STATUS_TOPIC: solve.status
       SOLVER_BUILD_DLQ_TOPIC: solve.build.requested.dlq
+      # Заміни (solver ≥ 0.3.0): та сама група lad-solver; зламані повідомлення — у свій DLQ.
+      SOLVER_SUBSTITUTION_TOPIC: solve.substitution.requested
+      SOLVER_SUBSTITUTION_DLQ_TOPIC: solve.substitution.requested.dlq
       SOLVER_MIN_TIME_LIMIT_S: "10"
       SOLVER_MAX_TIME_LIMIT_S: "180"
       SOLVER_NUM_WORKERS: "2"
@@ -201,11 +230,6 @@ services:
       KAFKA_MAX_POLL_INTERVAL_MS: "300000"  # > (макс. ліміт 180 с + запас сторожа 60 с) x 1000
       KAFKA_SESSION_TIMEOUT_MS: "10000"
       KAFKA_HEARTBEAT_INTERVAL_MS: "3000"
-    logging:
-      driver: json-file
-      options:
-        max-size: 10m
-        max-file: "3"
     depends_on:
       kafka:
         condition: service_healthy
@@ -226,6 +250,8 @@ services:
     image: ${TENANT_IMAGE:-lad-tenant-service:local}
     build: ${TENANT_SRC:-../tenant-service}
     container_name: lad-tenant-migrate
+    mem_limit: 256m
+    logging: *logging
     restart: "no"
     command: ["node", "dist/migrate.js"]
     environment:
@@ -240,6 +266,8 @@ services:
     image: ${TENANT_IMAGE:-lad-tenant-service:local}
     build: ${TENANT_SRC:-../tenant-service}
     container_name: lad-tenant-service
+    mem_limit: 256m
+    logging: *logging
     restart: unless-stopped
     environment:
       HOST: 0.0.0.0
@@ -254,11 +282,6 @@ services:
       KEYCLOAK_URL: http://keycloak:8080/idp
       TENANT_CLIENT_SECRET: ${TENANT_CLIENT_SECRET:?задайте TENANT_CLIENT_SECRET у .env}
       KAFKA_BROKERS: kafka:9092
-    logging:
-      driver: json-file
-      options:
-        max-size: 10m
-        max-file: "3"
     depends_on:
       tenant-migrate:
         condition: service_completed_successfully
@@ -275,6 +298,8 @@ services:
     image: ${SCHOOL_IMAGE:-lad-school-service:local}
     build: ${SCHOOL_SRC:-../school-service}
     container_name: lad-school-migrate
+    mem_limit: 256m
+    logging: *logging
     restart: "no"
     command: ["node", "dist/migrate.js"]
     environment:
@@ -289,6 +314,8 @@ services:
     image: ${SCHOOL_IMAGE:-lad-school-service:local}
     build: ${SCHOOL_SRC:-../school-service}
     container_name: lad-school-service
+    mem_limit: 256m
+    logging: *logging
     restart: unless-stopped
     environment:
       HOST: 0.0.0.0
@@ -302,11 +329,6 @@ services:
       OIDC_ISSUER: ${LAD_PUBLIC_URL:-http://localhost}/idp/realms/lad
       OIDC_JWKS_URL: http://keycloak:8080/idp/realms/lad/protocol/openid-connect/certs
       KAFKA_BROKERS: kafka:9092
-    logging:
-      driver: json-file
-      options:
-        max-size: 10m
-        max-file: "3"
     depends_on:
       school-migrate:
         condition: service_completed_successfully
@@ -321,6 +343,8 @@ services:
     image: ${TIMETABLE_IMAGE:-lad-timetable-service:local}
     build: ${TIMETABLE_SRC:-../timetable-service}
     container_name: lad-timetable-migrate
+    mem_limit: 256m
+    logging: *logging
     restart: "no"
     command: ["node", "dist/migrate.js"]
     environment:
@@ -335,6 +359,8 @@ services:
     image: ${TIMETABLE_IMAGE:-lad-timetable-service:local}
     build: ${TIMETABLE_SRC:-../timetable-service}
     container_name: lad-timetable-service
+    mem_limit: 384m
+    logging: *logging
     restart: unless-stopped
     environment:
       HOST: 0.0.0.0
@@ -350,11 +376,6 @@ services:
       QR_HMAC_SECRET: ${QR_HMAC_SECRET:?задайте QR_HMAC_SECRET у .env}
       PUBLIC_URL: ${LAD_PUBLIC_URL:-http://localhost}
       KAFKA_BROKERS: kafka:9092
-    logging:
-      driver: json-file
-      options:
-        max-size: 10m
-        max-file: "3"
     depends_on:
       timetable-migrate:
         condition: service_completed_successfully
@@ -371,17 +392,16 @@ services:
     image: ${WEB_IMAGE:-lad-web:local}
     build: ${WEB_SRC:-../frontend}
     container_name: lad-web
+    mem_limit: 64m
+    logging: *logging
     restart: unless-stopped
-    logging:
-      driver: json-file
-      options:
-        max-size: 10m
-        max-file: "3"
     networks: [lad]
 
   traefik:
     image: traefik:v3.7.17
     container_name: lad-traefik
+    mem_limit: 128m
+    logging: *logging
     restart: unless-stopped
     command: ["--configFile=/etc/traefik/traefik.yml"]
     environment:

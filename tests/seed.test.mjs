@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { PROBLEM_PATH, SEED_PATH, render, uuid5 } from '../seed/build.mjs';
-import { ALERT_ID, MAIN_ID, counts, loadTimetables, schoolSql, tenantSql, timetableSql, versionOf } from '../seed/sql.mjs';
+import { ALERT_ID, DEFAULT_PRIORITY_AREAS, MAIN_ID, counts, loadTimetables, parsePriorityAreas, schoolSql, tenantSql, timetableSql, versionOf } from '../seed/sql.mjs';
 
 const text = readFileSync(SEED_PATH, 'utf8');
 const seed = JSON.parse(text);
@@ -158,4 +158,22 @@ test('розклад: шаблон тривог на дзвінках триво
   assert.match(sql, new RegExp(`insert into alert_plan \\(school_id, timetable_id\\) values \\('${SCHOOL}'::uuid, '${ALERT_ID}'\\)`));
   assert.ok(seed.publication.effective_from <= new Date().toISOString().slice(0, 10));
   assert.equal(new Date(`${seed.publication.effective_from}T12:00:00Z`).getUTCDay(), 1, 'effective_from — понеділок');
+});
+
+test('PRIORITY_AREAS як у timetable-service: не задано — за замовчуванням, порожньо чи невідома галузь — помилка', () => {
+  assert.deepEqual(parsePriorityAreas(undefined), DEFAULT_PRIORITY_AREAS);
+  assert.deepEqual(parsePriorityAreas(' math , science '), ['math', 'science']);
+  assert.throws(() => parsePriorityAreas(''), /порожнім/);
+  assert.throws(() => parsePriorityAreas(' , '), /порожнім/);
+  assert.throws(() => parsePriorityAreas('math,mathematics'), /невідомі галузі mathematics/);
+});
+
+test('пріоритет предмета у версії береться з переданого списку галузей, а не з копії в сіді', () => {
+  const math = seed.subjects.find((s) => s.education_area === 'math');
+  const arts = seed.subjects.find((s) => s.education_area === 'arts');
+  const flag = (areas, subj) => versionOf(seed, 'main', timetables.main, areas).input.subjects.find((x) => x.id === subj.subject_id).priority_area;
+  assert.equal(flag(DEFAULT_PRIORITY_AREAS, math), true);
+  assert.equal(flag(DEFAULT_PRIORITY_AREAS, arts), false);
+  assert.equal(flag(['arts'], arts), true);
+  assert.equal(flag(['arts'], math), false);
 });
