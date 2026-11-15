@@ -168,7 +168,7 @@ lad-solver solve --in <problem.json> --out <result.json> \
   --time-limit 3000 --deterministic-time 120 --workers 2 --seed 0 --interleave
 ```
 
-`--deterministic-time` разом з `--interleave` роблять результат відтворюваним: два прогони дають ті самі уроки й формати днів (настінний час у `stats` відрізняється). Обидва файли пройшли `lad-validate` (validator-lib 0.2.0, contracts 0.3.0) без конфліктів, і в жодному немає класу без очних днів.
+`--deterministic-time` разом з `--interleave` роблять результат відтворюваним: два прогони дають ті самі уроки й формати днів (настінний час у `stats` відрізняється). Поточні файли пораховано solver 0.3.0 (`model_version` `a+a2+b/2026-11-15`). Вони пройшли `lad-validate` (validator-lib 0.3.1, contracts 0.4.0) без конфліктів: у жодному немає класу без очних днів і жодного дня класу з «вікном» між уроками.
 
 Завантаження — `make seed` після `make up-apps`:
 
