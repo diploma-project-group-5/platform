@@ -56,4 +56,20 @@ service_database tenant
 service_database school
 service_database timetable
 
+# --- Резервні копії: спільна роль backup (розділ 03) ---
+# Лише читання: pg_read_all_data (SELECT на всі таблиці й послідовності) без права запису.
+# BYPASSRLS — щоб дамп бачив рядки всіх закладів під FORCE ROW LEVEL SECURITY.
+: "${BACKUP_DB_PASSWORD:?задайте BACKUP_DB_PASSWORD у .env}"
+ensure_role backup "$BACKUP_DB_PASSWORD"
+psql_admin <<'SQL'
+ALTER ROLE backup BYPASSRLS;
+SELECT 'GRANT pg_read_all_data TO backup'
+WHERE NOT pg_has_role('backup', 'pg_read_all_data', 'MEMBER') \gexec
+SQL
+for db in keycloak tenant school timetable; do
+  psql_admin -v db="$db" <<'SQL'
+SELECT format('GRANT CONNECT ON DATABASE %I TO backup', :'db') \gexec
+SQL
+done
+
 echo "db-init: OK"

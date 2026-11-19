@@ -30,6 +30,8 @@ check_env() {
     [[ ",${COMPOSE_PROFILES:-}," == *",apps,"* && ",${COMPOSE_PROFILES:-}," == *",solver,"* ]] \
       || p "COMPOSE_PROFILES=apps,solver (зараз «${COMPOSE_PROFILES:-}»)"
     [ -n "${SOLVER_REF:-}" ] || p "SOLVER_REF — тег solver для показу, наприклад v0.4.0"
+    [[ "${BACKUP_AGE_RECIPIENT:-}" =~ ^age1[0-9a-z]{58}$ ]] \
+      || p "BACKUP_AGE_RECIPIENT — публічний ключ age для копій (age-keygen, рядок «Public key: age1…»)"
     qr="${QR_HMAC_SECRET:-}"
     [ "${#qr}" -ge 32 ] || p "QR_HMAC_SECRET — щонайменше 32 символи: openssl rand -base64 48"
     # Паролі з .env.example відомі всім, хто бачив репозиторій: на ВМ — лише свої.

@@ -4,7 +4,7 @@ TEST := docker compose -p lad-test -f docker-compose.yml -f docker-compose.test.
 TEST_SERVICES := postgres db-init kafka kafka-init keycloak traefik gateway-errors web-stub tenant-stub school-stub timetable-stub
 
 .DEFAULT_GOAL := help
-.PHONY: help env env-quiet up up-apps demo deploy down down-apps smoke seed kc-theme restart ps logs config psql kafka-topics token kc-reset reset test test-down
+.PHONY: help env env-quiet up up-apps demo deploy down down-apps smoke seed backup kc-theme restart ps logs config psql kafka-topics token kc-reset reset test test-down
 
 help: ## Список команд
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
@@ -48,6 +48,9 @@ smoke: .env ## Наскрізна перевірка після make up-apps: ш
 
 seed: .env ## Завантажити демо-заклад із seed/demo-school.json (після make up-apps; повтор повертає дані до файлу)
 	@bash scripts/seed.sh
+
+backup: .env ## Зашифровані копії баз (age) у BACKUP_DIR, старші за BACKUP_RETENTION_DAYS днів видаляються
+	@bash scripts/backup.sh
 
 restart: .env ## Перезапустити все або один сервіс: make restart s=traefik
 	$(COMPOSE) restart $(s)
@@ -100,6 +103,7 @@ test: .env ## Усі тести platform на окремому стенді lad-
 	$(TEST) up -d --wait --quiet-pull $(TEST_SERVICES); \
 	bash tests/db-init.sh "$(TEST)"; \
 	bash tests/kafka-init.sh "$(TEST)"; \
+	bash tests/backup.sh "$(TEST)"; \
 	$(TEST) run --rm tests
 
 test-down: ## Прибрати стенд lad-test, якщо make test перервали

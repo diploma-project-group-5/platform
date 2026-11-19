@@ -4,3 +4,5 @@
 .vscode/
 # Рендерить make deploy з traefik/traefik.vm.yml.tmpl: домен і пошта конкретної ВМ.
 traefik/traefik.vm.yml
+# Зашифровані копії баз (make backup).
+backups/
