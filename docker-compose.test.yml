@@ -37,6 +37,9 @@ services:
       SCHOOL_UPSTREAM: http://school-stub
       TIMETABLE_UPSTREAM: http://timetable-stub
 
+  gateway-errors:
+    container_name: lad-test-gateway-errors
+
   web-stub:
     image: traefik/whoami:v1.11.0
     environment: { WHOAMI_NAME: web }

@@ -4,7 +4,7 @@
 
 ## Що потрібно
 
-Docker Desktop (з Docker Compose v2) і `make`.
+Docker Desktop (з Docker Compose v2), `make` і `age` для зашифрованих копій баз (`brew install age` на Mac, `sudo apt install age` на ВМ).
 
 ## Швидкий старт
 
@@ -124,7 +124,7 @@ curl -H "Authorization: Bearer $(make -s token)" http://localhost/api/v1/school/
 | `/api/v1/tenant/…` | tenant-service | |
 | `/api/v1/school/…` | school-service | |
 | `/api/v1/timetable/…` | timetable-service | |
-| `/api/v1/public/…` | timetable-service | 10 запитів/с з однієї IP, сплеск до 20, далі 429 |
+| `/api/v1/public/…` | timetable-service | 10 запитів/с з однієї IP, сплеск до 20, далі 429 у форматі problem+json (тіло — з контейнера gateway-errors) |
 | `/internal…` | — | 404 від самого Traefik: внутрішні маршрути сервісів через шлюз недоступні, і застосунок web їх теж не віддає |
 
 Маршрути описано в `traefik/dynamic/routes.yml`. Traefik перечитує файл сам, перезапуск не потрібен.
@@ -211,7 +211,7 @@ make env      # створює .env з прикладу
 make deploy SEED=1
 ```
 
-`make deploy` спершу перевіряє `.env` і друкує всі проблеми одразу: домен, https-адресу, файли compose, профілі, паролі з прикладу, довжину секрету QR. Потім оновлює клони сервісів, перемикає solver на тег `SOLVER_REF`, рендерить `traefik/traefik.vm.yml` для домену, збирає й піднімає стенд, а наприкінці запускає `make smoke`. Smoke перевіряє й те, що на ВМ легко пропустити: `/internal` через шлюз — 404, а відсутність вчителя демо-закладу доходить до solver і задача заміни завершується (`done` з solver 0.4.0, `failed / unsupported_job_type` з 0.3.0), а не висить у черзі до сторожа. Відсутність після перевірки видаляється. Сертифікат Let's Encrypt Traefik отримує сам при першому зверненні й зберігає в томі `traefik-acme`. На https-відповідях стоїть HSTS (рік, без піддоменів): після першого відвідування браузер сам ходить лише по https. `SEED=1` ще й завантажує демо-заклад.
+`make deploy` спершу перевіряє `.env` і друкує всі проблеми одразу: домен, https-адресу, файли compose, профілі, паролі з прикладу, довжину секрету QR, публічний ключ age для копій (`BACKUP_AGE_RECIPIENT`, розділ «Резервні копії»). Потім оновлює клони сервісів, перемикає solver на тег `SOLVER_REF`, рендерить `traefik/traefik.vm.yml` для домену, збирає й піднімає стенд, а наприкінці запускає `make smoke`. Smoke перевіряє й те, що на ВМ легко пропустити: `/internal` через шлюз — 404, а відсутність вчителя демо-закладу доходить до solver і задача заміни завершується (`done` з solver 0.4.0, `failed / unsupported_job_type` з 0.3.0), а не висить у черзі до сторожа. Відсутність після перевірки видаляється. Сертифікат Let's Encrypt Traefik отримує сам при першому зверненні й зберігає в томі `traefik-acme`. На https-відповідях стоїть HSTS (рік, без піддоменів): після першого відвідування браузер сам ходить лише по https. `SEED=1` ще й завантажує демо-заклад.
 
 **Оновлення.** `git pull` у `platform`, потім `make deploy`. Сам `platform` скрипт не оновлює: bash читає скрипт по ходу виконання. Дані закладу `make deploy` без `SEED=1` не чіпає. Через `COMPOSE_FILE` і `COMPOSE_PROFILES` у `.env` решта команд на ВМ (`make logs`, `make restart`, `make seed`) теж працює з HTTPS-конфігурацією.
 
@@ -228,7 +228,34 @@ make deploy SEED=1
 | timetable-service | 384 МБ | |
 | tenant-service, school-service | по 256 МБ | |
 | traefik, web | 128 і 64 МБ | |
+| gateway-errors | 32 МБ | тіла помилок шлюзу (429) у форматі problem+json |
 | db-init, kafka-init, *-migrate | 128–512 МБ | одноразові, завершуються до старту сервісів |
+
+## Резервні копії: `make backup`
+
+`make backup` робить копії баз tenant, school, timetable і keycloak. Дамп знімає роль `backup`: вона лише читає (`pg_read_all_data`) і має `BYPASSRLS`, тож бачить рядки всіх закладів під FORCE RLS, але нічого не може змінити. Кожен дамп одразу шифрується утилітою [age](https://github.com/FiloSottile/age) публічним ключем із `BACKUP_AGE_RECIPIENT` і лягає в `BACKUP_DIR/<час UTC>/<база>.dump.age`. Копії, старші за `BACKUP_RETENTION_DAYS` днів (14), видаляються тим самим запуском.
+
+Приватний ключ на ВМ не зберігається: втрата або злам ВМ не відкриває копій. Ключ створює той, хто відновлюватиме, на своєму комп'ютері:
+
+```bash
+age-keygen -o lad-backup.key        # приватний ключ — зберегти поза ВМ
+# рядок «Public key: age1…» — у .env ВМ як BACKUP_AGE_RECIPIENT
+```
+
+Щоденний запуск на ВМ (cron користувача, о 02:30 за часом ВМ):
+
+```bash
+30 2 * * * cd /opt/lad/platform && make backup >> backups/backup.log 2>&1
+```
+
+Специфікація вимагає зберігати копії в Україні, тож каталог `BACKUP_DIR` треба синхронізувати в сховище в Україні (наприклад, `rclone sync`); вибір сховища — разом із вибором ВМ. Сам `make backup` пише лише локально.
+
+Відновлення однієї бази (на стенді з тією самою схемою, приватний ключ — у того, хто відновлює):
+
+```bash
+age -d -i lad-backup.key backups/<час>/school.dump.age \
+  | docker exec -i lad-postgres pg_restore -U postgres -d school --clean --if-exists
+```
 
 ## Тести
 
@@ -247,7 +274,8 @@ make test
 | `tests/compose-check.mjs` | кожен контейнер з `mem_limit` і ротацією логів; сума лімітів у бюджеті; для ВМ — Traefik з HTTPS-конфігурацією, портами 80 і 443, томом сертифікатів і адресами контейнерів |
 | `tests/deploy-check.sh` | `make deploy` не приймає `.env` без домену, з http-адресою чи паролями з прикладу й приймає правильно заповнений; шаблон Traefik для ВМ з тими самими захисними налаштуваннями |
 | `tests/db-init.sh` | ідемпотентність `db-init`; ролі keycloak, tenant, school, timetable без зайвих прав і власники баз; межа між базами сервісів; `btree_gist` для timetable |
-| `tests/kafka-init.sh` | ідемпотентність `kafka-init`; рівно 6 топіків з маніфесту + 6 `.dlq`; строки зберігання 7 і 14 днів; 3 партиції |
+| `tests/kafka-init.sh` | ідемпотентність `kafka-init`; рівно 6 топіків з маніфесту + 6 `.dlq`; строки зберігання 7 і 14 днів, сегмент на добу; 3 партиції |
+| `tests/backup.sh` | роль `backup` лише читає й бачить усі заклади під FORCE RLS; `make backup` робить 4 зашифровані копії, прибирає старі; копію видно лише після розшифрування приватним ключем; без ключа age — зрозуміла помилка |
 
 Тести — JavaScript (`node --test`, без залежностей), запускаються в контейнері `node:24`, тож Node на машині не потрібен. Той самий `make test` запускає GitHub Actions на кожен пуш (`.github/workflows/test.yml`).
 
@@ -260,6 +288,7 @@ make test
 | `make up` | підняти все й дочекатися healthcheck (спершу дописує в `.env` нові змінні) |
 | `make demo` | стенд для показу однією командою: порти, підйом з нуля разом із solver, сід |
 | `make deploy` | ВМ: перевірка `.env`, оновлення клонів, solver на `SOLVER_REF`, HTTPS, smoke (`SEED=1` — ще й сід) |
+| `make backup` | зашифровані копії баз у `BACKUP_DIR`, старі — видаляються |
 | `make down` | зупинити (дані лишаються) |
 | `make ps` | стан контейнерів |
 | `make logs s=kafka` | логи одного сервісу (без `s` — усіх) |

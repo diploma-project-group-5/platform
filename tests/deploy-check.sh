@@ -13,7 +13,7 @@ echo "▶ make deploy (scripts/deploy.sh --check)"
 
 # .env.example як є: локальні паролі й порожній домен.
 out="$(bash scripts/deploy.sh --check .env.example 2>&1)" && bad ".env.example прийнято для ВМ" || ok ".env.example для ВМ не проходить"
-for what in LAD_DOMAIN ACME_EMAIL LAD_PUBLIC_URL COMPOSE_FILE COMPOSE_PROFILES QR_HMAC_SECRET POSTGRES_SUPERUSER_PASSWORD SCHOOL_APP_DB_PASSWORD; do
+for what in LAD_DOMAIN ACME_EMAIL LAD_PUBLIC_URL COMPOSE_FILE COMPOSE_PROFILES QR_HMAC_SECRET POSTGRES_SUPERUSER_PASSWORD SCHOOL_APP_DB_PASSWORD BACKUP_AGE_RECIPIENT; do
   echo "$out" | grep -q "$what" && ok "називає $what" || bad "не назвав $what: $out"
 done
 
@@ -29,6 +29,7 @@ done < <(grep -E '^[A-Z_][A-Z0-9_]*=' .env.example)
   echo "LAD_PUBLIC_URL=https://lad.example.org"
   echo "COMPOSE_FILE=docker-compose.yml:docker-compose.vm.yml"
   echo "COMPOSE_PROFILES=apps,solver"
+  echo "BACKUP_AGE_RECIPIENT=age1$(printf 'q%.0s' $(seq 58))"
 } >> "$tmp/vm.env"
 out="$(bash scripts/deploy.sh --check "$tmp/vm.env" 2>&1)" && ok "заповнений .env для ВМ проходить" || bad "заповнений .env відхилено: $out"
 
