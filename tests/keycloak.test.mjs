@@ -90,11 +90,24 @@ describe('перший вхід з тимчасовим паролем', () => {
     const u = await newScheduler();
     assert.equal((await login(u.username, u.password)).status, 'update_password');
     assert.equal((await login(u.username, u.password, { newPassword: 'short12' })).status, 'password_rejected');
+    // Тимчасовий пароль знає сисадмін, тож лишити його постійним не можна (passwordHistory).
+    assert.equal((await login(u.username, u.password, { newPassword: u.password })).status, 'password_rejected');
     const r = await login(u.username, u.password, { newPassword: 'New-Pass-987654' });
     assert.equal(r.status, 'ok');
     assert.equal(r.claims.school_id, u.schoolId);
     assert.ok(r.claims.realm_access.roles.includes('scheduler'));
     assert.equal((await login(u.username, 'New-Pass-987654')).status, 'ok');
+  });
+});
+
+describe('offline-токени', () => {
+  // Offline-токен жив би 30 днів і переживав вихід — сесія 8 год перестала б діяти.
+  test('клієнт web не може запросити offline_access: Keycloak повертає invalid_scope', async () => {
+    const url = `${oidc(`${env.gateway}/idp`)}/auth?client_id=web&response_type=code&scope=openid%20offline_access` +
+      `&redirect_uri=${encodeURIComponent(`${env.publicUrl}/cb`)}&code_challenge=${'a'.repeat(43)}&code_challenge_method=S256`;
+    const res = await fetch(url, { redirect: 'manual' });
+    assert.equal(res.status, 302);
+    assert.equal(new URL(res.headers.get('location')).searchParams.get('error'), 'invalid_scope');
   });
 });
 

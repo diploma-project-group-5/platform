@@ -427,6 +427,24 @@ services:
       start_period: 5s
     networks: [lad]
 
+  # Тіла помилок шлюзу у форматі problem+json: Traefik сам віддав би 429 текстом «Too Many Requests».
+  gateway-errors:
+    image: nginxinc/nginx-unprivileged:1.29-alpine
+    container_name: lad-gateway-errors
+    mem_limit: 32m
+    logging: *logging
+    restart: unless-stopped
+    volumes:
+      - ./gateway-errors/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./gateway-errors/429.json:/usr/share/nginx/html/429.json:ro
+    healthcheck:
+      test: ["CMD", "wget", "-qO", "/dev/null", "http://127.0.0.1:8080/429.json"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 3s
+    networks: [lad]
+
 volumes:
   pg-data:
   kafka-data:

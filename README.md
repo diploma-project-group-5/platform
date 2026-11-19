@@ -124,7 +124,7 @@ curl -H "Authorization: Bearer $(make -s token)" http://localhost/api/v1/school/
 | `/api/v1/tenant/…` | tenant-service | |
 | `/api/v1/school/…` | school-service | |
 | `/api/v1/timetable/…` | timetable-service | |
-| `/api/v1/public/…` | timetable-service | 10 запитів/с з однієї IP, сплеск до 20, далі 429 |
+| `/api/v1/public/…` | timetable-service | 10 запитів/с з однієї IP, сплеск до 20, далі 429 у форматі problem+json (тіло — з контейнера gateway-errors) |
 | `/internal…` | — | 404 від самого Traefik: внутрішні маршрути сервісів через шлюз недоступні, і застосунок web їх теж не віддає |
 
 Маршрути описано в `traefik/dynamic/routes.yml`. Traefik перечитує файл сам, перезапуск не потрібен.
@@ -228,6 +228,7 @@ make deploy SEED=1
 | timetable-service | 384 МБ | |
 | tenant-service, school-service | по 256 МБ | |
 | traefik, web | 128 і 64 МБ | |
+| gateway-errors | 32 МБ | тіла помилок шлюзу (429) у форматі problem+json |
 | db-init, kafka-init, *-migrate | 128–512 МБ | одноразові, завершуються до старту сервісів |
 
 ## Тести

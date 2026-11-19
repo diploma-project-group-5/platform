@@ -1,7 +1,7 @@
 COMPOSE := docker compose
 # Окремий тестовий стенд: свій проєкт, томи й мережа; порти назовні не відкриваються.
 TEST := docker compose -p lad-test -f docker-compose.yml -f docker-compose.test.yml
-TEST_SERVICES := postgres db-init kafka kafka-init keycloak traefik web-stub tenant-stub school-stub timetable-stub
+TEST_SERVICES := postgres db-init kafka kafka-init keycloak traefik gateway-errors web-stub tenant-stub school-stub timetable-stub
 
 .DEFAULT_GOAL := help
 .PHONY: help env env-quiet up up-apps demo deploy down down-apps smoke seed kc-theme restart ps logs config psql kafka-topics token kc-reset reset test test-down

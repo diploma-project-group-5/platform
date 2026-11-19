@@ -60,7 +60,7 @@ http:
       priority: 100
       entryPoints: [web]
       service: timetable
-      middlewares: [public-rate-limit, security-headers]
+      middlewares: [public-problem, public-rate-limit, security-headers]
 
   middlewares:
     security-headers:
@@ -78,6 +78,13 @@ http:
       ipAllowList:
         sourceRange: ["127.0.0.1/32"]
 
+    # 429 від ліміту — тілом problem+json з gateway-errors, код лишається 429 (розділ 07).
+    public-problem:
+      errors:
+        status: ["429"]
+        service: gateway-errors
+        query: "/429.json"
+
     public-rate-limit:
       rateLimit:
         average: 10
@@ -85,6 +92,10 @@ http:
         burst: 20
 
   services:
+    gateway-errors:
+      loadBalancer:
+        servers:
+          - url: http://gateway-errors:8080
     web:
       loadBalancer:
         servers:

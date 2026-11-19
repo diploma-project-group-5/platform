@@ -54,6 +54,21 @@ test('паролі, захист від підбору, час життя ток
   assert.equal(realm.resetPasswordAllowed, false);
 });
 
+test('тимчасовий пароль не можна лишити постійним: passwordHistory', () => {
+  assert.match(realm.passwordPolicy, /passwordHistory\([1-9]\d*\)/);
+});
+
+test('offline-токени не довші за сесію 8 год і недоступні клієнту web', () => {
+  const web = realm.clients.find((c) => c.clientId === 'web');
+  // Без offline_access серед scope клієнта; базові scope (roles — це realm_access у токені) задано явно.
+  assert.deepEqual(web.optionalClientScopes, []);
+  assert.ok(web.defaultClientScopes.includes('roles'));
+  assert.ok(!web.defaultClientScopes.includes('offline_access'));
+  assert.equal(realm.offlineSessionMaxLifespanEnabled, true);
+  assert.ok(realm.offlineSessionMaxLifespan <= 28800);
+  assert.ok(realm.offlineSessionIdleTimeout <= 28800);
+});
+
 test('у файлі немає паролів і секретів — лише змінні з .env', () => {
   const secrets = [
     client('tenant-service').secret,

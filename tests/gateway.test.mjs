@@ -94,6 +94,22 @@ describe('ліміт запитів', () => {
     assert.ok(codes.filter((c) => c === 200).length >= 20, 'менше 20 успішних — ліміт надто жорсткий');
   });
 
+  test('429 — application/problem+json з code rate_limited (розділ 07)', async () => {
+    const limited = (await burst('/api/v1/public/x')).find((r) => r.status === 429);
+    assert.ok(limited, 'немає жодного 429');
+    assert.match(limited.headers['content-type'] ?? '', /^application\/problem\+json/);
+    const problem = JSON.parse(limited.body);
+    assert.equal(problem.status, 429);
+    assert.equal(problem.code, 'rate_limited');
+  });
+
+  test('інші відповіді /api/v1/public не підміняються сторінкою помилки', async () => {
+    await new Promise((r) => setTimeout(r, 3000)); // ліміт відновився
+    const res = await rawGet(env.gateway, '/api/v1/public/x');
+    assert.equal(res.status, 200);
+    assert.match(res.body, /Name: timetable/);
+  });
+
   test('/api/v1/tenant: ліміту немає', async () => {
     const codes = (await burst('/api/v1/tenant/x')).map((r) => r.status);
     assert.ok(!codes.includes(429));
