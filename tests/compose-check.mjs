@@ -47,6 +47,8 @@ if (vm) {
   const ports = (t.ports ?? []).map((p) => Number(p.target));
   check(ports.includes(443) && ports.includes(80), `traefik публікує 80 (редірект) і 443: ${ports.join(', ')}`);
   check((t.volumes ?? []).some((v) => v.target === '/acme'), 'сертифікати Let\'s Encrypt — в окремому томі /acme');
+  check((t.volumes ?? []).some((v) => v.target === '/logs' && /logs\/traefik$/.test(v.source ?? '')),
+    'журнал запитів шлюзу — у logs/traefik на ВМ (для logrotate, 30 днів)');
   const env = t.environment ?? {};
   check(env.WEB_UPSTREAM === 'http://web:8080' && env.TIMETABLE_UPSTREAM === 'http://timetable-service:3003',
     'шлюз веде на контейнери сервісів без APPS_UPSTREAMS у команді');

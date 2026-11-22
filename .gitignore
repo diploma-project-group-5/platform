@@ -6,3 +6,5 @@
 traefik/traefik.vm.yml
 # Зашифровані копії баз (make backup).
 backups/
+# Журнал запитів шлюзу на ВМ (make logrotate).
+logs/

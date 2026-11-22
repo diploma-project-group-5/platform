@@ -1,0 +1,17 @@
+# Журнал запитів шлюзу на ВМ: у ньому IP відвідувачів, тож він живе не довше 30 днів
+# (рішення 05: «IP шлюзу 30 днів (logrotate)»). Ставить make logrotate, перевіряє make deploy.
+# __LOG_DIR__ підставляє scripts/logrotate.sh — каталог logs/traefik клону platform.
+__LOG_DIR__/access.log {
+    daily
+    rotate 30
+    maxage 30
+    dateext
+    missingok
+    notifempty
+    compress
+    delaycompress
+    postrotate
+        # Traefik відкриває журнал наново за сигналом USR1.
+        docker kill --signal=USR1 lad-traefik >/dev/null 2>&1 || true
+    endscript
+}

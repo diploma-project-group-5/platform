@@ -4,7 +4,7 @@ TEST := docker compose -p lad-test -f docker-compose.yml -f docker-compose.test.
 TEST_SERVICES := postgres db-init kafka kafka-init keycloak traefik gateway-errors web-stub tenant-stub school-stub timetable-stub
 
 .DEFAULT_GOAL := help
-.PHONY: help env env-quiet up up-apps demo deploy down down-apps smoke seed backup kc-theme restart ps logs config psql kafka-topics token kc-reset reset test test-down
+.PHONY: help env env-quiet up up-apps demo deploy logrotate down down-apps smoke seed backup kc-theme restart ps logs config psql kafka-topics token kc-reset reset test test-down
 
 help: ## Список команд
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
@@ -48,6 +48,9 @@ smoke: .env ## Наскрізна перевірка після make up-apps: ш
 
 seed: .env ## Завантажити демо-заклад із seed/demo-school.json (після make up-apps; повтор повертає дані до файлу)
 	@bash scripts/seed.sh
+
+logrotate: ## ВМ, один раз через sudo: журнал запитів шлюзу (IP) зберігається не довше 30 днів
+	@bash scripts/logrotate.sh
 
 backup: .env ## Зашифровані копії баз (age) у BACKUP_DIR, старші за BACKUP_RETENTION_DAYS днів видаляються
 	@bash scripts/backup.sh
