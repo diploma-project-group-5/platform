@@ -77,7 +77,20 @@ for path in /internal/v1/schools/x/snapshot /INTERNAL/v1/x; do
   [ "$code" = "404" ] && ok "шлюз → $path: 404" || bad "шлюз → $path: $code замість 404"
 done
 
+# Розділ 07: e2e-тест «GET /api/v1/school/internal/v1/… через шлюз → 404». Префікс сервісу шлюз
+# пропускає, тож тут відповідає сам сервіс — і внутрішнього маршруту на публічному порту в нього немає.
+for svc in school tenant timetable; do
+  code="$(curl -s -o /dev/null -w '%{http_code}' "$base/api/v1/$svc/internal/v1/schools/x/snapshot")"
+  [ "$code" = "404" ] && ok "шлюз → /api/v1/$svc/internal/v1/…: 404" || bad "шлюз → /api/v1/$svc/internal/v1/…: $code замість 404"
+done
+
 token="$(bash scripts/token.sh sysadmin "$SYSADMIN_PASSWORD" "$base")"
+
+# Розділ 07: school і timetable приймають лише укладача; токен sysadmin — 403 (а не 200 чи 401).
+for svc in school/classes timetable/timetables; do
+  code="$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: Bearer $token" "$base/api/v1/$svc")"
+  [ "$code" = "403" ] && ok "шлюз → $svc з токеном sysadmin: 403" || bad "шлюз → $svc з токеном sysadmin: $code замість 403"
+done
 login="smoke-$(date +%s)"
 resp="$(curl -s -X POST "$base/api/v1/tenant/schools" -H "Authorization: Bearer $token" \
   -H 'Content-Type: application/json' -d "{\"name\":\"Smoke $login\",\"login\":\"$login\"}")"
