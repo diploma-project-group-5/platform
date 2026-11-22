@@ -91,6 +91,9 @@ git -C "${SOLVER_SRC:-../solver}" -c advice.detachedHead=false checkout --quiet 
 sed -e "s|__LAD_DOMAIN__|$LAD_DOMAIN|g" -e "s|__ACME_EMAIL__|$ACME_EMAIL|g" \
   traefik/traefik.vm.yml.tmpl > traefik/traefik.vm.yml
 echo "  ✔ traefik/traefik.vm.yml для $LAD_DOMAIN"
+# Журнал шлюзу з IP — лише з правилом logrotate на 30 днів (рішення 05). Ставиться один раз: make logrotate.
+bash scripts/logrotate.sh --check || exit 1
+mkdir -p logs/traefik
 
 # 3. Збірка й підйом (COMPOSE_FILE і COMPOSE_PROFILES — з .env).
 docker compose up -d --wait --build --remove-orphans

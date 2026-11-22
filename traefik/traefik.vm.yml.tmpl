@@ -58,4 +58,8 @@ providers:
 log:
   level: INFO
 
-accessLog: {}
+# Журнал запитів з IP відвідувачів — у файл (на ВМ це logs/traefik/access.log клону platform), а не у
+# вивід контейнера: вивід Docker обрізає за розміром, а IP мають жити не довше 30 днів (рішення 05).
+# Строк тримає logrotate ВМ — правило deploy/logrotate-traefik.tmpl, ставить make logrotate.
+accessLog:
+  filePath: /logs/access.log

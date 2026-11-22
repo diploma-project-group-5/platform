@@ -23,6 +23,8 @@ services:
       # Сертифікати Let's Encrypt переживають перезапуск: інакше кожен старт — новий запит
       # і швидке впирання в ліміти Let's Encrypt.
       - traefik-acme:/acme
+      # Журнал запитів у каталог ВМ, щоб його обертав logrotate (IP — 30 днів, make logrotate).
+      - ./logs/traefik:/logs
     healthcheck:
       test: ["CMD", "traefik", "healthcheck", "--configFile=/etc/traefik/traefik.vm.yml"]
 

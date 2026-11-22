@@ -45,5 +45,25 @@ for opt in 'aliasHeadersStrategy: delete' 'allowEncodedSlash: false' 'allowEncod
   grep -q "$opt" traefik/traefik.vm.yml.tmpl && ok "захист як у traefik.yml: $opt" || bad "у шаблоні немає $opt"
 done
 
+# Журнал запитів шлюзу з IP: у файл і logrotate на 30 днів (рішення 05).
+grep -q 'filePath: /logs/access.log' traefik/traefik.vm.yml.tmpl \
+  && ok "на ВМ журнал запитів шлюзу — у файл /logs/access.log" || bad "accessLog у шаблоні не у файл"
+lr=deploy/logrotate-traefik.tmpl
+grep -qE '^\s+daily$' $lr && grep -qE '^\s+rotate 30$' $lr && grep -qE '^\s+maxage 30$' $lr \
+  && ok "logrotate: щодня, не довше 30 днів" || bad "у $lr немає daily / rotate 30 / maxage 30"
+grep -q 'kill --signal=USR1 lad-traefik' $lr && ok "logrotate: Traefik відкриває журнал наново (USR1)" || bad "у $lr немає USR1 для Traefik"
+rule="$tmp/lad-traefik"
+if LOGROTATE_FILE="$rule" bash scripts/logrotate.sh --check >"$tmp/lr.out" 2>&1; then
+  bad "make deploy пропускає ВМ без правила logrotate"
+else
+  grep -q 'make logrotate' "$tmp/lr.out" && ok "без правила logrotate make deploy зупиняється й називає make logrotate" || bad "помилка без підказки: $(cat "$tmp/lr.out")"
+fi
+sed "s|__LOG_DIR__|$(pwd)/logs/traefik|g" $lr > "$rule"
+LOGROTATE_FILE="$rule" bash scripts/logrotate.sh --check >/dev/null 2>&1 \
+  && ok "з актуальним правилом перевірка проходить" || bad "актуальне правило не прийнято"
+echo "    rotate 365" >> "$rule"
+LOGROTATE_FILE="$rule" bash scripts/logrotate.sh --check >/dev/null 2>&1 \
+  && bad "застаріле правило прийнято" || ok "застаріле чи змінене правило — не проходить"
+
 echo "ℹ deploy-check: пройдено $pass, не пройдено $fail"
 [ "$fail" -eq 0 ]
