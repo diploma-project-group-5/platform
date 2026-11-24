@@ -1,0 +1,32 @@
+# Доповнення для ВМ (platform #18, #20): HTTPS на :443 з Let's Encrypt, редірект з :80,
+# шлюз завжди веде на контейнери сервісів. Локально не підключається.
+#
+# Підключення — у .env на ВМ, тоді його бачать усі команди make і docker compose:
+#   COMPOSE_FILE=docker-compose.yml:docker-compose.vm.yml
+#   COMPOSE_PROFILES=apps,solver
+# Статичну конфігурацію traefik/traefik.vm.yml рендерить make deploy із traefik/traefik.vm.yml.tmpl
+# (домен і пошта для Let's Encrypt — з .env: LAD_DOMAIN, ACME_EMAIL). Порядок — README, «Розгортання на ВМ».
+
+services:
+  traefik:
+    command: ["--configFile=/etc/traefik/traefik.vm.yml"]
+    environment:
+      # На ВМ сервіси завжди в контейнерах (профіль apps), тож шлюз не залежить від того,
+      # чи передав хтось APPS_UPSTREAMS у команду make.
+      WEB_UPSTREAM: http://web:8080
+      TENANT_UPSTREAM: http://tenant-service:3001
+      SCHOOL_UPSTREAM: http://school-service:3002
+      TIMETABLE_UPSTREAM: http://timetable-service:3003
+    ports:
+      - "443:443"
+    volumes:
+      # Сертифікати Let's Encrypt переживають перезапуск: інакше кожен старт — новий запит
+      # і швидке впирання в ліміти Let's Encrypt.
+      - traefik-acme:/acme
+      # Журнал запитів у каталог ВМ, щоб його обертав logrotate (IP — 30 днів, make logrotate).
+      - ./logs/traefik:/logs
+    healthcheck:
+      test: ["CMD", "traefik", "healthcheck", "--configFile=/etc/traefik/traefik.vm.yml"]
+
+volumes:
+  traefik-acme:
